@@ -53,6 +53,6 @@ d : The cell lineage tree to be used. This file should have 5 columns describing
 - 3. Branch-specific gain rate (The probability that an edge is gained in a child given that the edge is absent in the predecessor cell)
 - 4. Branch-specific loss rate (The probability that an edge is lost in a child given that the edge is present in the predecessor cell)
 
-m : A file describing the orthology relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1.
+m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1.
 
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
