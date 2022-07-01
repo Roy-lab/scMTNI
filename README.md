@@ -18,7 +18,7 @@ The scMTNI model has the following benefits:
 
 ## Step 2. Run
 
-## EXAMPLE USAGE OF scMTNI with motif prior
+### Example uasge of scMTNI with prior network
 ```./scMTNI -f testdata/testdata_config.txt -x5 -v1 -l testdata/TFs_OGs.txt -n testdata/AllGenes.txt -d testdata/celltype_tree_ancestor.txt -m testdata/testdata_ogids.txt -s testdata/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2```
 
 The above example will run scMTNI using all regulators and targets. 
@@ -28,8 +28,7 @@ Since scMTNI learns regulators on a per-target basis, the algorithm can easily b
 ```./scMTNI -f testdata/testdata_config.txt -x5 -v1 -l testdata/TFs_OGs.txt -n testdata/AllGenes0.txt -d testdata/celltype_tree_ancestor.txt -m testdata/testdata_ogids.txt -s testdata/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2```
 
 
-## PARAMETER EXPLANATIONS
-Parameter Explanations
+### Parameter Explanations
 f : config file with six columns, rows for each cell. Each cell's row should have the following species-specific entries:
 - 1. Cell Name
 - 2. Prefix of .table files (cell.table)
@@ -39,14 +38,21 @@ f : config file with six columns, rows for each cell. Each cell's row should hav
 - 6. List of motifs to be used. This file should have three tab-separated columns, listing the regulator, target, and motif score
 
 x : Maximum # of regulators to be used for a given target.
+
 v : Used for cross-validation. Can be left at 1.
+
 p : default 0.5. The probability that an edge is present in the root cell.
+
 l : List of the orthogroups (id #s) to be considered as regulators. Note: a regulator must also be present in the species-specific list of regulators given in the species-specific config file (parameter f)
+
 n : List of the orthogroups (id #s) to be considered as targets. Note: a target must also be present in the species-specific list of targets given in the species-specific config file (parameter f)
+
 d : The cell lineage tree to be used. This file should have 5 columns describing the tree:
-1. Child cell
-2. Parent cell
-3. Branch-specific gain rate (The probability that an edge is gained in a child given that the edge is absent in the predecessor cell)
-4. Branch-specific loss rate (The probability that an edge is lost in a child given that the edge is present in the predecessor cell)
+- 1. Child cell
+- 2. Parent cell
+- 3. Branch-specific gain rate (The probability that an edge is gained in a child given that the edge is absent in the predecessor cell)
+- 4. Branch-specific loss rate (The probability that an edge is lost in a child given that the edge is present in the predecessor cell)
+
 m : A file describing the orthology relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1.
-s : A list of the cells present in the OGIDS file (parameter m), in the order they exist in the OGIDS file
+
+s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
