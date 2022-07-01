@@ -8,7 +8,7 @@ The scMTNI model has the following benefits:
 - 2 incorporates the lineage structure to influence the extent of sharing between the learned networks, 
 - 3 incorporates prior information, such as motif-based prior network derived from scATAC-seq data, thereby integrating scRNA-seq and scATAC-seq data to infer gene regulatory network dynamics across cell lineages.
 
-![alt text](figures_doc/scMTNI2.png)
+![alt text](figures_doc/scMTNI_v2.png)
 
 ## Step 1. Install
 1) git clone https://github.com/Roy-lab/scMTNI.git 
