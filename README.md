@@ -77,7 +77,6 @@ Network_Analysis/StablityKmeansClustering.m
 
 ### 5.2 topic model-based dynamic network analysis:
 Network_Analysis/LDA_analysis.m
-Network_Analysis/LDA_analysis_wrapper.m
 
 
 
