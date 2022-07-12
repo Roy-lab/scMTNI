@@ -56,3 +56,18 @@ d : The cell lineage tree to be used. This file should have 5 columns describing
 m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1.
 
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
+
+
+## generating the prior
+
+## integrating scRNA-seq/scATAC-seq
+
+
+## Step 3. Evaluation
+
+
+## Step 4. Network dynamics analysis
+
+
+
+
