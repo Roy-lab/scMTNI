@@ -66,7 +66,15 @@ s : A list of the cells present in the gene file (parameter m), in the order the
 
 
 ## Step 4. Evaluation
+### 4.1 Compute AUPR:
 
+### 4.1 Compute F-score for top k edges compared to gold standard datasets
+
+```
+cellfile=example_data/celltype_order.txt
+indir=example_data/subsample/
+bash computeFscore_Buenrostro_gs_new.sh $indir $cellfile
+```
 
 ## Step 5. Network dynamics analysis
 ### 5.1 edge-based k-means clustering analysis:
