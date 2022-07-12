@@ -67,7 +67,10 @@ s : A list of the cells present in the gene file (parameter m), in the order the
 
 ## Step 4. Evaluation
 ### 4.1 Compute AUPR:
-
+```
+bash Evaluation/aupr_wrapper_list_intersection.sh
+```
+ 
 ### 4.1 Compute F-score for top k edges compared to gold standard datasets
 
 ```
