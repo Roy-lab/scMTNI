@@ -17,7 +17,9 @@ The scMTNI model has the following benefits:
 
 
 ## Step 2. Prepare input files
+## generating the prior
 
+## integrating scRNA-seq/scATAC-seq
 
 
 ## Step 3. Run
@@ -61,10 +63,6 @@ m : A file describing the gene relationships. The first column of this file is o
 
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
-
-## generating the prior
-
-## integrating scRNA-seq/scATAC-seq
 
 
 ## Step 4. Evaluation
