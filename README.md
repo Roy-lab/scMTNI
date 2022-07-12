@@ -16,7 +16,11 @@ The scMTNI model has the following benefits:
 3) make
 
 
-## Step 2. Run
+## Step 2. Prepare input files
+
+
+
+## Step 3. Run
 
 ### Example uasge of scMTNI with prior network
 ```./scMTNI -f testdata/testdata_config.txt -x5 -v1 -l testdata/TFs_OGs.txt -n testdata/AllGenes.txt -d testdata/celltype_tree_ancestor.txt -m testdata/testdata_ogids.txt -s testdata/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2```
@@ -63,10 +67,18 @@ s : A list of the cells present in the gene file (parameter m), in the order the
 ## integrating scRNA-seq/scATAC-seq
 
 
-## Step 3. Evaluation
+## Step 4. Evaluation
 
 
-## Step 4. Network dynamics analysis
+## Step 5. Network dynamics analysis
+### 5.1 edge-based k-means clustering analysis:
+Network_Analysis/StablityKmeansClustering.m
+
+
+### 5.2 topic model-based dynamic network analysis:
+Network_Analysis/LDA_analysis.m
+Network_Analysis/LDA_analysis_wrapper.m
+
 
 
 
