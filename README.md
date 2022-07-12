@@ -76,7 +76,7 @@ bash Evaluation/aupr_wrapper_list_intersection.sh
 ```
 cellfile=example_data/celltype_order.txt
 indir=example_data/subsample/
-bash computeFscore_Buenrostro_gs_new.sh $indir $cellfile
+python fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regulators $regulators --targets $targets --outdir $outpath
 ```
 
 ## Step 5. Network dynamics analysis
