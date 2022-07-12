@@ -17,9 +17,11 @@ The scMTNI model has the following benefits:
 
 
 ## Step 2. Prepare input files
-## generating the prior
+## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
 
-## integrating scRNA-seq/scATAC-seq
+
+## 2.2 generating the prior
+
 
 
 ## Step 3. Run
@@ -71,7 +73,7 @@ s : A list of the cells present in the gene file (parameter m), in the order the
 bash Evaluation/aupr_wrapper_list_intersection.sh
 ```
  
-### 4.1 Compute F-score for top k edges compared to gold standard datasets
+### 4.2 Compute F-score for top k edges compared to gold standard datasets
 
 ```
 cellfile=example_data/celltype_order.txt
