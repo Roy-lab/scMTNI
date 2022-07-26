@@ -20,7 +20,8 @@ The scMTNI model has the following benefits:
 ## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
 
 
-## 2.2 generating the prior
+## 2.2 generating the prior network using scATAC-seq data and motifs
+check https://github.com/Roy-lab/scMTNI/blob/main/genPriorNetwork/readme.md for details:
 ```
 bash genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
