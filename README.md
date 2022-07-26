@@ -31,8 +31,6 @@ do
 done
 ```
 
-
-
 ## Step 3. Run
 
 ### Example uasge of scMTNI with prior network
