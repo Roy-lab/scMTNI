@@ -97,6 +97,8 @@ python fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regula
 ## Step 5. Network dynamics analysis
 ### 5.1 edge-based k-means clustering analysis:
 Apply k-means clustering on edge*cell confidence matrix to find subnetworks with different patterns of conservation.
+
+```cd Network_Analysis/
 matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
 ```
 
