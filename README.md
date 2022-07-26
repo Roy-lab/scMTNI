@@ -21,14 +21,8 @@ The scMTNI model has the following benefits:
 
 
 ## 2.2 generating the prior
-```python PrepareBamForLigerclusters_A2S.py $cell $clusterfile $outdir 
-clusterfile=ligerclusters.txt
-outdir=results/
-cellfile=celltype_order.txt
-for cellcluster in `cat $cellfile`
-do
-    python PrepareBamForLigerclusters_A2S.py $cellcluster $clusterfile $outdir
-done
+```
+bash genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
 
 ## Step 3. Run
