@@ -41,7 +41,7 @@ done
 ```
 
 ####################################################################################
-#  Step 4: connect TF motfis to genes
+##  Step 4: connect TF motfis to genes
 
 ```outdir3=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/data/scATACseq/${dataset}/macs2_networks/
 mkdir -p $outdir3
@@ -72,7 +72,7 @@ done
 ```
 
 ####################################################################################
-## Step 6: get top 0.2*tfs*genes edges:
+## Step 6: get top 0.2 * tfs * genes edges:
 ```
 Rscript --vanilla filtertop20Pedges.R $datadir $outdir4
 ```
