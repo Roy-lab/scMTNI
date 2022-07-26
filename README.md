@@ -17,8 +17,8 @@ The scMTNI model has the following benefits:
 
 
 ## Step 2. Prepare input files
-Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets 
 ## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
+Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets 
 
 ```
 Rscript --vanilla LIGER_scRNAseq_scATAC_FBS.R
@@ -29,6 +29,12 @@ check https://github.com/Roy-lab/scMTNI/blob/main/genPriorNetwork/readme.md for 
 ```
 bash genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
+
+## 2.3 Prepare all input files and config file for scMTNI
+indir=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/networkinference/data/liger_sqrt_ncell50_k8_filterhumanbc_FBS/
+filelist=${indir}/filelist.txt
+regfile=${indir}/regulators_amit_ravasi_kinase_phosphatase_plus_rupa_debbie_ali_mitoribogenes_rm.txt
+python Prepares_cMTNI_inputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50
 
 ## Step 3. Run
 
