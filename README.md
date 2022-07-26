@@ -17,8 +17,12 @@ The scMTNI model has the following benefits:
 
 
 ## Step 2. Prepare input files
+Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets 
 ## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
 
+```
+Rscript --vanilla LIGER_scRNAseq_scATAC_FBS.R
+```
 
 ## 2.2 generating the prior network using scATAC-seq data and motifs
 check https://github.com/Roy-lab/scMTNI/blob/main/genPriorNetwork/readme.md for details:
