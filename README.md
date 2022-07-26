@@ -96,12 +96,16 @@ python fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regula
 
 ## Step 5. Network dynamics analysis
 ### 5.1 edge-based k-means clustering analysis:
-Network_Analysis/StablityKmeansClustering.m
-
+Apply k-means clustering on edge*cell confidence matrix to find subnetworks with different patterns of conservation.
+matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
+```
 
 ### 5.2 topic model-based dynamic network analysis:
-Network_Analysis/LDA_analysis.m
+Apply LDA topic models to examine subnetwork level rewiring 
 
+```cd Network_Analysis/
+matlab -nodisplay -nosplash -nodesktop -r "LDA_analysis; quit()"
+```
 
 
 
