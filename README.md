@@ -31,7 +31,8 @@ bash genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
 
 ## 2.3 Prepare all input files and config file for scMTNI
-```indir=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/networkinference/data/liger_sqrt_ncell50_k8_filterhumanbc_FBS/
+```
+indir=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/networkinference/data/liger_sqrt_ncell50_k8_filterhumanbc_FBS/
 filelist=${indir}/filelist.txt
 regfile=${indir}/regulators_amit_ravasi_kinase_phosphatase_plus_rupa_debbie_ali_mitoribogenes_rm.txt
 python Prepares_cMTNI_inputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50
@@ -46,7 +47,9 @@ The above example will run scMTNI using all regulators and targets.
 
 Since scMTNI learns regulators on a per-target basis, the algorithm can easily be parallelized by running the algorithm for each target gene (or sets of genes) separately. For example, to run scMTNI using only OG59 (includes HOG1), we can replace the -n parameter with a file that contains only OG59 as such:
 
-```./scMTNI -f testdata/testdata_config.txt -x5 -v1 -l testdata/TFs_OGs.txt -n testdata/AllGenes0.txt -d testdata/celltype_tree_ancestor.txt -m testdata/testdata_ogids.txt -s testdata/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2```
+```
+./scMTNI -f testdata/testdata_config.txt -x5 -v1 -l testdata/TFs_OGs.txt -n testdata/AllGenes0.txt -d testdata/celltype_tree_ancestor.txt -m testdata/testdata_ogids.txt -s testdata/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2
+```
 
 
 ### Parameter Explanations
