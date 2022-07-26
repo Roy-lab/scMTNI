@@ -1,6 +1,6 @@
 # generate prior network using scATAC-seq data
 
-########################################################################################################################################
+####################################################################################
 ## Step 1: extract bam files
 ```prefix=liger_sqrt_ncell50_k8_filterhumanbc_FBS;dataset=FBS
 clusterfile=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/networkinference/liger/sqrt_atacsum100_rnacell50/k10/ligerclusters.txt
@@ -13,7 +13,7 @@ do
 done
 ```
 
-########################################################################################################################################
+####################################################################################
 ## Step 2: MACS2 peaks calling
 
 ```outdir=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/data/scATACseq/${dataset}/macs2_peaks/
@@ -25,7 +25,7 @@ do
 done
 ```
 
-########################################################################################################################################
+####################################################################################
 ## Step 3: Map peaks to genes 
 
 ```motifs=/mnt/dv/wid/projects5/Roy-singlecell/sridharanlab/scATACseq/from_Stefan/filtered_fragments/ESC_8/others/all_motifs_sorted_clean.txt
@@ -40,7 +40,7 @@ do
 done
 ```
 
-########################################################################################################################################
+####################################################################################
 #  Step 4: connect TF motfis to genes
 
 ```outdir3=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/data/scATACseq/${dataset}/macs2_networks/
