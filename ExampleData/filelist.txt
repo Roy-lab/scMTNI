@@ -1,0 +1,7 @@
+cluster4	cluster4.table
+cluster8	cluster8.table
+cluster1	cluster1.table
+cluster5	cluster5.table
+cluster7	cluster7.table
+cluster3	cluster3.table
+cluster2	cluster2.table
