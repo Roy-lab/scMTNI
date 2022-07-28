@@ -23,7 +23,7 @@ Preprint: https://biorxiv.org/cgi/content/short/2022.07.25.501350v1
 Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets, check LIGER (https://github.com/welch-lab/liger) for details. 
 
 ```
-Rscript --vanilla LIGER_scRNAseq_scATAC_FBS.R
+Rscript --vanilla Integration/LIGER_scRNAseq_scATAC_FBS.R
 ```
 
 ## 2.2 generating the prior network using scATAC-seq data and motifs
