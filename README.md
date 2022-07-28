@@ -94,8 +94,7 @@ bash Evaluation/aupr_wrapper_list_intersection.sh
 ### 4.2 Compute F-score for top k edges compared to gold standard datasets
 
 ```
-cellfile=example_data/celltype_order.txt
-indir=example_data/subsample/
+cellfile=ExampleData/celltype_order.txt
 python fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regulators $regulators --targets $targets --outdir $outpath
 ```
 
