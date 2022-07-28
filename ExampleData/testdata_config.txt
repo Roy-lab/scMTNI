@@ -1,7 +1,0 @@
-cluster4	cluster4.table	Results/cluster4	cluster4_allregulators.txt	cluster4_allGenes.txt	motif_empty.txt
-cluster8	cluster8.table	Results/cluster8	cluster8_allregulators.txt	cluster8_allGenes.txt	motif_empty.txt
-cluster1	cluster1.table	Results/cluster1	cluster1_allregulators.txt	cluster1_allGenes.txt	motif_empty.txt
-cluster5	cluster5.table	Results/cluster5	cluster5_allregulators.txt	cluster5_allGenes.txt	motif_empty.txt
-cluster7	cluster7.table	Results/cluster7	cluster7_allregulators.txt	cluster7_allGenes.txt	motif_empty.txt
-cluster3	cluster3.table	Results/cluster3	cluster3_allregulators.txt	cluster3_allGenes.txt	motif_empty.txt
-cluster2	cluster2.table	Results/cluster2	cluster2_allregulators.txt	cluster2_allGenes.txt	motif_empty.txt
