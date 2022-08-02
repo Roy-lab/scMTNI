@@ -15,7 +15,7 @@ Preprint: https://biorxiv.org/cgi/content/short/2022.07.25.501350v1
 ## Step 1. Install
 The code is compiled and tested for Linux environment. 
 GSL (GNU Scientific Library) is used to handle matrix-related and vector-related operations.
-It requires version of gcc-6.3.1. The typical install time on a "normal" desktop computer is a few minutes.
+It requires GCC version of gcc-6.3.1 and GNU extension with std=gnu++14 setting. The typical install time on a "normal" desktop computer is a few minutes.
 
 1) git clone https://github.com/Roy-lab/scMTNI.git 
 2) cd scMTNI/Code/ 
@@ -60,11 +60,15 @@ Since scMTNI learns regulators on a per-target basis, the algorithm can easily b
 Code/scMTNI -f ExampleData/testdata_config.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 ```
 
+### Example uasge of scMTNI without prior network
+```
+Code/scMTNI -f ExampleData/testdata_config_noprior.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 0
+```
 
 ### Parameter Explanations
 f : config file with six columns, rows for each cell. Each cell's row should have the following species-specific entries:
 - 1. Cell Name
-- 2. Prefix of .table files (cell.table)
+- 2. Location of expression data with file name (cell.table)
 - 3. Location to place outputs
 - 4. List of regulators to be used
 - 5. List of target genes to be used
