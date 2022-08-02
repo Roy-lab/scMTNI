@@ -13,8 +13,9 @@ Preprint: https://biorxiv.org/cgi/content/short/2022.07.25.501350v1
 ![alt text](figures_doc/scMTNI_v2.png)
 
 ## Step 1. Install
+Requires gcc-6.3.1
 1) git clone https://github.com/Roy-lab/scMTNI.git 
-2) cd scMTNI/code 
+2) cd scMTNI/Code/ 
 3) make
 
 
