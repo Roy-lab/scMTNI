@@ -42,17 +42,21 @@ python Prepares_cMTNI_inputfiles.py --filelist $filelist --regfile $regfile --in
 ```
 
 ## Step 3. Run
-
+The data for demo is in ExampleData/. The estimuated run time for the demo is 1 min.
 ### Example uasge of scMTNI with prior network
 ```
-Code/scMTNI -f ExampleData/testdata_config.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 ```
+cd ExampleData/
+../Code/scMTNI -f testdata_config.txt -x50 -v1 -l TFs_OGs.txt -n AllGenes.txt -d celltype_tree_ancestor.txt -m testdata_ogids.txt -s celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 
+```
 The above example will run scMTNI using all regulators and targets. 
+
 
 Since scMTNI learns regulators on a per-target basis, the algorithm can easily be parallelized by running the algorithm for each target gene (or sets of genes) separately. For example, to run scMTNI using only OG59 (includes HOG1), we can replace the -n parameter with a file that contains only OG59 as such:
 
 ```
-Code/scMTNI -f ExampleData/testdata_config.txt -x5 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2
+cd ExampleData/
+../Code/scMTNI -f testdata_config.txt -x50 -v1 -l TFs_OGs.txt -n AllGenes0.txt -d celltype_tree_ancestor.txt -m testdata_ogids.txt -s celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 ```
 
 
