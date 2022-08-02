@@ -328,7 +328,7 @@ MetaLearner::init_onefold()
             evMgr->setPreRandomizeSplitSeed(preRandSeed);
         }
         potMgr->setEvidenceManager(evMgr);*/
-        string tableFileName = datasetSuff+ ".table";
+        string tableFileName = datasetSuff; //+ ".table";
         readEvidenceTable(tableFileName);
         Error::ErrorCode eCode;
         if(splitGenes){
@@ -627,7 +627,7 @@ MetaLearner::start(int f)
         cout << "precomputeEmptyGraphPrior" << endl;
         initPrior=precomputeEmptyGraphPrior();
         initCondsetMap_Tree(speciesData->getRoot());
-        cout <<"condsetMap_Tree" << endl;
+        /*cout <<"condsetMap_Tree" << endl;
         for(int setIter=0;setIter<condsetMap_Tree.size();setIter++)
         {
             //INTINTMAP* cset=setIter->second;
@@ -638,7 +638,7 @@ MetaLearner::start(int f)
                 cout << " "<<speciesIDNameMap[cIter]<<"=" << cset[cIter];
             }
             cout << endl;
-        }
+        }*/
     }
     //precomputePerSpeciesPrior();
     //initEdgeSet();
@@ -842,10 +842,10 @@ MetaLearner::initEdgeSet()
 int
 MetaLearner::initEdgeSet_onefold()
 {
-    cout <<"initEdgeSet_onefold" << endl;
+    //cout <<"initEdgeSet_onefold" << endl;
     initCondsetMap_Nopool();
     initCondsetMap_Tree(speciesData->getRoot());
-    cout <<"condsetMap_Tree" << endl;
+    /*cout <<"condsetMap_Tree" << endl;
     for(int setIter=0;setIter<condsetMap_Tree.size();setIter++)
     {
         //INTINTMAP* cset=setIter->second;
@@ -856,7 +856,7 @@ MetaLearner::initEdgeSet_onefold()
             cout << " "<<cIter<<"=" << cset[cIter];
         }
         cout << endl;
-    }
+    }*/
     //for(map<string,SpeciesDataManager*>::iterator eIter=speciesDataSet.begin();eIter!=speciesDataSet.end();eIter++)
     for(int i=0;i<speciesDataSet.size();i++){
         SpeciesDataManager* spd=speciesDataSet[i];
@@ -1575,7 +1575,7 @@ MetaLearner::initCondsetMap_Nopool()
             {
                 (*cset)[dIter]=0;
             }
-            cout << " cell=" << dIter << " status=" <<(*cset)[dIter];
+            //cout << " cell=" << dIter << " status=" <<(*cset)[dIter];
         }
         //cout << " condsetMap[ind]=cset" << endl;
         //int currind=(int)pow(2.0,ind);
@@ -1730,7 +1730,7 @@ MetaLearner::collectMoves_Orthogroups(int currK)
                 //INTINTMAP* cset=getConditionSet(specID);
                 //getNewPLLScore(specID,*cset,reg,target,newScore,scoreImprovement,targetOGIter,regwt); //*cset not needed in CVN
                 getNewPLLScore(specID,reg,target,newScore,scoreImprovement,targetOGIter);
-                cout << "specID=" << specID <<" regi=" << regi <<  " regOGID=" << regOGIter  <<" targeti=" << targeti << " targetOGID=" <<targetOGIter << " TFname=" << tfgrpMembers[specID] <<" targetgene=" << targetgrpMembers[specID] << " regvaribleID=" << regID << " targetvaribleID=" <<targetID << " scoreImprovement=" << scoreImprovement << " newScore=" << newScore << endl;
+                //cout << "specID=" << specID <<" regi=" << regi <<  " regOGID=" << regOGIter  <<" targeti=" << targeti << " targetOGID=" <<targetOGIter << " TFname=" << tfgrpMembers[specID] <<" targetgene=" << targetgrpMembers[specID] << " regvaribleID=" << regID << " targetvaribleID=" <<targetID << " scoreImprovement=" << scoreImprovement << " newScore=" << newScore << endl;
                 if(scoreImprovement>0) //&& (scoreImprovement>maxScoreImprovement))
                 {
                     bestTarget=targetID;  //variable index
@@ -1799,10 +1799,10 @@ MetaLearner::collectMoves_Orthogroups(int currK)
                     bestImprovement=netImprovement;
                     csetid=setIter;
                 }
-                cout << "condition"<<setIter <<": ePrior=" << ePrior << " oldpriorScore=" << oldpriorScore << " netImprovementwPrior=" << netImprovement << endl;
+                //cout << "condition"<<setIter <<": ePrior=" << ePrior << " oldpriorScore=" << oldpriorScore << " netImprovementwPrior=" << netImprovement << endl;
                 speciesEdgeStat.clear();
             }
-            cout << "Best condition: "<<csetid << " bestImprovement=" << bestImprovement << endl;                
+            //cout << "Best condition: "<<csetid << " bestImprovement=" << bestImprovement << endl;                
             if(csetid==-1) //add nothing
             {
                 continue;
@@ -2129,7 +2129,7 @@ MetaLearner::getNewPLLScore(int cid, Variable* u, Variable* v, double& targetmbS
         return 0;
     }
     currPrior=currPrior+plus-minus;
-    cout << "cell=" << cid << " regID=" <<u->getID() <<" varID=" << v->getID() << " oldsparsityPrior=" << varNeighborhoodPrior[v->getID()] <<" sparsityPriorchanged=" << plus-minus << " currsparsityPrior=" << currPrior << " pll_d=" << pll_d << " newscore=" << pll_d+currPrior << " oldscore=" << dFactor->mbScore << endl;
+    //cout << "cell=" << cid << " regID=" <<u->getID() <<" varID=" << v->getID() << " oldsparsityPrior=" << varNeighborhoodPrior[v->getID()] <<" sparsityPriorchanged=" << plus-minus << " currsparsityPrior=" << currPrior << " pll_d=" << pll_d << " newscore=" << pll_d+currPrior << " oldscore=" << dFactor->mbScore << endl;
     pll_d=pll_d+currPrior;
     /* comment by shilu
      double priorScore=0;
@@ -2167,7 +2167,7 @@ MetaLearner::getNewPLLScore(int cid, Variable* u, Variable* v, double& targetmbS
         auto dIter=dFactor->mergedMB.find(u->getID());
         dFactor->mergedMB.erase(dIter);
     }
-    cout << "getPLLScore_Condition_Tracetrick likelihood=" <<pll_d << " dFactor->mbScore="<<dFactor->mbScore<<" in " <<speciesIDNameMap[cid] << " for target " << dFactor << " status=" <<status << " toDel_d=" << toDel_d<< endl;
+    //cout << "getPLLScore_Condition_Tracetrick likelihood=" <<pll_d << " dFactor->mbScore="<<dFactor->mbScore<<" in " <<speciesIDNameMap[cid] << " for target " << dFactor << " status=" <<status << " toDel_d=" << toDel_d<< endl;
 
     return 0;
 }

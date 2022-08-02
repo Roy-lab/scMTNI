@@ -204,12 +204,12 @@ SpeciesDistance::getEdgeStatusProb(vector<int>& edgeStatus)
         return binEdgeKeyProbMap[binkey];
     }
 
-    cout << "binkey=" << binkey << " [Edge status: ";
+    /*cout << "binkey=" << binkey << " [Edge status: ";
     for(int eIter=0;eIter<edgeStatus.size();eIter++)
     {
         cout <<edgeStatus[eIter] <<" ";
     }
-    cout << "] " ;
+    cout << "] " ;*/
     //Start with the root
     //changed 6/4 to test setting the prior probability of an edge in the root node = .2
     double score;
@@ -222,14 +222,14 @@ SpeciesDistance::getEdgeStatusProb(vector<int>& edgeStatus)
         score = proot;
     }
     edgeprior=score;
-    cout << "P(G)=P(" << root->name <<"=" <<edgeStatus[0] <<")[" << score <<"]";
+    //cout << "P(G)=P(" << root->name <<"=" <<edgeStatus[0] <<")[" << score <<"]";
     for(int i=0;i<root->children.size();i++)
     {
         double childrenScore=getSubTree(edgeStatus[0],root->children[i],edgeStatus);
         edgeprior=edgeprior*childrenScore;
-        cout << " * P(" << root->children[i]->name <<"=" <<edgeStatus[speciesNameIDMap[root->children[i]->name]] <<"|" << root->name <<"=" <<edgeStatus[0] << ")[" <<  childrenScore << "]";
+        //cout << " * P(" << root->children[i]->name <<"=" <<edgeStatus[speciesNameIDMap[root->children[i]->name]] <<"|" << root->name <<"=" <<edgeStatus[0] << ")[" <<  childrenScore << "]";
     }
-    cout << "=" << edgeprior << endl;
+    //cout << "=" << edgeprior << endl;
     binEdgeKeyProbMap[binkey]=edgeprior;
     return edgeprior;
 }
@@ -304,7 +304,7 @@ SpeciesDistance::getSubTree(bool parentEdge, Species* child, vector<int>& edgeSt
             // edgeStatus[child->name] status for current node, i.e. parent edge status for children
             double childrenScore=getSubTree(edgeStatus[speciesNameIDMap[child->name]],child->children[i],edgeStatus);
             score=score*childrenScore;
-            cout << " * P(" << child->children[i]->name <<"=" <<edgeStatus[speciesNameIDMap[child->children[i]->name]] <<"|" << child->name <<"=" <<edgeStatus[speciesNameIDMap[child->name]] << ")" ;
+            //cout << " * P(" << child->children[i]->name <<"=" <<edgeStatus[speciesNameIDMap[child->children[i]->name]] <<"|" << child->name <<"=" <<edgeStatus[speciesNameIDMap[child->name]] << ")" ;
         }
     }
     return score;
