@@ -1,0 +1,8 @@
+cluster8	ExampleData//cluster8.table	Results/cluster8	ExampleData//cluster8_allregulators.txt	ExampleData//cluster8_allGenes.txt	ExampleData//motif_empty.txt
+cluster3	ExampleData//cluster3.table	Results/cluster3	ExampleData//cluster3_allregulators.txt	ExampleData//cluster3_allGenes.txt	ExampleData//motif_empty.txt
+cluster2	ExampleData//cluster2.table	Results/cluster2	ExampleData//cluster2_allregulators.txt	ExampleData//cluster2_allGenes.txt	ExampleData//motif_empty.txt
+cluster1	ExampleData//cluster1.table	Results/cluster1	ExampleData//cluster1_allregulators.txt	ExampleData//cluster1_allGenes.txt	ExampleData//motif_empty.txt
+cluster6	ExampleData//cluster6.table	Results/cluster6	ExampleData//cluster6_allregulators.txt	ExampleData//cluster6_allGenes.txt	ExampleData//motif_empty.txt
+cluster9	ExampleData//cluster9.table	Results/cluster9	ExampleData//cluster9_allregulators.txt	ExampleData//cluster9_allGenes.txt	ExampleData//motif_empty.txt
+cluster10	ExampleData//cluster10.table	Results/cluster10	ExampleData//cluster10_allregulators.txt	ExampleData//cluster10_allGenes.txt	ExampleData//motif_empty.txt
+cluster7	ExampleData//cluster7.table	Results/cluster7	ExampleData//cluster7_allregulators.txt	ExampleData//cluster7_allGenes.txt	ExampleData//motif_empty.txt

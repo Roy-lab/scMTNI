@@ -1,4 +1,4 @@
-Gene_OGID	cluster8,cluster3,cluster2,cluster1,cluster6,cluster9,cluster10,cluster7
+Gene_OGID	NAME
 OG1_1	SLC35E2B_cluster8,SLC35E2B_cluster3,SLC35E2B_cluster2,SLC35E2B_cluster1,SLC35E2B_cluster6,SLC35E2B_cluster9,SLC35E2B_cluster10,SLC35E2B_cluster7
 OG2_1	SKI_cluster8,SKI_cluster3,SKI_cluster2,SKI_cluster1,SKI_cluster6,SKI_cluster9,SKI_cluster10,SKI_cluster7
 OG3_1	PARK7_cluster8,PARK7_cluster3,PARK7_cluster2,PARK7_cluster1,PARK7_cluster6,PARK7_cluster9,PARK7_cluster10,PARK7_cluster7
