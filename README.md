@@ -39,6 +39,7 @@ check https://github.com/Roy-lab/scMTNI/blob/master/Scripts/genPriorNetwork/read
 ```
 bash Scripts/genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
+The example output files are ExampleData/cluster*_network.txt 
 
 ## 2.3 Prepare all input files and config file for scMTNI
 ### First prepare filelist.txt
@@ -54,6 +55,7 @@ cluster7	ExampleData/cluster7.table
 ```
 
 ### Then prepare all the other input files based on ExampleData/filelist.txt and regulators list ExampleData/regulators.txt
+Prepare input files with prior network:
 ```
 indir=ExampleData/
 filelist=${indir}/filelist.txt
@@ -65,6 +67,7 @@ Prepare input files without prior network:
 ```
 python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50 --motifs 0
 ```
+
 ### Prepare cell lineage tree:
 The cell lineage tree file should have 5 columns describing the tree:
 - 1. Child cell
