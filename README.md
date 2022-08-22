@@ -39,6 +39,17 @@ bash genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
 
 ## 2.3 Prepare all input files and config file for scMTNI
+First prepare ExampleData/filelist.txt, the first column is the cell name, the second column is the location and filename of the expression data for each cell type. 
+```cluster8	ExampleData/cluster8.table
+cluster3	ExampleData/cluster3.table
+cluster2	ExampleData/cluster2.table
+cluster1	ExampleData/cluster1.table
+cluster6	ExampleData/cluster6.table
+cluster9	ExampleData/cluster9.table
+cluster10	ExampleData/cluster10.table
+cluster7	ExampleData/cluster7.table
+```
+
 ```
 indir=ExampleData/
 filelist=${indir}/filelist.txt
