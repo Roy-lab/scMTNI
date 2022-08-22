@@ -1,0 +1,8 @@
+cluster8	ExampleData/cluster8.table
+cluster3	ExampleData/cluster3.table
+cluster2	ExampleData/cluster2.table
+cluster1	ExampleData/cluster1.table
+cluster6	ExampleData/cluster6.table
+cluster9	ExampleData/cluster9.table
+cluster10	ExampleData/cluster10.table
+cluster7	ExampleData/cluster7.table

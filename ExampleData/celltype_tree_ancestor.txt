@@ -1,0 +1,7 @@
+cluster3	cluster8	0.2	0.2
+cluster2	cluster3	0.2	0.2
+cluster1	cluster2	0.2	0.2
+cluster6	cluster2	0.2	0.2
+cluster9	cluster6	0.2	0.2
+cluster10	cluster6	0.2	0.2
+cluster7	cluster10	0.2	0.2
