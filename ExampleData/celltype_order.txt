@@ -1,7 +1,0 @@
-cluster4
-cluster8
-cluster1
-cluster5
-cluster7
-cluster3
-cluster2

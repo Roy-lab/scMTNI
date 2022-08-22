@@ -1,7 +1,0 @@
-cluster4	ExampleData/cluster4.table	Results/cluster4	ExampleData/cluster4_allregulators.txt	ExampleData/cluster4_allGenes.txt	ExampleData/cluster4_network.txt
-cluster8	ExampleData/cluster8.table	Results/cluster8	ExampleData/cluster8_allregulators.txt	ExampleData/cluster8_allGenes.txt	ExampleData/cluster8_network.txt
-cluster1	ExampleData/cluster1.table	Results/cluster1	ExampleData/cluster1_allregulators.txt	ExampleData/cluster1_allGenes.txt	ExampleData/cluster1_network.txt
-cluster5	ExampleData/cluster5.table	Results/cluster5	ExampleData/cluster5_allregulators.txt	ExampleData/cluster5_allGenes.txt	ExampleData/cluster5_network.txt
-cluster7	ExampleData/cluster7.table	Results/cluster7	ExampleData/cluster7_allregulators.txt	ExampleData/cluster7_allGenes.txt	ExampleData/cluster7_network.txt
-cluster3	ExampleData/cluster3.table	Results/cluster3	ExampleData/cluster3_allregulators.txt	ExampleData/cluster3_allGenes.txt	ExampleData/cluster3_network.txt
-cluster2	ExampleData/cluster2.table	Results/cluster2	ExampleData/cluster2_allregulators.txt	ExampleData/cluster2_allGenes.txt	ExampleData/cluster2_network.txt
