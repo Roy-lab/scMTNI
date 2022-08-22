@@ -67,6 +67,7 @@ python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfil
 
 ## Step 3. Run
 The input data for demo is in ExampleData/. The expected output is in Results/. The estimuated run time for the demo is around 7 minute.
+The output network for each cell type is Results/cluster*/fold0/var_mb_pw_k50.txt
 
 ### Example uasge of scMTNI with prior network
 ```
