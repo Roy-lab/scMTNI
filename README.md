@@ -23,6 +23,8 @@ It requires GCC version of gcc-6.3.1 and GNU extension with std=gnu++14 setting.
 
 
 ## Step 2. Prepare input files
+The data for demo is in ExampleData/. The demo data contains 100 regulators and 300 genes.
+
 ## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
 Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets, check LIGER (https://github.com/welch-lab/liger) for details. 
 Input example files for scATAC-seq and scRNA-seq: ExampleData/LIGER/scATACseq.txt, ExampleData/LIGER/scRNAseq.txt
@@ -64,7 +66,7 @@ python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfil
 ```
 
 ## Step 3. Run
-The data for demo is in ExampleData/. The expected output is in Results/. The estimuated run time for the demo is around 1 minute.
+The input data for demo is in ExampleData/. The expected output is in Results/. The estimuated run time for the demo is around 7 minute.
 
 ### Example uasge of scMTNI with prior network
 ```
