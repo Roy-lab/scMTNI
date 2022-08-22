@@ -55,7 +55,7 @@ Then prepare all the other input files based on ExampleData/filelist.txt and reg
 indir=ExampleData/
 filelist=${indir}/filelist.txt
 regfile=${indir}/regulators.txt
-python Prepares_cMTNI_inputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50
+python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50
 ```
 
 ## Step 3. Run
