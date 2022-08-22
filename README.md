@@ -64,6 +64,23 @@ Prepare input files without prior network:
 ```
 python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50 --motifs 0
 ```
+### Prepare cell lineage tree:
+The cell lineage tree file should have 5 columns describing the tree:
+- 1. Child cell
+- 2. Parent cell
+- 3. Branch-specific gain rate (The probability that an edge is gained in a child given that the edge is absent in the predecessor cell)
+- 4. Branch-specific loss rate (The probability that an edge is lost in a child given that the edge is present in the predecessor cell)
+
+The example file for cell lineage tree ExampleData/celltype_tree_ancestor.txt
+
+```cluster3	cluster8	0.2	0.2
+cluster2	cluster3	0.2	0.2
+cluster1	cluster2	0.2	0.2
+cluster6	cluster2	0.2	0.2
+cluster9	cluster6	0.2	0.2
+cluster10	cluster6	0.2	0.2
+cluster7	cluster10	0.2	0.2
+```
 
 ## Step 3. Run
 The input data for demo is in ExampleData/. The expected output is in Results/. The estimuated run time for the demo is around 7 minute.
