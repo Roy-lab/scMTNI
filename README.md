@@ -30,14 +30,14 @@ Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets, check LIGER (htt
 Input example files for scATAC-seq and scRNA-seq: ExampleData/LIGER/scATACseq.txt, ExampleData/LIGER/scRNAseq.txt
 
 ```
-Rscript --vanilla Integration/LIGER_scRNAseq_scATAC.R
+Rscript --vanilla Scripts/Integration/LIGER_scRNAseq_scATAC.R
 ```
 The output files are in ExampleData/LIGER/. The liger cluster assginment is in ExampleData/LIGER/ligerclusters.txt
 
 ## 2.2 generating the prior network using scATAC-seq data and motifs
-check https://github.com/Roy-lab/scMTNI/blob/main/genPriorNetwork/readme.md for details:
+check https://github.com/Roy-lab/scMTNI/blob/main/Scripts/genPriorNetwork/readme.md for details:
 ```
-bash genPriorNetwork/genPriorNetwork_scMTNI.sh
+bash Scripts/genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
 
 ## 2.3 Prepare all input files and config file for scMTNI
@@ -121,14 +121,14 @@ s : A list of the cells present in the gene file (parameter m), in the order the
 ## Step 4. Evaluation
 ### 4.1 Compute AUPR:
 ```
-bash Evaluation/aupr_wrapper_list_intersection.sh
+bash Scripts/Evaluation/aupr_wrapper_list_intersection.sh
 ```
  
 ### 4.2 Compute F-score for top k edges compared to gold standard datasets
 
 ```
 cellfile=ExampleData/celltype_order.txt
-python fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regulators $regulators --targets $targets --outdir $outpath
+python Scripts/Evaluation/fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regulators $regulators --targets $targets --outdir $outpath
 ```
 
 ## Step 5. Network dynamics analysis
@@ -136,7 +136,7 @@ python fscore_filterPred.py  --inferred $predicted_net --gold ${GSfile} --regula
 Apply k-means clustering on edge*cell confidence matrix to find subnetworks with different patterns of conservation.
 
 ```
-cd Network_Analysis/
+cd Scripts/Network_Analysis/
 matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
 ```
 
@@ -144,7 +144,7 @@ matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
 Apply LDA topic models to examine subnetwork level rewiring 
 
 ```
-cd Network_Analysis/
+cd Scripts/Network_Analysis/
 matlab -nodisplay -nosplash -nodesktop -r "LDA_analysis; quit()"
 ```
 
