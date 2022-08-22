@@ -25,8 +25,7 @@ It requires GCC version of gcc-6.3.1 and GNU extension with std=gnu++14 setting.
 ## Step 2. Prepare input files
 ## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
 Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets, check LIGER (https://github.com/welch-lab/liger) for details. 
-Input example files for scATAC-seq: ExampleData/LIGER/scATACseq.txt
-Input example files for scRNA-seq: ExampleData/LIGER/scRNAseq.txt
+Input example files for scATAC-seq and scRNA-seq: ExampleData/LIGER/scATACseq.txt, ExampleData/LIGER/scRNAseq.txt
 
 ```
 Rscript --vanilla Integration/LIGER_scRNAseq_scATAC.R
