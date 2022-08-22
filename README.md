@@ -36,7 +36,7 @@ The output files are in ExampleData/LIGER/. The liger cluster assginment is in E
 
 ## 2.2 generating the prior network using scATAC-seq data and motifs
 Check https://github.com/Roy-lab/scMTNI/blob/master/Scripts/genPriorNetwork/readme.md for details. 
-Due to limitation of file size in Github, bam files are not currently not provided in ExampleData/. For demo, please directly use the output prior networks ExampleData/cluster*_network.txt 
+Due to limitation of file size in Github, bam files are currently not provided in ExampleData/. For demo, please directly use the output prior networks ExampleData/cluster*_network.txt 
 ```
 bash Scripts/genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
