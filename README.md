@@ -35,7 +35,7 @@ Rscript --vanilla Scripts/Integration/LIGER_scRNAseq_scATAC.R
 The output files are in ExampleData/LIGER/. The liger cluster assginment is in ExampleData/LIGER/ligerclusters.txt
 
 ## 2.2 generating the prior network using scATAC-seq data and motifs
-check https://github.com/Roy-lab/scMTNI/blob/main/Scripts/genPriorNetwork/readme.md for details:
+check https://github.com/Roy-lab/scMTNI/blob/master/Scripts/genPriorNetwork/readme.md for details:
 ```
 bash Scripts/genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
