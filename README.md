@@ -141,6 +141,26 @@ s : A list of the cells present in the gene file (parameter m), in the order the
 
 
 ## Step 4. Evaluation
+### 4.0 Generate consensus network for subsample results
+
+```
+# Input:
+# 1 [number of subsamples]
+# 2 [number of regulators]
+# 3 [cell file order file path]
+# 4 [scMTNI results directory path]
+# 5 [number of ogids]
+
+nseed=10
+maxReg=50
+cellfile=ExampleData/celltype_order.txt
+indir=Results_subsample/
+nogid=50
+
+bash Scripts/Postprocessing/Makeconsensusnetwork.sh $nseed $maxReg $cellfile $indir $nogid 
+
+```
+
 ### 4.1 Compute AUPR:
 ```
 bash Scripts/Evaluation/aupr_wrapper_list_intersection.sh
@@ -165,9 +185,34 @@ matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
 ### 5.2 topic model-based dynamic network analysis:
 Apply LDA topic models to examine subnetwork level rewiring 
 
+Prepare input matrix for subsample results
+```
+# Input:
+# 1 [cell file order file path]
+# 2 [scMTNI results directory path]
+# 3 [edge filter threshold; i.e. 'full', '\_cf0.8'] 
+Rscript Scripts/Network_Analysis/prepareNetmatrix.R ExampleData/celltype_order.txt Results_subsample/ \_cf0.8
+```
+
+Apply LDA
 ```
 cd Scripts/Network_Analysis/
 matlab -nodisplay -nosplash -nodesktop -r "LDA_analysis; quit()"
+```
+
+Obtain giant component of inferred networks
+```
+bash Scripts/Network_Analysis/getGiantComponents_H72noprior.sh
+```
+
+Obtain top regulators per component
+```
+bash Scripts/Network_Analysis/getTopRegPerComponent.sh
+```
+
+Make networks per topic: 
+```
+Rscript Scripts/Network_Analysis/makeAllGraphs.R
 ```
 
 
