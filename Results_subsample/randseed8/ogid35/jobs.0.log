@@ -1,0 +1,47 @@
+000 (49777.1955.000) 10/11 10:48:13 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1955.000) 10/11 18:01:43 Job executing on host: <128.105.68.47:9618?addrs=128.105.68.47-9618&alias=e2477.chtc.wisc.edu&noUDP&sock=startd_4901_41bf>
+...
+006 (49777.1955.000) 10/11 18:01:51 Image size of job updated: 105296
+	103  -  MemoryUsage of job (MB)
+	105296  -  ResidentSetSize of job (KB)
+...
+006 (49777.1955.000) 10/11 18:06:51 Image size of job updated: 721468
+	655  -  MemoryUsage of job (MB)
+	669956  -  ResidentSetSize of job (KB)
+...
+006 (49777.1955.000) 10/11 18:11:52 Image size of job updated: 1138756
+	1062  -  MemoryUsage of job (MB)
+	1087340  -  ResidentSetSize of job (KB)
+...
+006 (49777.1955.000) 10/11 18:16:53 Image size of job updated: 1979100
+	1926  -  MemoryUsage of job (MB)
+	1971212  -  ResidentSetSize of job (KB)
+...
+006 (49777.1955.000) 10/11 18:21:53 Image size of job updated: 2882104
+	2786  -  MemoryUsage of job (MB)
+	2852444  -  ResidentSetSize of job (KB)
+...
+006 (49777.1955.000) 10/11 18:26:53 Image size of job updated: 3707652
+	3589  -  MemoryUsage of job (MB)
+	3675068  -  ResidentSetSize of job (KB)
+...
+006 (49777.1955.000) 10/11 18:30:03 Image size of job updated: 4223024
+	3589  -  MemoryUsage of job (MB)
+	3675068  -  ResidentSetSize of job (KB)
+...
+005 (49777.1955.000) 10/11 18:30:03 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:27:47, Sys 0 00:00:09  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:27:47, Sys 0 00:00:09  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	171764  -  Run Bytes Sent By Job
+	316808288  -  Run Bytes Received By Job
+	171764  -  Total Bytes Sent By Job
+	316808288  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.98        1         1 
+	   Disk (KB)            : 325000      819200   1701260 
+	   Memory (MB)          :   3589       20480     20480 
+...

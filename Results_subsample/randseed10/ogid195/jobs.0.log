@@ -1,0 +1,47 @@
+000 (49777.2595.000) 10/11 10:48:14 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.2595.000) 10/11 19:31:32 Job executing on host: <128.105.68.41:9618?addrs=128.105.68.41-9618&alias=e2471.chtc.wisc.edu&noUDP&sock=startd_4919_9a73>
+...
+006 (49777.2595.000) 10/11 19:31:40 Image size of job updated: 104944
+	103  -  MemoryUsage of job (MB)
+	104944  -  ResidentSetSize of job (KB)
+...
+006 (49777.2595.000) 10/11 19:36:40 Image size of job updated: 717788
+	651  -  MemoryUsage of job (MB)
+	666244  -  ResidentSetSize of job (KB)
+...
+006 (49777.2595.000) 10/11 19:41:41 Image size of job updated: 760328
+	694  -  MemoryUsage of job (MB)
+	710596  -  ResidentSetSize of job (KB)
+...
+006 (49777.2595.000) 10/11 19:46:42 Image size of job updated: 967068
+	901  -  MemoryUsage of job (MB)
+	922192  -  ResidentSetSize of job (KB)
+...
+006 (49777.2595.000) 10/11 19:51:42 Image size of job updated: 1169444
+	1094  -  MemoryUsage of job (MB)
+	1120060  -  ResidentSetSize of job (KB)
+...
+006 (49777.2595.000) 10/11 19:56:43 Image size of job updated: 1409612
+	1326  -  MemoryUsage of job (MB)
+	1357660  -  ResidentSetSize of job (KB)
+...
+006 (49777.2595.000) 10/11 20:01:11 Image size of job updated: 1610284
+	1326  -  MemoryUsage of job (MB)
+	1357660  -  ResidentSetSize of job (KB)
+...
+005 (49777.2595.000) 10/11 20:01:12 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:29:21, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:29:21, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	173214  -  Run Bytes Sent By Job
+	316778592  -  Run Bytes Received By Job
+	173214  -  Total Bytes Sent By Job
+	316778592  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1709291 
+	   Memory (MB)          :   1326       20480     20480 
+...
