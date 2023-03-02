@@ -1,0 +1,11 @@
+HMGN2	cluster10	4
+HMGN2	cluster2	5
+HMGN2	cluster3	4
+HMGN2	cluster6	4
+HMGN2	cluster7	8
+HMGN2	cluster8	7
+ID2	cluster2	4
+ID2	cluster3	1
+ID2	cluster6	8
+ID2	cluster7	3
+ID2	cluster8	7

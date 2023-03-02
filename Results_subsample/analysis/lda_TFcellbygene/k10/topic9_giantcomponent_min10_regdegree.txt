@@ -1,0 +1,10 @@
+MIXL1	cluster2	7
+MIXL1	cluster7	4
+PLEK	cluster7	55
+PTMA	cluster10	3
+PTMA	cluster2	6
+PTMA	cluster3	5
+PTMA	cluster6	7
+PTMA	cluster7	7
+PTMA	cluster8	4
+PTMA	cluster9	1

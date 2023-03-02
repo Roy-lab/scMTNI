@@ -1,0 +1,2 @@
+CTH	cluster10	1
+CTH	cluster6	14

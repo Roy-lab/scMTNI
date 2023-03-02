@@ -1,6 +1,6 @@
 source("Scripts/Network_Analysis/genNetall_multi.R");
 
-giantcomponent="Results_subsample/analysis/lda_TFcellbygene/network_cf0.8/k10/"
+giantcomponent="Results_subsample/analysis/lda_TFcellbygene/k10/"
 k=10
 filter="_cf0.8"
 buenrostro_cellorder=c("cluster8", "cluster3","cluster2","cluster1","cluster6","cluster9","cluster10", "cluster7")

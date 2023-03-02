@@ -161,6 +161,11 @@ bash Scripts/Postprocessing/Makeconsensusnetwork.sh $nseed $maxReg $cellfile $in
 
 ```
 
+Apply 80% edge confidence limit to consensus edges
+```
+bash Scripts/Postprocessing/genConsensus_cf0.8.sh
+```
+
 ### 4.1 Compute AUPR:
 ```
 bash Scripts/Evaluation/aupr_wrapper_list_intersection.sh
@@ -191,13 +196,12 @@ Prepare input matrix for subsample results
 # 1 [cell file order file path]
 # 2 [scMTNI results directory path]
 # 3 [edge filter threshold; i.e. 'full', '\_cf0.8'] 
-Rscript Scripts/Network_Analysis/prepareNetmatrix.R ExampleData/celltype_order.txt Results_subsample/ \_cf0.8
+Rscript Scripts/Network_Analysis/prepareNetmatrix.R ExampleData/celltype_order.txt Results_subsample/analysis/cluster1 \_cf0.8
 ```
 
-Apply LDA
+Apply LDA to subsample results
 ```
-cd Scripts/Network_Analysis/
-matlab -nodisplay -nosplash -nodesktop -r "LDA_analysis; quit()"
+matlab -nodisplay -nosplash -nodesktop -r "addpath('Scripts/Network_Analysis'); LDA_analysis('Results_subsample/analysis/lda_TFcellbygene/','ExampleData/celltype_order.txt',10,'_filteredlowexpression','_cf0.8','testdata',0); quit()"
 ```
 
 Obtain giant component of inferred networks
@@ -210,7 +214,7 @@ Obtain top regulators per component
 bash Scripts/Network_Analysis/getTopRegPerComponent.sh
 ```
 
-Make networks per topic: 
+Make network figures per topic: 
 ```
 Rscript Scripts/Network_Analysis/makeAllGraphs.R
 ```
