@@ -1,0 +1,45 @@
+000 (49777.1019.000) 10/11 10:48:10 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1019.000) 10/11 15:31:12 Job executing on host: <128.105.68.16:9618?addrs=128.105.68.16-9618&alias=coba2000.chtc.wisc.edu&noUDP&sock=startd_7305_336c>
+...
+006 (49777.1019.000) 10/11 15:31:20 Image size of job updated: 156784
+	104  -  MemoryUsage of job (MB)
+	105560  -  ResidentSetSize of job (KB)
+...
+006 (49777.1019.000) 10/11 15:36:20 Image size of job updated: 722560
+	656  -  MemoryUsage of job (MB)
+	671296  -  ResidentSetSize of job (KB)
+...
+006 (49777.1019.000) 10/11 15:41:20 Image size of job updated: 998408
+	931  -  MemoryUsage of job (MB)
+	953260  -  ResidentSetSize of job (KB)
+...
+006 (49777.1019.000) 10/11 15:46:21 Image size of job updated: 1434672
+	1352  -  MemoryUsage of job (MB)
+	1383816  -  ResidentSetSize of job (KB)
+...
+006 (49777.1019.000) 10/11 15:51:21 Image size of job updated: 1860160
+	1782  -  MemoryUsage of job (MB)
+	1824076  -  ResidentSetSize of job (KB)
+...
+006 (49777.1019.000) 10/11 15:53:33 Image size of job updated: 2058364
+	1782  -  MemoryUsage of job (MB)
+	1824100  -  ResidentSetSize of job (KB)
+...
+005 (49777.1019.000) 10/11 15:53:33 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:22:10, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:22:10, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	172169  -  Run Bytes Sent By Job
+	316773216  -  Run Bytes Received By Job
+	172169  -  Total Bytes Sent By Job
+	316773216  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  44742796 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   1782       20480     21341 
+...

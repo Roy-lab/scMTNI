@@ -1,0 +1,41 @@
+000 (49777.807.000) 10/11 10:48:09 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.807.000) 10/11 14:46:20 Job executing on host: <128.105.68.23:9618?addrs=128.105.68.23-9618&alias=gpulab2004.chtc.wisc.edu&noUDP&sock=startd_62541_80a6>
+...
+006 (49777.807.000) 10/11 14:46:28 Image size of job updated: 156300
+	103  -  MemoryUsage of job (MB)
+	105132  -  ResidentSetSize of job (KB)
+...
+006 (49777.807.000) 10/11 14:51:28 Image size of job updated: 718976
+	653  -  MemoryUsage of job (MB)
+	667856  -  ResidentSetSize of job (KB)
+...
+006 (49777.807.000) 10/11 14:56:29 Image size of job updated: 1136364
+	1060  -  MemoryUsage of job (MB)
+	1085372  -  ResidentSetSize of job (KB)
+...
+006 (49777.807.000) 10/11 15:01:30 Image size of job updated: 1572172
+	1486  -  MemoryUsage of job (MB)
+	1521032  -  ResidentSetSize of job (KB)
+...
+006 (49777.807.000) 10/11 15:06:30 Image size of job updated: 2656772
+	2594  -  MemoryUsage of job (MB)
+	2656104  -  ResidentSetSize of job (KB)
+...
+005 (49777.807.000) 10/11 15:06:31 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:20:06, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:20:06, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	169131  -  Run Bytes Sent By Job
+	316889536  -  Run Bytes Received By Job
+	169131  -  Total Bytes Sent By Job
+	316889536  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  18192444 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   2594       20480     21341 
+...

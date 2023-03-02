@@ -1,0 +1,47 @@
+000 (49777.261.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.261.000) 10/11 12:47:04 Job executing on host: <128.105.68.49:9618?addrs=128.105.68.49-9618&alias=e2479.chtc.wisc.edu&noUDP&sock=startd_4870_fe4f>
+...
+006 (49777.261.000) 10/11 12:47:12 Image size of job updated: 156572
+	103  -  MemoryUsage of job (MB)
+	105156  -  ResidentSetSize of job (KB)
+...
+006 (49777.261.000) 10/11 12:52:12 Image size of job updated: 720588
+	654  -  MemoryUsage of job (MB)
+	669016  -  ResidentSetSize of job (KB)
+...
+006 (49777.261.000) 10/11 12:57:12 Image size of job updated: 732084
+	668  -  MemoryUsage of job (MB)
+	683800  -  ResidentSetSize of job (KB)
+...
+006 (49777.261.000) 10/11 13:02:13 Image size of job updated: 845820
+	779  -  MemoryUsage of job (MB)
+	797188  -  ResidentSetSize of job (KB)
+...
+006 (49777.261.000) 10/11 13:07:13 Image size of job updated: 956876
+	885  -  MemoryUsage of job (MB)
+	905560  -  ResidentSetSize of job (KB)
+...
+006 (49777.261.000) 10/11 13:12:13 Image size of job updated: 1057268
+	986  -  MemoryUsage of job (MB)
+	1008784  -  ResidentSetSize of job (KB)
+...
+006 (49777.261.000) 10/11 13:14:54 Image size of job updated: 1139340
+	986  -  MemoryUsage of job (MB)
+	1008784  -  ResidentSetSize of job (KB)
+...
+005 (49777.261.000) 10/11 13:14:54 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:27:41, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:27:41, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	173889  -  Run Bytes Sent By Job
+	316905856  -  Run Bytes Received By Job
+	173889  -  Total Bytes Sent By Job
+	316905856  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1696518 
+	   Memory (MB)          :    986       20480     20480 
+...

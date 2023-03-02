@@ -1,0 +1,53 @@
+000 (49777.952.000) 10/11 10:48:10 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.952.000) 10/11 15:17:12 Job executing on host: <128.105.245.10:9618?addrs=128.105.245.10-9618&alias=gpu2000.chtc.wisc.edu&noUDP&sock=startd_6299_2b25>
+...
+006 (49777.952.000) 10/11 15:17:20 Image size of job updated: 105540
+	104  -  MemoryUsage of job (MB)
+	105540  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:22:20 Image size of job updated: 795104
+	742  -  MemoryUsage of job (MB)
+	759648  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:27:21 Image size of job updated: 1263728
+	1185  -  MemoryUsage of job (MB)
+	1213380  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:32:21 Image size of job updated: 1657136
+	1569  -  MemoryUsage of job (MB)
+	1606148  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:37:21 Image size of job updated: 1984168
+	1892  -  MemoryUsage of job (MB)
+	1936756  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:42:22 Image size of job updated: 2274332
+	2183  -  MemoryUsage of job (MB)
+	2235280  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:47:23 Image size of job updated: 2564452
+	2463  -  MemoryUsage of job (MB)
+	2521376  -  ResidentSetSize of job (KB)
+...
+006 (49777.952.000) 10/11 15:48:56 Image size of job updated: 2647960
+	2463  -  MemoryUsage of job (MB)
+	2521376  -  ResidentSetSize of job (KB)
+...
+005 (49777.952.000) 10/11 15:48:56 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:31:29, Sys 0 00:00:09  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:31:29, Sys 0 00:00:09  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	166380  -  Run Bytes Sent By Job
+	316889568  -  Run Bytes Received By Job
+	166380  -  Total Bytes Sent By Job
+	316889568  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200  18119584 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   2463       20480     25710 
+...

@@ -1,0 +1,66 @@
+000 (49777.675.000) 10/11 10:48:09 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.675.000) 10/11 14:32:08 Job executing on host: <144.92.142.174:9618?addrs=144.92.142.174-9618&noUDP&sock=22187_03d9_3>
+...
+006 (49777.675.000) 10/11 14:32:17 Image size of job updated: 105336
+	103  -  MemoryUsage of job (MB)
+	105336  -  ResidentSetSize of job (KB)
+...
+006 (49777.675.000) 10/11 14:37:18 Image size of job updated: 731652
+	652  -  MemoryUsage of job (MB)
+	666832  -  ResidentSetSize of job (KB)
+...
+006 (49777.675.000) 10/11 14:42:19 Image size of job updated: 812684
+	740  -  MemoryUsage of job (MB)
+	757324  -  ResidentSetSize of job (KB)
+...
+006 (49777.675.000) 10/11 14:47:19 Image size of job updated: 1045624
+	970  -  MemoryUsage of job (MB)
+	992892  -  ResidentSetSize of job (KB)
+...
+006 (49777.675.000) 10/11 14:52:13 Image size of job updated: 1332828
+	1104  -  MemoryUsage of job (MB)
+	1130380  -  ResidentSetSize of job (KB)
+...
+004 (49777.675.000) 10/11 14:52:13 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:20:02, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	316723520  -  Run Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200    971116 
+	   Memory (MB)          :   1104       20480     20480 
+...
+001 (49777.675.000) 10/11 14:52:26 Job executing on host: <128.105.245.10:9618?addrs=128.105.245.10-9618&alias=gpu2000.chtc.wisc.edu&noUDP&sock=startd_6299_2b25>
+...
+006 (49777.675.000) 10/11 15:17:36 Image size of job updated: 1500000
+	1223  -  MemoryUsage of job (MB)
+	1251332  -  ResidentSetSize of job (KB)
+...
+006 (49777.675.000) 10/11 15:22:38 Image size of job updated: 1530448
+	1449  -  MemoryUsage of job (MB)
+	1483168  -  ResidentSetSize of job (KB)
+...
+006 (49777.675.000) 10/11 15:24:14 Image size of job updated: 1604552
+	1449  -  MemoryUsage of job (MB)
+	1483168  -  ResidentSetSize of job (KB)
+...
+005 (49777.675.000) 10/11 15:24:14 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:31:32, Sys 0 00:00:09  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:51:34, Sys 0 00:00:11  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	172109  -  Run Bytes Sent By Job
+	316723520  -  Run Bytes Received By Job
+	172109  -  Total Bytes Sent By Job
+	633447040  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200  18119584 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   1449       20480     25710 
+...

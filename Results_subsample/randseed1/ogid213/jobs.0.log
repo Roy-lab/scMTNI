@@ -1,0 +1,45 @@
+000 (49777.453.000) 10/11 10:48:09 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.453.000) 10/11 13:55:37 Job executing on host: <128.105.68.16:9618?addrs=128.105.68.16-9618&alias=coba2000.chtc.wisc.edu&noUDP&sock=startd_7305_336c>
+...
+006 (49777.453.000) 10/11 13:55:45 Image size of job updated: 105276
+	103  -  MemoryUsage of job (MB)
+	105272  -  ResidentSetSize of job (KB)
+...
+006 (49777.453.000) 10/11 14:00:45 Image size of job updated: 720412
+	654  -  MemoryUsage of job (MB)
+	669144  -  ResidentSetSize of job (KB)
+...
+006 (49777.453.000) 10/11 14:05:46 Image size of job updated: 860016
+	801  -  MemoryUsage of job (MB)
+	819920  -  ResidentSetSize of job (KB)
+...
+006 (49777.453.000) 10/11 14:10:47 Image size of job updated: 1237680
+	1160  -  MemoryUsage of job (MB)
+	1187256  -  ResidentSetSize of job (KB)
+...
+006 (49777.453.000) 10/11 14:15:47 Image size of job updated: 1717176
+	1655  -  MemoryUsage of job (MB)
+	1693788  -  ResidentSetSize of job (KB)
+...
+006 (49777.453.000) 10/11 14:19:42 Image size of job updated: 2232460
+	1655  -  MemoryUsage of job (MB)
+	1693788  -  ResidentSetSize of job (KB)
+...
+005 (49777.453.000) 10/11 14:19:42 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:23:53, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:23:53, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	169986  -  Run Bytes Sent By Job
+	316905888  -  Run Bytes Received By Job
+	169986  -  Total Bytes Sent By Job
+	316905888  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  44742796 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   1655       20480     21341 
+...

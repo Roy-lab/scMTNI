@@ -1,0 +1,53 @@
+000 (49777.348.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.348.000) 10/11 13:21:22 Job executing on host: <128.105.245.10:9618?addrs=128.105.245.10-9618&alias=gpu2000.chtc.wisc.edu&noUDP&sock=startd_6299_2b25>
+...
+006 (49777.348.000) 10/11 13:21:31 Image size of job updated: 156524
+	103  -  MemoryUsage of job (MB)
+	105264  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:26:32 Image size of job updated: 720332
+	654  -  MemoryUsage of job (MB)
+	669028  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:31:32 Image size of job updated: 789528
+	726  -  MemoryUsage of job (MB)
+	742564  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:36:33 Image size of job updated: 1049600
+	989  -  MemoryUsage of job (MB)
+	1011972  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:41:34 Image size of job updated: 1609724
+	1527  -  MemoryUsage of job (MB)
+	1562824  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:46:34 Image size of job updated: 2302752
+	2204  -  MemoryUsage of job (MB)
+	2256852  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:51:34 Image size of job updated: 2951068
+	2882  -  MemoryUsage of job (MB)
+	2951068  -  ResidentSetSize of job (KB)
+...
+006 (49777.348.000) 10/11 13:53:19 Image size of job updated: 3182596
+	2882  -  MemoryUsage of job (MB)
+	2951068  -  ResidentSetSize of job (KB)
+...
+005 (49777.348.000) 10/11 13:53:19 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:31:42, Sys 0 00:00:09  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:31:42, Sys 0 00:00:09  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	172790  -  Run Bytes Sent By Job
+	316905856  -  Run Bytes Received By Job
+	172790  -  Total Bytes Sent By Job
+	316905856  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  18119584 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   2882       20480     25710 
+...
