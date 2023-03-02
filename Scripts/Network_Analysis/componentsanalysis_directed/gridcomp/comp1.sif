@@ -1,0 +1,16 @@
+AF251705	Fcer1g
+AF251705	Hcst
+AF251705	Tyrobp
+Cd200r1	Tyrobp
+Fcer1g	AF251705
+H60A_NOT_IN_MAP	Klrk1
+Hcst	AF251705
+Hcst	Klrk1
+Klrk1	H60A_NOT_IN_MAP
+Klrk1	Hcst
+Klrk1	Tyrobp
+Trem3	Tyrobp
+Tyrobp	AF251705
+Tyrobp	Cd200r1
+Tyrobp	Klrk1
+Tyrobp	Trem3
