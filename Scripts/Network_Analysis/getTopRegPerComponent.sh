@@ -1,4 +1,4 @@
-DIR=Results_subsample/analysis/lda_TFcellbygene/network_cf0.8/k10
+DIR=Results_subsample/analysis/lda_TFcellbygene/k10
 
 T=1
 while [ $T -le 10 ]

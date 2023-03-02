@@ -1,0 +1,47 @@
+000 (49777.752.000) 10/11 10:48:09 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.752.000) 10/11 14:40:12 Job executing on host: <128.105.68.47:9618?addrs=128.105.68.47-9618&alias=e2477.chtc.wisc.edu&noUDP&sock=startd_4901_41bf>
+...
+006 (49777.752.000) 10/11 14:40:20 Image size of job updated: 105432
+	103  -  MemoryUsage of job (MB)
+	105432  -  ResidentSetSize of job (KB)
+...
+006 (49777.752.000) 10/11 14:45:20 Image size of job updated: 722852
+	656  -  MemoryUsage of job (MB)
+	671208  -  ResidentSetSize of job (KB)
+...
+006 (49777.752.000) 10/11 14:50:21 Image size of job updated: 834976
+	769  -  MemoryUsage of job (MB)
+	787104  -  ResidentSetSize of job (KB)
+...
+006 (49777.752.000) 10/11 14:55:21 Image size of job updated: 1228956
+	1154  -  MemoryUsage of job (MB)
+	1181124  -  ResidentSetSize of job (KB)
+...
+006 (49777.752.000) 10/11 15:00:21 Image size of job updated: 1672816
+	1583  -  MemoryUsage of job (MB)
+	1620816  -  ResidentSetSize of job (KB)
+...
+006 (49777.752.000) 10/11 15:05:22 Image size of job updated: 2138896
+	2060  -  MemoryUsage of job (MB)
+	2109084  -  ResidentSetSize of job (KB)
+...
+006 (49777.752.000) 10/11 15:07:38 Image size of job updated: 2347984
+	2060  -  MemoryUsage of job (MB)
+	2109084  -  ResidentSetSize of job (KB)
+...
+005 (49777.752.000) 10/11 15:07:38 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:27:18, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:27:18, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	172206  -  Run Bytes Sent By Job
+	316889536  -  Run Bytes Received By Job
+	172206  -  Total Bytes Sent By Job
+	316889536  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1701260 
+	   Memory (MB)          :   2060       20480     20480 
+...

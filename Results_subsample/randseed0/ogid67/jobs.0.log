@@ -1,0 +1,47 @@
+000 (49777.067.000) 10/11 10:48:07 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.067.000) 10/11 11:16:48 Job executing on host: <128.105.68.49:9618?addrs=128.105.68.49-9618&alias=e2479.chtc.wisc.edu&noUDP&sock=startd_4870_fe4f>
+...
+006 (49777.067.000) 10/11 11:16:56 Image size of job updated: 156952
+	104  -  MemoryUsage of job (MB)
+	105672  -  ResidentSetSize of job (KB)
+...
+006 (49777.067.000) 10/11 11:21:56 Image size of job updated: 724908
+	659  -  MemoryUsage of job (MB)
+	673904  -  ResidentSetSize of job (KB)
+...
+006 (49777.067.000) 10/11 11:26:57 Image size of job updated: 1042980
+	970  -  MemoryUsage of job (MB)
+	992420  -  ResidentSetSize of job (KB)
+...
+006 (49777.067.000) 10/11 11:31:58 Image size of job updated: 1374852
+	1305  -  MemoryUsage of job (MB)
+	1336016  -  ResidentSetSize of job (KB)
+...
+006 (49777.067.000) 10/11 11:36:58 Image size of job updated: 1723372
+	1638  -  MemoryUsage of job (MB)
+	1676312  -  ResidentSetSize of job (KB)
+...
+006 (49777.067.000) 10/11 11:41:59 Image size of job updated: 2067324
+	1973  -  MemoryUsage of job (MB)
+	2019512  -  ResidentSetSize of job (KB)
+...
+006 (49777.067.000) 10/11 11:43:51 Image size of job updated: 2185592
+	1973  -  MemoryUsage of job (MB)
+	2019512  -  ResidentSetSize of job (KB)
+...
+005 (49777.067.000) 10/11 11:43:51 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:26:54, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:26:54, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	172375  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	172375  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1696518 
+	   Memory (MB)          :   1973       20480     20480 
+...

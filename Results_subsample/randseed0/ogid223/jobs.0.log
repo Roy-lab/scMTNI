@@ -1,0 +1,51 @@
+000 (49777.223.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.223.000) 10/11 12:21:01 Job executing on host: <128.105.68.53:9618?addrs=128.105.68.53-9618&alias=e2483.chtc.wisc.edu&noUDP&sock=startd_4911_1db1>
+...
+006 (49777.223.000) 10/11 12:21:10 Image size of job updated: 104988
+	103  -  MemoryUsage of job (MB)
+	104988  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:26:10 Image size of job updated: 719868
+	653  -  MemoryUsage of job (MB)
+	668516  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:31:10 Image size of job updated: 806620
+	739  -  MemoryUsage of job (MB)
+	756692  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:36:11 Image size of job updated: 1004804
+	933  -  MemoryUsage of job (MB)
+	954692  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:41:12 Image size of job updated: 1222016
+	1150  -  MemoryUsage of job (MB)
+	1176848  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:46:12 Image size of job updated: 1682992
+	1603  -  MemoryUsage of job (MB)
+	1640960  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:51:13 Image size of job updated: 2223584
+	2165  -  MemoryUsage of job (MB)
+	2216084  -  ResidentSetSize of job (KB)
+...
+006 (49777.223.000) 10/11 12:51:33 Image size of job updated: 2306976
+	2165  -  MemoryUsage of job (MB)
+	2216084  -  ResidentSetSize of job (KB)
+...
+005 (49777.223.000) 10/11 12:51:34 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:29:07, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:29:07, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	172480  -  Run Bytes Sent By Job
+	316855776  -  Run Bytes Received By Job
+	172480  -  Total Bytes Sent By Job
+	316855776  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200   1709928 
+	   Memory (MB)          :   2165       20480     20480 
+...

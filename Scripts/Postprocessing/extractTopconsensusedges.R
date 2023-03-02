@@ -20,14 +20,14 @@ n=as.numeric(args[2])
 outpath=args[3]
     
 
-cellfile=("/mnt/dv/wid/projects7/Roy-singlecell2/ashtonlab/results/H72_de/scmtni/merlin/input/celltype_order.txt")
+cellfile=("ExampleData/celltype_order.txt")
 cellsf=read.table(cellfile,stringsAsFactors = F)
 cells=cellsf$V1
 
 data=NULL
 for(cell in cells){
   print(cell)
-  path=paste0("/mnt/dv/wid/projects7/Roy-singlecell2/ashtonlab/results/H72_de/scmtni/merlin/subsample/analysis/")
+  path=paste0("Results_subsample/analysis/")
   d=fread(paste0(path,cell,"/consensus_edges.txt"))
   d=d[order(d$V3,decreasing = T),]
   if(cf=="top"){

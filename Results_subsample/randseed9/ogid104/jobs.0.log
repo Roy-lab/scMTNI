@@ -1,0 +1,47 @@
+000 (49777.2264.000) 10/11 10:48:14 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.2264.000) 10/11 18:49:35 Job executing on host: <128.105.68.46:9618?addrs=128.105.68.46-9618&alias=e2476.chtc.wisc.edu&noUDP&sock=startd_4927_1735>
+...
+006 (49777.2264.000) 10/11 18:49:44 Image size of job updated: 156596
+	103  -  MemoryUsage of job (MB)
+	105388  -  ResidentSetSize of job (KB)
+...
+006 (49777.2264.000) 10/11 18:54:44 Image size of job updated: 793852
+	725  -  MemoryUsage of job (MB)
+	741876  -  ResidentSetSize of job (KB)
+...
+006 (49777.2264.000) 10/11 18:59:44 Image size of job updated: 1092012
+	1017  -  MemoryUsage of job (MB)
+	1040988  -  ResidentSetSize of job (KB)
+...
+006 (49777.2264.000) 10/11 19:04:45 Image size of job updated: 1403472
+	1325  -  MemoryUsage of job (MB)
+	1356204  -  ResidentSetSize of job (KB)
+...
+006 (49777.2264.000) 10/11 19:09:45 Image size of job updated: 1713460
+	1634  -  MemoryUsage of job (MB)
+	1672344  -  ResidentSetSize of job (KB)
+...
+006 (49777.2264.000) 10/11 19:14:45 Image size of job updated: 2053636
+	1958  -  MemoryUsage of job (MB)
+	2004720  -  ResidentSetSize of job (KB)
+...
+006 (49777.2264.000) 10/11 19:15:30 Image size of job updated: 2105696
+	1958  -  MemoryUsage of job (MB)
+	2004852  -  ResidentSetSize of job (KB)
+...
+005 (49777.2264.000) 10/11 19:15:30 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:25:48, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:25:48, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	171047  -  Run Bytes Sent By Job
+	316843968  -  Run Bytes Received By Job
+	171047  -  Total Bytes Sent By Job
+	316843968  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1703790 
+	   Memory (MB)          :   1958       20480     20480 
+...

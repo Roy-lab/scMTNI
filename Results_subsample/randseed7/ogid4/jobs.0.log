@@ -1,0 +1,92 @@
+000 (49777.1684.000) 10/11 10:48:12 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1684.000) 10/11 17:19:49 Job executing on host: <144.92.142.182:9618?addrs=144.92.142.182-9618&noUDP&sock=15205_f19b_3>
+...
+006 (49777.1684.000) 10/11 17:19:58 Image size of job updated: 105596
+	104  -  MemoryUsage of job (MB)
+	105596  -  ResidentSetSize of job (KB)
+...
+006 (49777.1684.000) 10/11 17:20:10 Image size of job updated: 229736
+	104  -  MemoryUsage of job (MB)
+	105596  -  ResidentSetSize of job (KB)
+...
+004 (49777.1684.000) 10/11 17:20:10 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:20, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	316887264  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :   325000   819200   1428816 
+	   Memory (MB)          :      104    20480     20480 
+...
+001 (49777.1684.000) 10/11 17:20:33 Job executing on host: <144.92.142.182:9618?addrs=144.92.142.182-9618&noUDP&sock=15205_f19b_3>
+...
+004 (49777.1684.000) 10/11 17:20:54 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:20, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	316887264  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :   325000   819200   1428816 
+	   Memory (MB)          :      123    20480     20480 
+...
+001 (49777.1684.000) 10/11 17:21:16 Job executing on host: <144.92.142.191:9618?addrs=144.92.142.191-9618&noUDP&sock=12603_302e_3>
+...
+006 (49777.1684.000) 10/11 17:22:02 Image size of job updated: 498476
+	159  -  MemoryUsage of job (MB)
+	162484  -  ResidentSetSize of job (KB)
+...
+004 (49777.1684.000) 10/11 17:22:02 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:45, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	316887264  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :   325000   819200   1428813 
+	   Memory (MB)          :      159    20480     20480 
+...
+001 (49777.1684.000) 10/11 17:22:32 Job executing on host: <128.105.68.23:9618?addrs=128.105.68.23-9618&alias=gpulab2004.chtc.wisc.edu&noUDP&sock=startd_62541_80a6>
+...
+006 (49777.1684.000) 10/11 17:27:42 Image size of job updated: 720012
+	654  -  MemoryUsage of job (MB)
+	668736  -  ResidentSetSize of job (KB)
+...
+006 (49777.1684.000) 10/11 17:32:42 Image size of job updated: 850312
+	790  -  MemoryUsage of job (MB)
+	808084  -  ResidentSetSize of job (KB)
+...
+006 (49777.1684.000) 10/11 17:37:42 Image size of job updated: 1120624
+	1045  -  MemoryUsage of job (MB)
+	1069628  -  ResidentSetSize of job (KB)
+...
+006 (49777.1684.000) 10/11 17:42:43 Image size of job updated: 1450208
+	1369  -  MemoryUsage of job (MB)
+	1401168  -  ResidentSetSize of job (KB)
+...
+006 (49777.1684.000) 10/11 17:43:50 Image size of job updated: 1533528
+	1369  -  MemoryUsage of job (MB)
+	1401168  -  ResidentSetSize of job (KB)
+...
+005 (49777.1684.000) 10/11 17:43:50 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:21:13, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:22:38, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	171743  -  Run Bytes Sent By Job
+	316887264  -  Run Bytes Received By Job
+	171743  -  Total Bytes Sent By Job
+	1267549056  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  18192444 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   1369       20480     21341 
+...

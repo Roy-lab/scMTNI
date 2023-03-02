@@ -1,0 +1,49 @@
+000 (49777.201.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.201.000) 10/11 12:15:46 Job executing on host: <128.105.68.16:9618?addrs=128.105.68.16-9618&alias=coba2000.chtc.wisc.edu&noUDP&sock=startd_7305_336c>
+...
+006 (49777.201.000) 10/11 12:15:55 Image size of job updated: 105704
+	104  -  MemoryUsage of job (MB)
+	105704  -  ResidentSetSize of job (KB)
+...
+006 (49777.201.000) 10/11 12:20:56 Image size of job updated: 814648
+	756  -  MemoryUsage of job (MB)
+	774088  -  ResidentSetSize of job (KB)
+...
+006 (49777.201.000) 10/11 12:25:56 Image size of job updated: 1300104
+	1221  -  MemoryUsage of job (MB)
+	1249904  -  ResidentSetSize of job (KB)
+...
+006 (49777.201.000) 10/11 12:30:56 Image size of job updated: 2059200
+	1975  -  MemoryUsage of job (MB)
+	2021624  -  ResidentSetSize of job (KB)
+...
+006 (49777.201.000) 10/11 12:35:57 Image size of job updated: 2922368
+	2826  -  MemoryUsage of job (MB)
+	2892892  -  ResidentSetSize of job (KB)
+...
+006 (49777.201.000) 10/11 12:40:58 Image size of job updated: 3991480
+	3864  -  MemoryUsage of job (MB)
+	3955756  -  ResidentSetSize of job (KB)
+...
+006 (49777.201.000) 10/11 12:41:46 Image size of job updated: 4151312
+	3864  -  MemoryUsage of job (MB)
+	3955756  -  ResidentSetSize of job (KB)
+...
+005 (49777.201.000) 10/11 12:41:46 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:25:27, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:25:27, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	176830  -  Run Bytes Sent By Job
+	316855776  -  Run Bytes Received By Job
+	176830  -  Total Bytes Sent By Job
+	316855776  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.94        1         1 
+	   Disk (KB)            : 325000      819200  44742796 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   3864       20480     21341 
+...

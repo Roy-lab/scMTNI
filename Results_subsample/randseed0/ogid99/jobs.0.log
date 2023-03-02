@@ -1,0 +1,47 @@
+000 (49777.099.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.099.000) 10/11 11:24:01 Job executing on host: <128.105.68.26:9618?addrs=128.105.68.26-9618&alias=e2456.chtc.wisc.edu&noUDP&sock=startd_4882_3972>
+...
+006 (49777.099.000) 10/11 11:24:09 Image size of job updated: 105320
+	103  -  MemoryUsage of job (MB)
+	105320  -  ResidentSetSize of job (KB)
+...
+006 (49777.099.000) 10/11 11:29:09 Image size of job updated: 721756
+	655  -  MemoryUsage of job (MB)
+	670428  -  ResidentSetSize of job (KB)
+...
+006 (49777.099.000) 10/11 11:34:10 Image size of job updated: 883824
+	814  -  MemoryUsage of job (MB)
+	833316  -  ResidentSetSize of job (KB)
+...
+006 (49777.099.000) 10/11 11:39:10 Image size of job updated: 1085436
+	1020  -  MemoryUsage of job (MB)
+	1044120  -  ResidentSetSize of job (KB)
+...
+006 (49777.099.000) 10/11 11:44:10 Image size of job updated: 1329696
+	1254  -  MemoryUsage of job (MB)
+	1283700  -  ResidentSetSize of job (KB)
+...
+006 (49777.099.000) 10/11 11:49:11 Image size of job updated: 1598692
+	1512  -  MemoryUsage of job (MB)
+	1548228  -  ResidentSetSize of job (KB)
+...
+006 (49777.099.000) 10/11 11:50:11 Image size of job updated: 1650320
+	1512  -  MemoryUsage of job (MB)
+	1548228  -  ResidentSetSize of job (KB)
+...
+005 (49777.099.000) 10/11 11:50:11 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:25:55, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:25:55, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	169413  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	169413  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200   1719902 
+	   Memory (MB)          :   1512       20480     20480 
+...

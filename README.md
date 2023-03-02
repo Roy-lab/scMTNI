@@ -206,7 +206,9 @@ matlab -nodisplay -nosplash -nodesktop -r "addpath('Scripts/Network_Analysis'); 
 
 Obtain giant component of inferred networks
 ```
-bash Scripts/Network_Analysis/getGiantComponents_H72noprior.sh
+Rscript --vanilla Scripts/Network_Analysis/plotNetworks_LDA_cf0.8.R 10
+
+bash Scripts/Network_Analysis/getGiantComponents.sh
 ```
 
 Obtain top regulators per component

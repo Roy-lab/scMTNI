@@ -1,0 +1,47 @@
+000 (49777.209.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.209.000) 10/11 12:17:46 Job executing on host: <128.105.68.39:9618?addrs=128.105.68.39-9618&alias=e2469.chtc.wisc.edu&noUDP&sock=startd_4916_8bab>
+...
+006 (49777.209.000) 10/11 12:17:55 Image size of job updated: 105548
+	104  -  MemoryUsage of job (MB)
+	105548  -  ResidentSetSize of job (KB)
+...
+006 (49777.209.000) 10/11 12:22:56 Image size of job updated: 720784
+	654  -  MemoryUsage of job (MB)
+	669456  -  ResidentSetSize of job (KB)
+...
+006 (49777.209.000) 10/11 12:27:56 Image size of job updated: 1196672
+	1118  -  MemoryUsage of job (MB)
+	1144524  -  ResidentSetSize of job (KB)
+...
+006 (49777.209.000) 10/11 12:32:57 Image size of job updated: 2157360
+	2095  -  MemoryUsage of job (MB)
+	2145216  -  ResidentSetSize of job (KB)
+...
+006 (49777.209.000) 10/11 12:37:58 Image size of job updated: 3316928
+	3197  -  MemoryUsage of job (MB)
+	3273024  -  ResidentSetSize of job (KB)
+...
+006 (49777.209.000) 10/11 12:42:58 Image size of job updated: 4384364
+	4231  -  MemoryUsage of job (MB)
+	4332324  -  ResidentSetSize of job (KB)
+...
+006 (49777.209.000) 10/11 12:45:44 Image size of job updated: 4957528
+	4231  -  MemoryUsage of job (MB)
+	4332324  -  ResidentSetSize of job (KB)
+...
+005 (49777.209.000) 10/11 12:45:44 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:26:54, Sys 0 00:00:09  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:26:54, Sys 0 00:00:09  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	167539  -  Run Bytes Sent By Job
+	316855776  -  Run Bytes Received By Job
+	167539  -  Total Bytes Sent By Job
+	316855776  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1698565 
+	   Memory (MB)          :   4231       20480     20480 
+...

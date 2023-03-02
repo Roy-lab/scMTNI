@@ -1,0 +1,47 @@
+000 (49777.120.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.120.000) 10/11 11:28:54 Job executing on host: <144.92.142.170:9618?addrs=144.92.142.170-9618&noUDP&sock=20228_4dd1_3>
+...
+006 (49777.120.000) 10/11 11:29:02 Image size of job updated: 105488
+	104  -  MemoryUsage of job (MB)
+	105488  -  ResidentSetSize of job (KB)
+...
+006 (49777.120.000) 10/11 11:34:02 Image size of job updated: 733624
+	654  -  MemoryUsage of job (MB)
+	668904  -  ResidentSetSize of job (KB)
+...
+006 (49777.120.000) 10/11 11:39:02 Image size of job updated: 774952
+	697  -  MemoryUsage of job (MB)
+	713700  -  ResidentSetSize of job (KB)
+...
+006 (49777.120.000) 10/11 11:44:03 Image size of job updated: 1008424
+	932  -  MemoryUsage of job (MB)
+	954052  -  ResidentSetSize of job (KB)
+...
+006 (49777.120.000) 10/11 11:49:03 Image size of job updated: 1277892
+	1195  -  MemoryUsage of job (MB)
+	1223456  -  ResidentSetSize of job (KB)
+...
+006 (49777.120.000) 10/11 11:54:03 Image size of job updated: 1688060
+	1596  -  MemoryUsage of job (MB)
+	1633600  -  ResidentSetSize of job (KB)
+...
+006 (49777.120.000) 10/11 11:58:07 Image size of job updated: 2017240
+	1596  -  MemoryUsage of job (MB)
+	1633600  -  ResidentSetSize of job (KB)
+...
+005 (49777.120.000) 10/11 11:58:07 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:29:09, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:29:09, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	180606  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	180606  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   3124004 
+	   Memory (MB)          :   1596       20480     20480 
+...

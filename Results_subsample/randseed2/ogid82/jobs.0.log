@@ -1,0 +1,47 @@
+000 (49777.562.000) 10/11 10:48:09 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.562.000) 10/11 14:18:11 Job executing on host: <144.92.142.165:9618?addrs=144.92.142.165-9618&noUDP&sock=5852_9050_3>
+...
+006 (49777.562.000) 10/11 14:18:20 Image size of job updated: 105868
+	104  -  MemoryUsage of job (MB)
+	105868  -  ResidentSetSize of job (KB)
+...
+006 (49777.562.000) 10/11 14:23:21 Image size of job updated: 736000
+	656  -  MemoryUsage of job (MB)
+	671220  -  ResidentSetSize of job (KB)
+...
+006 (49777.562.000) 10/11 14:28:21 Image size of job updated: 736000
+	656  -  MemoryUsage of job (MB)
+	671356  -  ResidentSetSize of job (KB)
+...
+006 (49777.562.000) 10/11 14:33:21 Image size of job updated: 758288
+	683  -  MemoryUsage of job (MB)
+	699016  -  ResidentSetSize of job (KB)
+...
+006 (49777.562.000) 10/11 14:38:22 Image size of job updated: 989564
+	909  -  MemoryUsage of job (MB)
+	930068  -  ResidentSetSize of job (KB)
+...
+006 (49777.562.000) 10/11 14:43:23 Image size of job updated: 1352984
+	1288  -  MemoryUsage of job (MB)
+	1318344  -  ResidentSetSize of job (KB)
+...
+006 (49777.562.000) 10/11 14:45:44 Image size of job updated: 1615880
+	1288  -  MemoryUsage of job (MB)
+	1318344  -  ResidentSetSize of job (KB)
+...
+005 (49777.562.000) 10/11 14:45:44 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:27:29, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:27:29, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	170599  -  Run Bytes Sent By Job
+	316723520  -  Run Bytes Received By Job
+	170599  -  Total Bytes Sent By Job
+	316723520  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1240067 
+	   Memory (MB)          :   1288       20480     20480 
+...

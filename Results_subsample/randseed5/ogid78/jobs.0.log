@@ -1,0 +1,53 @@
+000 (49777.1278.000) 10/11 10:48:11 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1278.000) 10/11 16:15:57 Job executing on host: <128.105.245.10:9618?addrs=128.105.245.10-9618&alias=gpu2000.chtc.wisc.edu&noUDP&sock=startd_6299_2b25>
+...
+006 (49777.1278.000) 10/11 16:16:06 Image size of job updated: 156348
+	103  -  MemoryUsage of job (MB)
+	105216  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:21:07 Image size of job updated: 719904
+	653  -  MemoryUsage of job (MB)
+	668600  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:26:08 Image size of job updated: 1053568
+	1009  -  MemoryUsage of job (MB)
+	1032936  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:31:08 Image size of job updated: 1735708
+	1660  -  MemoryUsage of job (MB)
+	1699200  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:36:08 Image size of job updated: 2355996
+	2262  -  MemoryUsage of job (MB)
+	2315732  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:41:09 Image size of job updated: 2975344
+	2856  -  MemoryUsage of job (MB)
+	2924216  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:46:09 Image size of job updated: 3584616
+	3458  -  MemoryUsage of job (MB)
+	3540356  -  ResidentSetSize of job (KB)
+...
+006 (49777.1278.000) 10/11 16:47:36 Image size of job updated: 3748180
+	3458  -  MemoryUsage of job (MB)
+	3540356  -  ResidentSetSize of job (KB)
+...
+005 (49777.1278.000) 10/11 16:47:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:31:21, Sys 0 00:00:12  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:31:21, Sys 0 00:00:12  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	170868  -  Run Bytes Sent By Job
+	316719136  -  Run Bytes Received By Job
+	170868  -  Total Bytes Sent By Job
+	316719136  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200  18119584 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   3458       20480     25710 
+...

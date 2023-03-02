@@ -1,0 +1,47 @@
+000 (49777.094.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.094.000) 10/11 11:23:44 Job executing on host: <128.105.68.47:9618?addrs=128.105.68.47-9618&alias=e2477.chtc.wisc.edu&noUDP&sock=startd_4901_41bf>
+...
+006 (49777.094.000) 10/11 11:23:52 Image size of job updated: 105420
+	103  -  MemoryUsage of job (MB)
+	105420  -  ResidentSetSize of job (KB)
+...
+006 (49777.094.000) 10/11 11:28:52 Image size of job updated: 722604
+	656  -  MemoryUsage of job (MB)
+	671012  -  ResidentSetSize of job (KB)
+...
+006 (49777.094.000) 10/11 11:33:52 Image size of job updated: 870464
+	811  -  MemoryUsage of job (MB)
+	829544  -  ResidentSetSize of job (KB)
+...
+006 (49777.094.000) 10/11 11:38:53 Image size of job updated: 1065536
+	997  -  MemoryUsage of job (MB)
+	1020812  -  ResidentSetSize of job (KB)
+...
+006 (49777.094.000) 10/11 11:43:53 Image size of job updated: 1534772
+	1449  -  MemoryUsage of job (MB)
+	1483736  -  ResidentSetSize of job (KB)
+...
+006 (49777.094.000) 10/11 11:48:53 Image size of job updated: 2031688
+	1946  -  MemoryUsage of job (MB)
+	1991804  -  ResidentSetSize of job (KB)
+...
+006 (49777.094.000) 10/11 11:52:22 Image size of job updated: 2508212
+	1946  -  MemoryUsage of job (MB)
+	1991804  -  ResidentSetSize of job (KB)
+...
+005 (49777.094.000) 10/11 11:52:22 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:28:15, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:28:15, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	175166  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	175166  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1701260 
+	   Memory (MB)          :   1946       20480     20480 
+...

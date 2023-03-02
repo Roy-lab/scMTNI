@@ -8,8 +8,8 @@ if(length(args)==0)
   print("Start!")
 }
 
-cellfile=args[1]  ##/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/Buenrostro_2018/data/CVNdata/liger_4cells_sqrt_19genesrm_varthre0.05_k10/celltype_order.txt
-indir=args[2]  ##/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/Buenrostro_2018/Results/scCVN_upto1transition/liger_4cells_sqrt_19genesrm_varthre0.05_k10_macs2/pg0.2_pm0.8_pr0.2_maxReg50_b4_bm4/subsample/analysis/
+cellfile=args[1]  ## celltype_order.txt
+indir=args[2]  ## Results_/subsample/analysis/
 filter=args[3] #"_full" or "_cf0.8"
 if(length(args)==3){
   binary=""
@@ -21,15 +21,14 @@ print("Done reading in files")
 
 library(data.table)
 library(Matrix)
-#cells=read.table("/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/Buenrostro_2018/data/CVNdata/liger_4cells_sqrt_19genesrm_varthre0.05_k10/celltype_order.txt",stringsAsFactors = F)
 cells=read.table(cellfile,stringsAsFactors = F)
 cells=cells$V1
-#indir="/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/Buenrostro_2018/Results/scCVN_upto1transition/liger_4cells_sqrt_19genesrm_varthre0.05_k10_macs2/pg0.2_pm0.8_pr0.2_maxReg50_b4_bm4/subsample/analysis/"
+#indir=" Results_subsample/analysis/"
 #filter="_full"
 #binary=""
 #filter="_cf0.8"
 #binary="_binary"
-outdir=paste0(indir,"lda_TFcellbygene/network",filter,binary,"/")
+outdir=paste0(indir,"lda_TFcellbygene/")
 dir.create(outdir,recursive = T)
 print(outdir)
 genes=NULL
