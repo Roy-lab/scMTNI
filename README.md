@@ -180,12 +180,37 @@ python Scripts/Evaluation/fscore_filterPred.py  --inferred $predicted_net --gold
 
 ## Step 5. Network dynamics analysis
 ### 5.1 edge-based k-means clustering analysis:
-Apply k-means clustering on edge*cell confidence matrix to find subnetworks with different patterns of conservation.
+Apply k-means clustering on edge\*cell confidence matrix to find subnetworks with different patterns of conservation.
 
 ```
 cd Scripts/Network_Analysis/
 matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
 ```
+
+Apply k-means for k=1-30 to the subsample results with a 0.8 confidence limit:
+```
+matlab -nodisplay -nosplash -nodesktop -r "addpath('Scripts/Network_Analysis'); StablityKmeansClustering_cf08; quit()"
+```
+Output directory:
+Results_subsample/analysis/kmeansclustering_cf0.8
+
+
+Generate a bubbleplot and kmeans heatmap per cluster
+```
+# Command line arguments
+# 1 [start of kmeans range i.e. 15]
+# 2 [end of kmeans range i.e. 30]
+# 3 [path to cluster dir]
+# 4 [path to output dir]
+# 5 [edge threshold i.e. cf0.8]
+# 6 [prefix i.e. testdata]
+
+bash Scripts/Network_Analysis/kmeans_bubbleplot_wrapper.sh 15 30 Results_subsample/analysis/kmeansclustering_cf0.8/ Results_subsample/analysis/kmeansclustering_cf0.8/ cf0.8 testdata
+```
+Output directory:
+Results_subsample/analysis/kmeansclustering_cf0.8/kmeans_k\*
+
+
 
 ### 5.2 topic model-based dynamic network analysis:
 Apply LDA topic models to examine subnetwork level rewiring 
