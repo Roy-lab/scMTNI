@@ -26,7 +26,13 @@ genNetall_multi=function(prefix,data1,outname,w,h,nr=2,ntop=20,cellorder){
   # assign edge attributes (day)
   set.edge.attribute(mynetwork, "edgePresense", ifelse(mynetwork %e% "weight" > 0, "edge present", "edge absent"))
   #set.edge.attribute(mynetwork, "edgealpha", ifelse(mynetwork %e% "weight" > 0, 1, 0))
-  set.edge.attribute(mynetwork, "cell", dedges[, 4])
+
+  ## SP Mar/14/2023: This line makes unexpected/gibbrish changes to the "mynetwork" object in
+  ## version 1.18.1 of the "network" package. On the contrary, this line does
+  ## not have any effect on the said object in version 1.17.1 of the "network"
+  ## package. Either way, this line is not required. Hence, I'm commenting it.
+  # set.edge.attribute(mynetwork, "cell", dedges[, 4])
+
   #set.edge.attribute(mynetwork, "edgename", dedges[, 5])
   set.seed(10052016)
   gnet=ggnetwork(mynetwork, arrow.size = 0.1,arrow.gap = 0.015, by = "cell",weights = "weight",
