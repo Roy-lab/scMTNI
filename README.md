@@ -246,6 +246,9 @@ Make network figures per topic:
 Rscript Scripts/Network_Analysis/makeAllGraphs.R
 ```
 
-
+Make regulators bubble plot per topic:
+```
+Rscript Scripts/Network_Analysis/makeTopicRegBubble_ggplot.R
+```
 
 
