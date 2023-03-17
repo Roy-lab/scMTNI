@@ -139,7 +139,7 @@ m : A file describing the gene relationships. The first column of this file is o
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
 
-### Addition note (how to generate subsamples of a given expression dataset)
+### Additional note (how to generate subsamples of a given expression dataset)
 In the manuscript, we applied scMTNI on multiple subsamples of a given gene expression dataset.
 It was done to improve the stability or robustness of the results.
 To generate subsamples of a given dataset, please use the following script.
