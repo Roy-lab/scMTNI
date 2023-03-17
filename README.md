@@ -139,6 +139,26 @@ m : A file describing the gene relationships. The first column of this file is o
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
 
+### Addition note (how to generate subsamples of a given expression dataset)
+In the manuscript, we applied scMTNI on multiple subsamples of a given gene expression dataset.
+It was done to improve the stability or robustness of the results.
+To generate subsamples of a given dataset, please use the following script.
+
+```
+# Input:
+# --indir [the location of the filelist file; please see Step 2.3]
+# --filelist [the name of the filelist file]
+# --nseed [number of desired subsamples]
+# --fraction (optional) [fraction of cells each subsample should have compared to the number of cells in the original dataset; default = 0.5]
+
+## Generate 100 subsamples of a given dataset.
+## Each subsample should have half the number of cells in the original dataset (by default).
+## For each subsample, the cells will be selected without replacement.
+python Scripts/Datasubsample_sc_merged.py --filelist $filelist --indir $indir --nseed 100
+
+```
+
+
 
 ## Step 4. Evaluation
 ### 4.0 Generate consensus network for subsample results
