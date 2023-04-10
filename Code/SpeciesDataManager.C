@@ -11,7 +11,6 @@
  *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
  *   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *   */
-
 #include <string.h>
 #include "Variable.H"
 #include "Evidence.H"
@@ -126,6 +125,9 @@ SpeciesDataManager::setMotifNetwork(const char* aPtr)
 
 		int tfID=varMgr->getVarID(tfName.c_str());
 		int tgtID=varMgr->getVarID(tgtName.c_str());
+		if(tfID==-1 || tgtID==-1){
+			continue;
+		}
         unordered_map<int,double>* tgtSet=NULL;
 		if(motifNetwork.find(tfID)==motifNetwork.end())
 		{
@@ -137,6 +139,7 @@ SpeciesDataManager::setMotifNetwork(const char* aPtr)
 			tgtSet=motifNetwork[tfID];
 		}
 		(*tgtSet)[tgtID]=score;
+		//cout << "TFvarID=" << tfID << " targetvarID=" << tgtID << " " << tfName << "->" << tgtName<<  "="<< score<<endl; 
 	}
 	cout << "motifNetwork.size() = " << motifNetwork.size() << endl;
 	inFile.close();

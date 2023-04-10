@@ -44,7 +44,7 @@ VariableManager::readVariablesFromTable(vector<string>& inputTable)
 		Variable* var = new Variable;
 		var->setID(nodeID);
 		var->setName(nodeName.c_str());
-        variableSet.push_back(var);//variableSet[nodeID]=var;
+        	variableSet.push_back(var);//variableSet[nodeID]=var;
 		varNameIDMap[nodeName] = nodeID;
 		++nodeID;
         
@@ -194,11 +194,10 @@ int
 VariableManager::getVarID(const char* varName)
 {
 	string varKey(varName);
-        /* comment by shilu
 	if(varNameIDMap.find(varKey)==varNameIDMap.end())
 	{
 		return -1;
-	}*/
+	}
 	int vId=varNameIDMap[varKey];
 	return vId;
 }

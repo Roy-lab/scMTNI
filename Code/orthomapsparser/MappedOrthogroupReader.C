@@ -123,7 +123,7 @@ MappedOrthogroupReader::readSpeciesMapping(const char* aFName)
         }
         string speciesName(buffer);
         speciesIDNameMap[lineCnt]=speciesName;
-        //cout << "speciesIDNameMap["<<lineCnt << "]=" << speciesName << endl;
+        cout << "speciesIDNameMap["<<lineCnt << "]=" << speciesName << endl;
         lineCnt++;
     }
     inFile.close();
@@ -206,7 +206,6 @@ MappedOrthogroupReader::addMembers(char* abuffer, MappedOrthogroup* ogrp)
             //specGeneMap.push_back(geneName);
             ogrp->addMembers(geneName);
         }
-        //cout << "specGeneMap[" << speciesName << "]=" << geneName << endl;
         tokCnt++;
         if(end!=NULL)
         {
@@ -275,7 +274,7 @@ MappedOrthogroupReader::generateGeneOrthoMap()
                 allgenesForSpecies=geneOrthoMap[speciesName];
             }
             (*allgenesForSpecies)[members[sIter]]=oIter->first;
-            //cout << "OGID=" << oIter->first << " species=" << sIter->first << " member="<< sIter->second << endl;
+            //cout << "OGID=" << oIter->first << " species=" << speciesName << " member="<< members[sIter] << endl;
         }
     }
     return 0;

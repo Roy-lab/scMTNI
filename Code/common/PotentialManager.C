@@ -62,7 +62,7 @@ PotentialManager::~PotentialManager()
     {
         delete data;
     }
-    if (meanMat!=NULL)
+		if (meanMat!=NULL)
     {
         delete meanMat;
     }
@@ -1179,7 +1179,6 @@ PotentialManager::computePotentialMBCovMean(SlimFactor* sFactor, int& status)//u
     ParChildID.push_back(sFactor->fId); //the last one is target
     //extract covariance
     Matrix* covariance=new Matrix(ParChildID.size(),ParChildID.size());
-    //cout << "PotentialManager::computePotentialMBCovMean my covariance for target ID=" << sFactor->fId << endl;
     for(int i=0;i<ParChildID.size();i++) {
         //double mean=meanMat->getValue(vIter->first,0);
         //aPot->updateMean(vIter->first,mean);
@@ -1420,7 +1419,7 @@ PotentialManager::computeMeanVarPseudoLikelihood_onefold(int id) //SlimFactor* s
     double variance=ssd/(dataSetSize-1.0)+1e-10;  //(0.001+ssd)/((double)(data->getColCnt()-1))
     covMat->setValue(variance,id,id);
     double pll=-0.5*ssd/variance-0.5*log(2.0*PI*variance)*dataSetSize;
-    //cout << id<<" variance=" <<variance << " mean=" << vmean << " pll=" << pll << endl;
+    //cout << "PotentialManager::computeMeanVarPseudoLikelihood_onefold id="<<id<<" variance=" <<variance << " mean=" << vmean << " ssd=" << ssd << " dataSetSize=" << dataSetSize <<" pll=" << pll << endl;
     for(int j=id+1;j<data->getRowCnt();j++)
     {
         estimateCovariance_Eff(id,j);
