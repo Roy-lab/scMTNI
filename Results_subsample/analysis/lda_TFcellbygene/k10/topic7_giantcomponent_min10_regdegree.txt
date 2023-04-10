@@ -1,0 +1,4 @@
+HES4	cluster7	24
+POLR1A	cluster8	13
+ZBTB7B	cluster2	2
+ZBTB7B	cluster7	9

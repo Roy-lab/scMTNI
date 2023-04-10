@@ -1,0 +1,47 @@
+000 (49777.170.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.170.000) 10/11 11:51:34 Job executing on host: <128.105.68.25:9618?addrs=128.105.68.25-9618&alias=e2455.chtc.wisc.edu&noUDP&sock=startd_4900_9227>
+...
+006 (49777.170.000) 10/11 11:51:43 Image size of job updated: 156664
+	103  -  MemoryUsage of job (MB)
+	105280  -  ResidentSetSize of job (KB)
+...
+006 (49777.170.000) 10/11 11:56:44 Image size of job updated: 721804
+	655  -  MemoryUsage of job (MB)
+	670244  -  ResidentSetSize of job (KB)
+...
+006 (49777.170.000) 10/11 12:01:44 Image size of job updated: 1018792
+	956  -  MemoryUsage of job (MB)
+	978464  -  ResidentSetSize of job (KB)
+...
+006 (49777.170.000) 10/11 12:06:44 Image size of job updated: 1667524
+	1586  -  MemoryUsage of job (MB)
+	1623284  -  ResidentSetSize of job (KB)
+...
+006 (49777.170.000) 10/11 12:11:45 Image size of job updated: 2336464
+	2272  -  MemoryUsage of job (MB)
+	2325920  -  ResidentSetSize of job (KB)
+...
+006 (49777.170.000) 10/11 12:16:45 Image size of job updated: 3064068
+	2973  -  MemoryUsage of job (MB)
+	3043340  -  ResidentSetSize of job (KB)
+...
+006 (49777.170.000) 10/11 12:18:05 Image size of job updated: 3275036
+	2973  -  MemoryUsage of job (MB)
+	3043340  -  ResidentSetSize of job (KB)
+...
+005 (49777.170.000) 10/11 12:18:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:26:05, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:26:05, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	176059  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	176059  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1696544 
+	   Memory (MB)          :   2973       20480     20480 
+...

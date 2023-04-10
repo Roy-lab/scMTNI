@@ -1,0 +1,51 @@
+000 (49777.199.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.199.000) 10/11 12:15:08 Job executing on host: <128.105.68.47:9618?addrs=128.105.68.47-9618&alias=e2477.chtc.wisc.edu&noUDP&sock=startd_4901_41bf>
+...
+006 (49777.199.000) 10/11 12:15:17 Image size of job updated: 156576
+	103  -  MemoryUsage of job (MB)
+	105392  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:20:18 Image size of job updated: 720912
+	654  -  MemoryUsage of job (MB)
+	669264  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:25:18 Image size of job updated: 949944
+	884  -  MemoryUsage of job (MB)
+	904356  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:30:19 Image size of job updated: 1406528
+	1338  -  MemoryUsage of job (MB)
+	1369524  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:35:20 Image size of job updated: 1858072
+	1778  -  MemoryUsage of job (MB)
+	1820568  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:40:20 Image size of job updated: 2336620
+	2244  -  MemoryUsage of job (MB)
+	2297352  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:45:21 Image size of job updated: 2874252
+	2770  -  MemoryUsage of job (MB)
+	2836308  -  ResidentSetSize of job (KB)
+...
+006 (49777.199.000) 10/11 12:47:36 Image size of job updated: 3137208
+	2770  -  MemoryUsage of job (MB)
+	2836308  -  ResidentSetSize of job (KB)
+...
+005 (49777.199.000) 10/11 12:47:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:28:44, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:28:44, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	176549  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	176549  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1701260 
+	   Memory (MB)          :   2770       20480     20480 
+...

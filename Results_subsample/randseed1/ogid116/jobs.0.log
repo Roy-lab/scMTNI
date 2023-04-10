@@ -1,0 +1,45 @@
+000 (49777.356.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.356.000) 10/11 13:26:31 Job executing on host: <128.105.68.16:9618?addrs=128.105.68.16-9618&alias=coba2000.chtc.wisc.edu&noUDP&sock=startd_7305_336c>
+...
+006 (49777.356.000) 10/11 13:26:40 Image size of job updated: 105148
+	103  -  MemoryUsage of job (MB)
+	105144  -  ResidentSetSize of job (KB)
+...
+006 (49777.356.000) 10/11 13:31:41 Image size of job updated: 804076
+	753  -  MemoryUsage of job (MB)
+	770316  -  ResidentSetSize of job (KB)
+...
+006 (49777.356.000) 10/11 13:36:41 Image size of job updated: 1859656
+	1783  -  MemoryUsage of job (MB)
+	1825200  -  ResidentSetSize of job (KB)
+...
+006 (49777.356.000) 10/11 13:41:42 Image size of job updated: 3194592
+	3071  -  MemoryUsage of job (MB)
+	3144508  -  ResidentSetSize of job (KB)
+...
+006 (49777.356.000) 10/11 13:46:43 Image size of job updated: 4291812
+	4184  -  MemoryUsage of job (MB)
+	4283784  -  ResidentSetSize of job (KB)
+...
+006 (49777.356.000) 10/11 13:49:24 Image size of job updated: 4873284
+	4184  -  MemoryUsage of job (MB)
+	4283784  -  ResidentSetSize of job (KB)
+...
+005 (49777.356.000) 10/11 13:49:25 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:22:42, Sys 0 00:00:08  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:22:42, Sys 0 00:00:08  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	174299  -  Run Bytes Sent By Job
+	316905856  -  Run Bytes Received By Job
+	174299  -  Total Bytes Sent By Job
+	316905856  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  44742796 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   4184       20480     21341 
+...

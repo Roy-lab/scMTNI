@@ -1,0 +1,10 @@
+Trappc1	Trappc3
+Trappc1	Trappc4
+Trappc2	Trappc3
+Trappc2	Trappc5
+Trappc3	Trappc1
+Trappc3	Trappc2
+Trappc3	Trappc5
+Trappc4	Trappc1
+Trappc5	Trappc2
+Trappc5	Trappc3

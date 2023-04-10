@@ -1,0 +1,4 @@
+GFI1	cluster10	21
+NR1I2	cluster8	24
+USF1	cluster10	9
+USF1	cluster7	3

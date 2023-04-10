@@ -1,0 +1,47 @@
+000 (49777.246.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.246.000) 10/11 12:43:55 Job executing on host: <128.105.68.52:9618?addrs=128.105.68.52-9618&alias=e2482.chtc.wisc.edu&noUDP&sock=startd_4866_3fee>
+...
+006 (49777.246.000) 10/11 12:44:04 Image size of job updated: 156732
+	104  -  MemoryUsage of job (MB)
+	105760  -  ResidentSetSize of job (KB)
+...
+006 (49777.246.000) 10/11 12:49:05 Image size of job updated: 722312
+	656  -  MemoryUsage of job (MB)
+	671188  -  ResidentSetSize of job (KB)
+...
+006 (49777.246.000) 10/11 12:54:06 Image size of job updated: 846688
+	782  -  MemoryUsage of job (MB)
+	800548  -  ResidentSetSize of job (KB)
+...
+006 (49777.246.000) 10/11 12:59:06 Image size of job updated: 1116720
+	1045  -  MemoryUsage of job (MB)
+	1069432  -  ResidentSetSize of job (KB)
+...
+006 (49777.246.000) 10/11 13:04:07 Image size of job updated: 1556468
+	1477  -  MemoryUsage of job (MB)
+	1512028  -  ResidentSetSize of job (KB)
+...
+006 (49777.246.000) 10/11 13:09:08 Image size of job updated: 2066748
+	1975  -  MemoryUsage of job (MB)
+	2022076  -  ResidentSetSize of job (KB)
+...
+006 (49777.246.000) 10/11 13:10:55 Image size of job updated: 2274724
+	1975  -  MemoryUsage of job (MB)
+	2022076  -  ResidentSetSize of job (KB)
+...
+005 (49777.246.000) 10/11 13:10:55 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:25:24, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:25:24, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	157962  -  Run Bytes Sent By Job
+	316905792  -  Run Bytes Received By Job
+	157962  -  Total Bytes Sent By Job
+	316905792  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200   1699516 
+	   Memory (MB)          :   1975       20480     20480 
+...

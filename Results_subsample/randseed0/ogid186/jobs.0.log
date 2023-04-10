@@ -1,0 +1,53 @@
+000 (49777.186.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.186.000) 10/11 12:09:46 Job executing on host: <128.105.245.10:9618?addrs=128.105.245.10-9618&alias=gpu2000.chtc.wisc.edu&noUDP&sock=startd_6299_2b25>
+...
+006 (49777.186.000) 10/11 12:09:55 Image size of job updated: 105232
+	103  -  MemoryUsage of job (MB)
+	105232  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:14:55 Image size of job updated: 720488
+	654  -  MemoryUsage of job (MB)
+	669212  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:19:55 Image size of job updated: 769760
+	703  -  MemoryUsage of job (MB)
+	719736  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:24:56 Image size of job updated: 885036
+	816  -  MemoryUsage of job (MB)
+	834908  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:29:57 Image size of job updated: 1033276
+	969  -  MemoryUsage of job (MB)
+	992088  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:34:57 Image size of job updated: 1238972
+	1199  -  MemoryUsage of job (MB)
+	1227320  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:39:58 Image size of job updated: 1861276
+	1809  -  MemoryUsage of job (MB)
+	1852380  -  ResidentSetSize of job (KB)
+...
+006 (49777.186.000) 10/11 12:43:43 Image size of job updated: 2312900
+	1810  -  MemoryUsage of job (MB)
+	1852432  -  ResidentSetSize of job (KB)
+...
+005 (49777.186.000) 10/11 12:43:43 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:33:33, Sys 0 00:00:10  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:33:33, Sys 0 00:00:10  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	175591  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	175591  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200  18119584 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   1810       20480     25710 
+...

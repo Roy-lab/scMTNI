@@ -1,0 +1,45 @@
+000 (49777.2250.000) 10/11 10:48:14 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.2250.000) 10/11 18:47:21 Job executing on host: <128.105.68.16:9618?addrs=128.105.68.16-9618&alias=coba2000.chtc.wisc.edu&noUDP&sock=startd_7305_336c>
+...
+006 (49777.2250.000) 10/11 18:47:30 Image size of job updated: 105600
+	104  -  MemoryUsage of job (MB)
+	105600  -  ResidentSetSize of job (KB)
+...
+006 (49777.2250.000) 10/11 18:52:32 Image size of job updated: 722620
+	656  -  MemoryUsage of job (MB)
+	671464  -  ResidentSetSize of job (KB)
+...
+006 (49777.2250.000) 10/11 18:57:32 Image size of job updated: 1018244
+	945  -  MemoryUsage of job (MB)
+	967120  -  ResidentSetSize of job (KB)
+...
+006 (49777.2250.000) 10/11 19:02:32 Image size of job updated: 1841136
+	1784  -  MemoryUsage of job (MB)
+	1826724  -  ResidentSetSize of job (KB)
+...
+006 (49777.2250.000) 10/11 19:07:33 Image size of job updated: 2722064
+	2638  -  MemoryUsage of job (MB)
+	2701116  -  ResidentSetSize of job (KB)
+...
+006 (49777.2250.000) 10/11 19:10:34 Image size of job updated: 3245252
+	2638  -  MemoryUsage of job (MB)
+	2701136  -  ResidentSetSize of job (KB)
+...
+005 (49777.2250.000) 10/11 19:10:34 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:22:58, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:22:58, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	176330  -  Run Bytes Sent By Job
+	316843968  -  Run Bytes Received By Job
+	176330  -  Total Bytes Sent By Job
+	316843968  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200  44742796 
+	   Gpus                 :                            0 
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   2638       20480     21341 
+...

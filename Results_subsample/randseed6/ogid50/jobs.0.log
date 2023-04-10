@@ -1,0 +1,47 @@
+000 (49777.1490.000) 10/11 10:48:11 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1490.000) 10/11 16:51:17 Job executing on host: <128.105.68.52:9618?addrs=128.105.68.52-9618&alias=e2482.chtc.wisc.edu&noUDP&sock=startd_4866_3fee>
+...
+006 (49777.1490.000) 10/11 16:51:26 Image size of job updated: 105496
+	104  -  MemoryUsage of job (MB)
+	105496  -  ResidentSetSize of job (KB)
+...
+006 (49777.1490.000) 10/11 16:56:27 Image size of job updated: 724896
+	658  -  MemoryUsage of job (MB)
+	673532  -  ResidentSetSize of job (KB)
+...
+006 (49777.1490.000) 10/11 17:01:28 Image size of job updated: 941512
+	874  -  MemoryUsage of job (MB)
+	894500  -  ResidentSetSize of job (KB)
+...
+006 (49777.1490.000) 10/11 17:06:28 Image size of job updated: 1247608
+	1184  -  MemoryUsage of job (MB)
+	1211960  -  ResidentSetSize of job (KB)
+...
+006 (49777.1490.000) 10/11 17:11:28 Image size of job updated: 1602412
+	1523  -  MemoryUsage of job (MB)
+	1558856  -  ResidentSetSize of job (KB)
+...
+006 (49777.1490.000) 10/11 17:16:29 Image size of job updated: 1935184
+	1847  -  MemoryUsage of job (MB)
+	1890836  -  ResidentSetSize of job (KB)
+...
+006 (49777.1490.000) 10/11 17:18:49 Image size of job updated: 2101304
+	1847  -  MemoryUsage of job (MB)
+	1890836  -  ResidentSetSize of job (KB)
+...
+005 (49777.1490.000) 10/11 17:18:49 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:26:38, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:26:38, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	166843  -  Run Bytes Sent By Job
+	316715872  -  Run Bytes Received By Job
+	166843  -  Total Bytes Sent By Job
+	316715872  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.98        1         1 
+	   Disk (KB)            : 325000      819200   1699516 
+	   Memory (MB)          :   1847       20480     20480 
+...

@@ -1,0 +1,47 @@
+000 (49777.1538.000) 10/11 10:48:12 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1538.000) 10/11 16:57:39 Job executing on host: <128.105.68.38:9618?addrs=128.105.68.38-9618&alias=e2468.chtc.wisc.edu&noUDP&sock=startd_4884_98a3>
+...
+006 (49777.1538.000) 10/11 16:57:48 Image size of job updated: 156464
+	103  -  MemoryUsage of job (MB)
+	104996  -  ResidentSetSize of job (KB)
+...
+006 (49777.1538.000) 10/11 17:02:49 Image size of job updated: 720284
+	653  -  MemoryUsage of job (MB)
+	668532  -  ResidentSetSize of job (KB)
+...
+006 (49777.1538.000) 10/11 17:07:49 Image size of job updated: 1024928
+	956  -  MemoryUsage of job (MB)
+	978732  -  ResidentSetSize of job (KB)
+...
+006 (49777.1538.000) 10/11 17:12:49 Image size of job updated: 1328656
+	1251  -  MemoryUsage of job (MB)
+	1280748  -  ResidentSetSize of job (KB)
+...
+006 (49777.1538.000) 10/11 17:17:50 Image size of job updated: 1734568
+	1657  -  MemoryUsage of job (MB)
+	1696020  -  ResidentSetSize of job (KB)
+...
+006 (49777.1538.000) 10/11 17:22:50 Image size of job updated: 2125872
+	2036  -  MemoryUsage of job (MB)
+	2084760  -  ResidentSetSize of job (KB)
+...
+006 (49777.1538.000) 10/11 17:26:56 Image size of job updated: 2423776
+	2036  -  MemoryUsage of job (MB)
+	2084760  -  ResidentSetSize of job (KB)
+...
+005 (49777.1538.000) 10/11 17:26:56 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:28:14, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:28:14, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	174055  -  Run Bytes Sent By Job
+	316715872  -  Run Bytes Received By Job
+	174055  -  Total Bytes Sent By Job
+	316715872  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.90        1         1 
+	   Disk (KB)            : 325000      819200   1694917 
+	   Memory (MB)          :   2036       20480     20480 
+...

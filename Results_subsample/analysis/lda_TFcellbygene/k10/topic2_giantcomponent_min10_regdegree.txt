@@ -1,0 +1,8 @@
+YBX1	cluster1	2
+YBX1	cluster10	30
+YBX1	cluster2	20
+YBX1	cluster3	10
+YBX1	cluster6	12
+YBX1	cluster7	62
+YBX1	cluster8	8
+YBX1	cluster9	9

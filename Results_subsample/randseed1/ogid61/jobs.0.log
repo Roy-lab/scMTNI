@@ -1,0 +1,47 @@
+000 (49777.301.000) 10/11 10:48:08 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.301.000) 10/11 13:08:44 Job executing on host: <128.105.68.27:9618?addrs=128.105.68.27-9618&alias=e2457.chtc.wisc.edu&noUDP&sock=startd_4846_880a>
+...
+006 (49777.301.000) 10/11 13:08:53 Image size of job updated: 105584
+	104  -  MemoryUsage of job (MB)
+	105584  -  ResidentSetSize of job (KB)
+...
+006 (49777.301.000) 10/11 13:13:54 Image size of job updated: 723552
+	657  -  MemoryUsage of job (MB)
+	672272  -  ResidentSetSize of job (KB)
+...
+006 (49777.301.000) 10/11 13:18:55 Image size of job updated: 1053880
+	984  -  MemoryUsage of job (MB)
+	1007024  -  ResidentSetSize of job (KB)
+...
+006 (49777.301.000) 10/11 13:23:55 Image size of job updated: 1380096
+	1298  -  MemoryUsage of job (MB)
+	1328444  -  ResidentSetSize of job (KB)
+...
+006 (49777.301.000) 10/11 13:28:56 Image size of job updated: 1673824
+	1592  -  MemoryUsage of job (MB)
+	1629668  -  ResidentSetSize of job (KB)
+...
+006 (49777.301.000) 10/11 13:33:57 Image size of job updated: 1983600
+	1889  -  MemoryUsage of job (MB)
+	1933664  -  ResidentSetSize of job (KB)
+...
+006 (49777.301.000) 10/11 13:35:11 Image size of job updated: 2044868
+	1889  -  MemoryUsage of job (MB)
+	1933664  -  ResidentSetSize of job (KB)
+...
+005 (49777.301.000) 10/11 13:35:11 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:26:10, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:26:10, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	171963  -  Run Bytes Sent By Job
+	316905856  -  Run Bytes Received By Job
+	171963  -  Total Bytes Sent By Job
+	316905856  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.99        1         1 
+	   Disk (KB)            : 325000      819200   1705482 
+	   Memory (MB)          :   1889       20480     20480 
+...

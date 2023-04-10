@@ -1,3 +1,4 @@
+
 %% K-means on confidence matrix of stability selection:
 
 prefix='liger_sqrt_ncell50_k10_filterhumanbc_macs2'
@@ -120,4 +121,3 @@ saveas(gcf,sprintf('%s/%s_kmeans_silhouette.pdf',outdir,prefix),'pdf');
 optK=r(1,1)+1
 optK2=I(1)
 sprintf('optimal K based on SI is %d, K explained at least 95%% variance is %d',optK2,optK)
-

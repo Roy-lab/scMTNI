@@ -1,0 +1,59 @@
+000 (49777.1454.000) 10/11 10:48:11 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.1454.000) 10/11 16:42:46 Job executing on host: <128.104.103.47:9618?addrs=128.104.103.47-9618+[2607-f388-107c-501-a236-9fff-fe3c-f3a0]-9618&alias=ahlquist0000.chtc.wisc.edu&noUDP&sock=startd_2110_dceb>
+...
+006 (49777.1454.000) 10/11 16:42:54 Image size of job updated: 105284
+	103  -  MemoryUsage of job (MB)
+	105284  -  ResidentSetSize of job (KB)
+...
+006 (49777.1454.000) 10/11 16:46:00 Image size of job updated: 720380
+	652  -  MemoryUsage of job (MB)
+	666932  -  ResidentSetSize of job (KB)
+...
+004 (49777.1454.000) 10/11 16:46:00 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:03:13, Sys 0 00:00:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	316715808  -  Run Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      1.00        1         4 
+	   Disk (KB)            : 325000      819200 227573996 
+	   Gpus                 :                            1 "GPU-ebcd15a8"
+	   Memory (MB)          :    652       20480     47794 
+...
+001 (49777.1454.000) 10/11 16:46:26 Job executing on host: <128.105.68.23:9618?addrs=128.105.68.23-9618&alias=gpulab2004.chtc.wisc.edu&noUDP&sock=startd_62541_80a6>
+...
+006 (49777.1454.000) 10/11 16:56:35 Image size of job updated: 1393600
+	1320  -  MemoryUsage of job (MB)
+	1350852  -  ResidentSetSize of job (KB)
+...
+006 (49777.1454.000) 10/11 17:01:36 Image size of job updated: 2102968
+	2006  -  MemoryUsage of job (MB)
+	2053244  -  ResidentSetSize of job (KB)
+...
+006 (49777.1454.000) 10/11 17:06:37 Image size of job updated: 2875796
+	2761  -  MemoryUsage of job (MB)
+	2826836  -  ResidentSetSize of job (KB)
+...
+006 (49777.1454.000) 10/11 17:08:29 Image size of job updated: 3164580
+	2761  -  MemoryUsage of job (MB)
+	2826836  -  ResidentSetSize of job (KB)
+...
+005 (49777.1454.000) 10/11 17:08:29 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:21:56, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:25:09, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	174577  -  Run Bytes Sent By Job
+	316715808  -  Run Bytes Received By Job
+	174577  -  Total Bytes Sent By Job
+	633431616  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      1.00        1         1 
+	   Disk (KB)            : 325000      819200  18192444 
+	   Gpus                 :                            0 "GPU-ebcd15a8"
+	   Ioheavy              :                            0 
+	   Memory (MB)          :   2761       20480     21341 
+...

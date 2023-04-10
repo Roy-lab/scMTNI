@@ -1,0 +1,47 @@
+000 (49777.021.000) 10/11 10:48:07 Job submitted from host: <144.92.142.142:9618?addrs=144.92.142.142-9618&noUDP&sock=44923_051a_3>
+...
+001 (49777.021.000) 10/11 10:50:49 Job executing on host: <128.105.68.27:9618?addrs=128.105.68.27-9618&alias=e2457.chtc.wisc.edu&noUDP&sock=startd_4846_880a>
+...
+006 (49777.021.000) 10/11 10:50:58 Image size of job updated: 105176
+	103  -  MemoryUsage of job (MB)
+	105176  -  ResidentSetSize of job (KB)
+...
+006 (49777.021.000) 10/11 10:55:58 Image size of job updated: 720856
+	654  -  MemoryUsage of job (MB)
+	669468  -  ResidentSetSize of job (KB)
+...
+006 (49777.021.000) 10/11 11:00:58 Image size of job updated: 863252
+	797  -  MemoryUsage of job (MB)
+	815592  -  ResidentSetSize of job (KB)
+...
+006 (49777.021.000) 10/11 11:05:59 Image size of job updated: 1272988
+	1193  -  MemoryUsage of job (MB)
+	1221228  -  ResidentSetSize of job (KB)
+...
+006 (49777.021.000) 10/11 11:11:00 Image size of job updated: 1654624
+	1582  -  MemoryUsage of job (MB)
+	1619076  -  ResidentSetSize of job (KB)
+...
+006 (49777.021.000) 10/11 11:16:00 Image size of job updated: 1996724
+	1901  -  MemoryUsage of job (MB)
+	1945908  -  ResidentSetSize of job (KB)
+...
+006 (49777.021.000) 10/11 11:19:09 Image size of job updated: 2205732
+	1901  -  MemoryUsage of job (MB)
+	1945908  -  ResidentSetSize of job (KB)
+...
+005 (49777.021.000) 10/11 11:19:09 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:27:46, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:27:46, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	173579  -  Run Bytes Sent By Job
+	316855744  -  Run Bytes Received By Job
+	173579  -  Total Bytes Sent By Job
+	316855744  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.97        1         1 
+	   Disk (KB)            : 325000      819200   1705482 
+	   Memory (MB)          :   1901       20480     20480 
+...

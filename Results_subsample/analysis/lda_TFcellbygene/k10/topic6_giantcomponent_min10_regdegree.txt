@@ -1,0 +1,4 @@
+USF1	cluster6	15
+ZNF2	cluster3	3
+ZNF2	cluster6	7
+ZNF589	cluster6	12

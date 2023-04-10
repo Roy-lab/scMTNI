@@ -1,0 +1,10 @@
+../randseed0/cluster8/fold0/var_mb_pw_k50.txt
+../randseed1/cluster8/fold0/var_mb_pw_k50.txt
+../randseed2/cluster8/fold0/var_mb_pw_k50.txt
+../randseed3/cluster8/fold0/var_mb_pw_k50.txt
+../randseed4/cluster8/fold0/var_mb_pw_k50.txt
+../randseed5/cluster8/fold0/var_mb_pw_k50.txt
+../randseed6/cluster8/fold0/var_mb_pw_k50.txt
+../randseed7/cluster8/fold0/var_mb_pw_k50.txt
+../randseed8/cluster8/fold0/var_mb_pw_k50.txt
+../randseed9/cluster8/fold0/var_mb_pw_k50.txt

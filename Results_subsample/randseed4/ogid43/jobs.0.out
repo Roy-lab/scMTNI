@@ -1,0 +1,256 @@
+./CVN -f config_condor.txt -x50 -v1 -l TFs_OGs.txt -n AllGenes43.txt -d celltype_tree_ancestor.txt -m testdata_ogids.txt -s celltype_order.txt -p 0.2 -c yes -b -4 -q 4
+(cluster3|cluster8) p_maintain_edge=0.8 p_gain=0.2
+(cluster2|cluster3) p_maintain_edge=0.8 p_gain=0.2
+(cluster1|cluster2) p_maintain_edge=0.8 p_gain=0.2
+(cluster6|cluster2) p_maintain_edge=0.8 p_gain=0.2
+(cluster9|cluster6) p_maintain_edge=0.8 p_gain=0.2
+(cluster10|cluster6) p_maintain_edge=0.8 p_gain=0.2
+(cluster7|cluster10) p_maintain_edge=0.8 p_gain=0.2
+speciesSet.size()=8 Root is cluster8
+MappedOrthogroupReader::readSpeciesMapping() --- celltype_order.txt
+MappedOrthogroupReader::readFile - testdata_ogids.txt
+MappedOrthogroupReader::generateGeneOrthoMap()
+MetaLearner::init_onefold() read:config_condor.txt
+MetaLearner::setinputVariableNames number of variables: 2042
+readEvidenceTable:cluster8.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=348
+motifNetwork.size() = 319
+0=cluster8 motifNetwork=cluster8_network.txt
+variable size=2042
+readEvidenceTable:cluster3.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=95
+motifNetwork.size() = 326
+1=cluster3 motifNetwork=cluster3_network.txt
+variable size=2042
+readEvidenceTable:cluster2.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=386
+motifNetwork.size() = 328
+2=cluster2 motifNetwork=cluster2_network.txt
+variable size=2042
+readEvidenceTable:cluster1.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=36
+motifNetwork.size() = 322
+3=cluster1 motifNetwork=cluster1_network.txt
+variable size=2042
+readEvidenceTable:cluster6.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=524
+motifNetwork.size() = 320
+4=cluster6 motifNetwork=cluster6_network.txt
+variable size=2042
+readEvidenceTable:cluster9.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=184
+motifNetwork.size() = 327
+5=cluster9 motifNetwork=cluster9_network.txt
+variable size=2042
+readEvidenceTable:cluster10.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=165
+motifNetwork.size() = 326
+6=cluster10 motifNetwork=cluster10_network.txt
+variable size=2042
+readEvidenceTable:cluster7.table
+PotentialManager::loadEvidenceFromTable varCount=2042 sampleCount=1032
+motifNetwork.size() = 320
+7=cluster7 motifNetwork=cluster7_network.txt
+variable size=2042
+-------------------------------------------------------------
+MetaLearner::start
+precomputeEmptyGraphPrior
+binkey=0 [Edge status: 0 0 0 0 0 0 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.209715]=0.167772
+condsetMap_Tree
+0 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=0 cluster10=0 cluster7=1
+1 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=1 cluster10=0 cluster7=0
+2 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=1 cluster10=0 cluster7=1
+3 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+4 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=0 cluster9=0 cluster10=0 cluster7=1
+5 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=0 cluster9=1 cluster10=0 cluster7=0
+6 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=0 cluster9=1 cluster10=0 cluster7=1
+7 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=0 cluster10=1 cluster7=1
+8 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=1 cluster10=1 cluster7=1
+9 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=0 cluster9=0 cluster10=1 cluster7=1
+10 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=0 cluster9=1 cluster10=1 cluster7=1
+11 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=1 cluster9=1 cluster10=1 cluster7=1
+12 cluster8=0 cluster3=0 cluster2=0 cluster1=1 cluster6=1 cluster9=1 cluster10=1 cluster7=1
+13 cluster8=0 cluster3=0 cluster2=1 cluster1=1 cluster6=1 cluster9=1 cluster10=1 cluster7=1
+14 cluster8=0 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=1 cluster10=1 cluster7=1
+15 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=1 cluster10=1 cluster7=1
+16 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=1 cluster10=1 cluster7=0
+17 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=0 cluster10=1 cluster7=1
+18 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=0 cluster10=1 cluster7=0
+19 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=1 cluster9=1 cluster10=1 cluster7=1
+20 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=1 cluster9=1 cluster10=1 cluster7=0
+21 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=1 cluster9=0 cluster10=1 cluster7=1
+22 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=1 cluster9=0 cluster10=1 cluster7=0
+23 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=1 cluster10=0 cluster7=0
+24 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=1 cluster9=0 cluster10=0 cluster7=0
+25 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=1 cluster9=1 cluster10=0 cluster7=0
+26 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=1 cluster9=0 cluster10=0 cluster7=0
+27 cluster8=1 cluster3=1 cluster2=1 cluster1=1 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+28 cluster8=1 cluster3=1 cluster2=1 cluster1=0 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+29 cluster8=1 cluster3=1 cluster2=0 cluster1=0 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+30 cluster8=1 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+31 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=1 cluster9=0 cluster10=0 cluster7=0
+32 cluster8=0 cluster3=0 cluster2=1 cluster1=0 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+33 cluster8=0 cluster3=0 cluster2=0 cluster1=0 cluster6=0 cluster9=0 cluster10=1 cluster7=0
+34 cluster8=0 cluster3=1 cluster2=0 cluster1=0 cluster6=0 cluster9=0 cluster10=0 cluster7=0
+inputRegulatorOGs.size() = 1999 inputOGList.size() = 50
+binkey=4 [Edge status: 0 0 1 0 0 0 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=1) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=1) * P(cluster2=1|cluster3=0) * P(cluster3=0|cluster8=0)[0.0032768]=0.00262144
+binkey=2 [Edge status: 0 1 0 0 0 0 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=1) * P(cluster3=1|cluster8=0)[0.0131072]=0.0104858
+binkey=32 [Edge status: 0 0 0 0 0 1 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=1|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0524288]=0.041943
+binkey=64 [Edge status: 0 0 0 0 0 0 1 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=1) * P(cluster10=1|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=1 [Edge status: 1 0 0 0 0 0 0 0 ] P(G)=P(cluster8=1)[0.2] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=1)[0.0524288]=0.0104858
+binkey=128 [Edge status: 0 0 0 0 0 0 0 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=1|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0524288]=0.041943
+binkey=16 [Edge status: 0 0 0 0 1 0 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=1) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=1) * P(cluster6=1|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0032768]=0.00262144
+binkey=160 [Edge status: 0 0 0 0 0 1 0 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=1|cluster6=0) * P(cluster7=1|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=3 [Edge status: 1 1 0 0 0 0 0 0 ] P(G)=P(cluster8=1)[0.2] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=1) * P(cluster3=1|cluster8=1)[0.0524288]=0.0104858
+binkey=192 [Edge status: 0 0 0 0 0 0 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0524288]=0.041943
+binkey=8 [Edge status: 0 0 0 1 0 0 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0524288]=0.041943
+binkey=40 [Edge status: 0 0 0 1 0 1 0 0 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=1|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=136 [Edge status: 0 0 0 1 0 0 0 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=1|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=168 [Edge status: 0 0 0 1 0 1 0 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=1|cluster6=0) * P(cluster7=1|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0032768]=0.00262144
+binkey=224 [Edge status: 0 0 0 0 0 1 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=1|cluster6=0) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=200 [Edge status: 0 0 0 1 0 0 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=0|cluster6=0) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=232 [Edge status: 0 0 0 1 0 1 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=1|cluster6=0) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=0) * P(cluster6=0|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0032768]=0.00262144
+binkey=240 [Edge status: 0 0 0 0 1 1 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=0|cluster2=0) * P(cluster9=1|cluster6=1) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=1) * P(cluster6=1|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0524288]=0.041943
+binkey=248 [Edge status: 0 0 0 1 1 1 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=0) * P(cluster9=1|cluster6=1) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=1) * P(cluster6=1|cluster2=0) * P(cluster2=0|cluster3=0) * P(cluster3=0|cluster8=0)[0.0131072]=0.0104858
+binkey=252 [Edge status: 0 0 1 1 1 1 1 1 ] P(G)=P(cluster8=0)[0.8] * P(cluster1=1|cluster2=1) * P(cluster9=1|cluster6=1) * P(cluster7=1|cluster10=1) * P(cluster10=1|cluster6=1) * P(cluster6=1|cluster2=1) * P(cluster2=1|cluster3=0) * P(cluster3=0|cluster8=0)[0.0524288]=0.041943
+binkey=7 [Edge status: 1 1 1 0 0 0 0 0 ] P(G)=P(cluster8=1)[0.2] * P(cluster1=0|cluster2=1) * P(cluster9=0|cluster6=0) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=0) * P(cluster6=0|cluster2=1) * P(cluster2=1|cluster3=1) * P(cluster3=1|cluster8=1)[0.0131072]=0.00262144
+ITERATION 0 newScore=-2.67766e+06 diffscore=12370.3 priorChange=-110.904 successMove=56
+ITERATION 1 newScore=-2.66916e+06 diffscore=8498.61 priorChange=-110.904 successMove=51
+binkey=23 [Edge status: 1 1 1 0 1 0 0 0 ] P(G)=P(cluster8=1)[0.2] * P(cluster1=0|cluster2=1) * P(cluster9=0|cluster6=1) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=1) * P(cluster6=1|cluster2=1) * P(cluster2=1|cluster3=1) * P(cluster3=1|cluster8=1)[0.0032768]=0.00065536
+ITERATION 2 newScore=-2.66342e+06 diffscore=5741.62 priorChange=-121.994 successMove=51
+ITERATION 3 newScore=-2.6603e+06 diffscore=3122.24 priorChange=-112.29 successMove=54
+ITERATION 4 newScore=-2.65739e+06 diffscore=2901.33 priorChange=-126.153 successMove=51
+ITERATION 5 newScore=-2.64924e+06 diffscore=8155.57 priorChange=-115.062 successMove=53
+ITERATION 6 newScore=-2.64446e+06 diffscore=4780.49 priorChange=-121.994 successMove=52
+ITERATION 7 newScore=-2.64058e+06 diffscore=3880.54 priorChange=-103.972 successMove=53
+ITERATION 8 newScore=-2.63728e+06 diffscore=3295.42 priorChange=-112.29 successMove=53
+ITERATION 9 newScore=-2.63429e+06 diffscore=2991.78 priorChange=-117.835 successMove=51
+ITERATION 10 newScore=-2.63355e+06 diffscore=744.32 priorChange=-119.221 successMove=54
+ITERATION 11 newScore=-2.63034e+06 diffscore=3203.55 priorChange=-115.062 successMove=51
+ITERATION 12 newScore=-2.6289e+06 diffscore=1440.97 priorChange=-117.835 successMove=52
+ITERATION 13 newScore=-2.62744e+06 diffscore=1465.62 priorChange=-117.835 successMove=51
+ITERATION 14 newScore=-2.62679e+06 diffscore=647.413 priorChange=-108.131 successMove=50
+ITERATION 15 newScore=-2.62611e+06 diffscore=677.886 priorChange=-116.449 successMove=50
+binkey=55 [Edge status: 1 1 1 0 1 1 0 0 ] P(G)=P(cluster8=1)[0.2] * P(cluster1=0|cluster2=1) * P(cluster9=1|cluster6=1) * P(cluster7=0|cluster10=0) * P(cluster10=0|cluster6=1) * P(cluster6=1|cluster2=1) * P(cluster2=1|cluster3=1) * P(cluster3=1|cluster8=1)[0.0131072]=0.00262144
+ITERATION 16 newScore=-2.62462e+06 diffscore=1487.97 priorChange=-108.131 successMove=52
+ITERATION 17 newScore=-2.62191e+06 diffscore=2714.55 priorChange=-121.994 successMove=51
+ITERATION 18 newScore=-2.61972e+06 diffscore=2186.27 priorChange=-112.29 successMove=50
+ITERATION 19 newScore=-2.6165e+06 diffscore=3224.75 priorChange=-106.745 successMove=51
+ITERATION 20 newScore=-2.61316e+06 diffscore=3339.74 priorChange=-106.745 successMove=51
+ITERATION 21 newScore=-2.61231e+06 diffscore=846.58 priorChange=-109.517 successMove=49
+ITERATION 22 newScore=-2.61029e+06 diffscore=2018.7 priorChange=-97.0406 successMove=48
+ITERATION 23 newScore=-2.60916e+06 diffscore=1130.44 priorChange=-106.745 successMove=50
+ITERATION 24 newScore=-2.60822e+06 diffscore=936.724 priorChange=-105.358 successMove=48
+binkey=87 [Edge status: 1 1 1 0 1 0 1 0 ] P(G)=P(cluster8=1)[0.2] * P(cluster1=0|cluster2=1) * P(cluster9=0|cluster6=1) * P(cluster7=0|cluster10=1) * P(cluster10=1|cluster6=1) * P(cluster6=1|cluster2=1) * P(cluster2=1|cluster3=1) * P(cluster3=1|cluster8=1)[0.0032768]=0.00065536
+ITERATION 25 newScore=-2.60457e+06 diffscore=3650.42 priorChange=-115.062 successMove=48
+ITERATION 26 newScore=-2.5983e+06 diffscore=6275.73 priorChange=-109.517 successMove=49
+ITERATION 27 newScore=-2.59671e+06 diffscore=1592.14 priorChange=-92.8817 successMove=49
+ITERATION 28 newScore=-2.5945e+06 diffscore=2209.22 priorChange=-99.8132 successMove=48
+ITERATION 29 newScore=-2.59251e+06 diffscore=1984.41 priorChange=-90.1091 successMove=50
+ITERATION 30 newScore=-2.59064e+06 diffscore=1870.01 priorChange=-103.972 successMove=49
+ITERATION 31 newScore=-2.58798e+06 diffscore=2659.24 priorChange=-115.062 successMove=49
+ITERATION 32 newScore=-2.5876e+06 diffscore=383.131 priorChange=-98.4269 successMove=47
+ITERATION 33 newScore=-2.58719e+06 diffscore=407.835 priorChange=-105.358 successMove=48
+ITERATION 34 newScore=-2.58527e+06 diffscore=1925.21 priorChange=-98.4269 successMove=46
+ITERATION 35 newScore=-2.58467e+06 diffscore=599.135 priorChange=-113.676 successMove=46
+ITERATION 36 newScore=-2.58343e+06 diffscore=1239.48 priorChange=-98.4269 successMove=47
+ITERATION 37 newScore=-2.58174e+06 diffscore=1686.23 priorChange=-98.4269 successMove=46
+ITERATION 38 newScore=-2.57979e+06 diffscore=1953.89 priorChange=-79.0188 successMove=48
+ITERATION 39 newScore=-2.5782e+06 diffscore=1590.22 priorChange=-85.9503 successMove=46
+ITERATION 40 newScore=-2.57651e+06 diffscore=1688.74 priorChange=-103.972 successMove=46
+ITERATION 41 newScore=-2.57481e+06 diffscore=1698.58 priorChange=-84.564 successMove=44
+ITERATION 42 newScore=-2.57197e+06 diffscore=2839.8 priorChange=-94.268 successMove=44
+ITERATION 43 newScore=-2.57151e+06 diffscore=458.95 priorChange=-88.7228 successMove=46
+ITERATION 44 newScore=-2.57039e+06 diffscore=1123.36 priorChange=-102.586 successMove=45
+ITERATION 45 newScore=-2.56863e+06 diffscore=1753.98 priorChange=-80.4051 successMove=44
+ITERATION 46 newScore=-2.56712e+06 diffscore=1517.2 priorChange=-81.7914 successMove=44
+ITERATION 47 newScore=-2.56545e+06 diffscore=1669.87 priorChange=-94.268 successMove=42
+ITERATION 48 newScore=-2.565e+06 diffscore=451.223 priorChange=-87.3365 successMove=44
+ITERATION 49 newScore=-2.56476e+06 diffscore=237.927 priorChange=-80.4051 successMove=43
+ITERATION 50 newScore=-2.56451e+06 diffscore=249.812 priorChange=-101.199 successMove=42
+ITERATION 51 newScore=-2.56417e+06 diffscore=340.517 priorChange=-97.0406 successMove=44
+ITERATION 52 newScore=-2.56284e+06 diffscore=1329.33 priorChange=-92.8817 successMove=43
+ITERATION 53 newScore=-2.5626e+06 diffscore=236.184 priorChange=-87.3365 successMove=41
+ITERATION 54 newScore=-2.56224e+06 diffscore=365.567 priorChange=-98.4269 successMove=40
+ITERATION 55 newScore=-2.55988e+06 diffscore=2361.32 priorChange=-83.1777 successMove=39
+ITERATION 56 newScore=-2.55843e+06 diffscore=1441.4 priorChange=-79.0188 successMove=38
+ITERATION 57 newScore=-2.55725e+06 diffscore=1188.92 priorChange=-83.1777 successMove=37
+ITERATION 58 newScore=-2.55683e+06 diffscore=418.379 priorChange=-87.3365 successMove=36
+ITERATION 59 newScore=-2.55435e+06 diffscore=2480.57 priorChange=-87.3365 successMove=35
+ITERATION 60 newScore=-2.55402e+06 diffscore=328.75 priorChange=-88.7228 successMove=35
+ITERATION 61 newScore=-2.55284e+06 diffscore=1173.79 priorChange=-84.564 successMove=34
+ITERATION 62 newScore=-2.55134e+06 diffscore=1499.06 priorChange=-74.8599 successMove=32
+ITERATION 63 newScore=-2.55115e+06 diffscore=196.013 priorChange=-63.7695 successMove=32
+ITERATION 64 newScore=-2.55096e+06 diffscore=192.618 priorChange=-47.134 successMove=32
+ITERATION 65 newScore=-2.54857e+06 diffscore=2388.28 priorChange=-52.6792 successMove=32
+ITERATION 66 newScore=-2.5484e+06 diffscore=165.268 priorChange=-60.997 successMove=31
+ITERATION 67 newScore=-2.54824e+06 diffscore=163.034 priorChange=-59.6107 successMove=30
+ITERATION 68 newScore=-2.54807e+06 diffscore=166.507 priorChange=-66.5421 successMove=30
+ITERATION 69 newScore=-2.54791e+06 diffscore=158.995 priorChange=-63.7695 successMove=29
+ITERATION 70 newScore=-2.54775e+06 diffscore=161.611 priorChange=-55.4518 successMove=29
+ITERATION 71 newScore=-2.5476e+06 diffscore=156.81 priorChange=-51.2929 successMove=29
+ITERATION 72 newScore=-2.54646e+06 diffscore=1139.09 priorChange=-66.5421 successMove=29
+ITERATION 73 newScore=-2.54632e+06 diffscore=139.447 priorChange=-56.8381 successMove=27
+ITERATION 74 newScore=-2.54612e+06 diffscore=197.501 priorChange=-52.6792 successMove=26
+ITERATION 75 newScore=-2.54494e+06 diffscore=1175.31 priorChange=-58.2244 successMove=26
+ITERATION 76 newScore=-2.54485e+06 diffscore=97.1299 priorChange=-40.2025 successMove=25
+ITERATION 77 newScore=-2.54467e+06 diffscore=173.877 priorChange=-49.9066 successMove=24
+ITERATION 78 newScore=-2.54453e+06 diffscore=144.988 priorChange=-52.6792 successMove=23
+ITERATION 79 newScore=-2.54425e+06 diffscore=278.825 priorChange=-47.134 successMove=23
+ITERATION 80 newScore=-2.54406e+06 diffscore=184.946 priorChange=-41.5888 successMove=22
+ITERATION 81 newScore=-2.54309e+06 diffscore=975.934 priorChange=-30.4985 successMove=21
+ITERATION 82 newScore=-2.54299e+06 diffscore=102.5 priorChange=-41.5888 successMove=22
+ITERATION 83 newScore=-2.5418e+06 diffscore=1184.84 priorChange=-55.4518 successMove=21
+ITERATION 84 newScore=-2.54168e+06 diffscore=118.995 priorChange=-36.0437 successMove=20
+ITERATION 85 newScore=-2.54152e+06 diffscore=161.65 priorChange=-42.9751 successMove=20
+ITERATION 86 newScore=-2.54139e+06 diffscore=127.206 priorChange=-29.1122 successMove=18
+ITERATION 87 newScore=-2.54105e+06 diffscore=340.055 priorChange=-20.7944 successMove=15
+ITERATION 88 newScore=-2.53992e+06 diffscore=1129.46 priorChange=-27.7259 successMove=14
+ITERATION 89 newScore=-2.53982e+06 diffscore=105.012 priorChange=-19.4081 successMove=13
+ITERATION 90 newScore=-2.53967e+06 diffscore=144.434 priorChange=-26.3396 successMove=13
+ITERATION 91 newScore=-2.5395e+06 diffscore=170.613 priorChange=-27.7259 successMove=13
+ITERATION 92 newScore=-2.53805e+06 diffscore=1450.51 priorChange=-24.9533 successMove=11
+ITERATION 93 newScore=-2.53802e+06 diffscore=34.1521 priorChange=-20.7944 successMove=11
+ITERATION 94 newScore=-2.53799e+06 diffscore=30.1285 priorChange=-18.0218 successMove=10
+ITERATION 95 newScore=-2.53795e+06 diffscore=35.51 priorChange=-23.567 successMove=10
+ITERATION 96 newScore=-2.53792e+06 diffscore=31.9669 priorChange=-23.567 successMove=10
+ITERATION 97 newScore=-2.5379e+06 diffscore=25.957 priorChange=-12.4766 successMove=9
+ITERATION 98 newScore=-2.53787e+06 diffscore=24.2284 priorChange=-11.0904 successMove=9
+ITERATION 99 newScore=-2.53784e+06 diffscore=32.731 priorChange=-18.0218 successMove=8
+MetaLearner::dumpAllGraphs
+Final Score -2.53784e+06
+MetaLearner::start runtime: 1245390069 ms
+Results/
+Results/cluster3/
+Results/cluster3/fold0/
+Results/cluster3/fold0/modelparams.txt
+Results/cluster3/fold0/var_mb_pw_k50.txt
+Results/cluster7/
+Results/cluster7/fold0/
+Results/cluster7/fold0/modelparams.txt
+Results/cluster7/fold0/var_mb_pw_k50.txt
+Results/cluster2/
+Results/cluster2/fold0/
+Results/cluster2/fold0/modelparams.txt
+Results/cluster2/fold0/var_mb_pw_k50.txt
+Results/cluster9/
+Results/cluster9/fold0/
+Results/cluster9/fold0/modelparams.txt
+Results/cluster9/fold0/var_mb_pw_k50.txt
+Results/cluster6/
+Results/cluster6/fold0/
+Results/cluster6/fold0/modelparams.txt
+Results/cluster6/fold0/var_mb_pw_k50.txt
+Results/cluster1/
+Results/cluster1/fold0/
+Results/cluster1/fold0/modelparams.txt
+Results/cluster1/fold0/var_mb_pw_k50.txt
+Results/cluster10/
+Results/cluster10/fold0/
+Results/cluster10/fold0/modelparams.txt
+Results/cluster10/fold0/var_mb_pw_k50.txt
+Results/cluster8/
+Results/cluster8/scoreFile.txt
+Results/cluster8/fold0/
+Results/cluster8/fold0/modelparams.txt
+Results/cluster8/fold0/var_mb_pw_k50.txt

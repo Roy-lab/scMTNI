@@ -1,0 +1,3 @@
+KLF7	cluster10	6
+KLF7	cluster9	4
+ZBTB40	cluster10	27

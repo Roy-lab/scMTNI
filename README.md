@@ -139,8 +139,53 @@ m : A file describing the gene relationships. The first column of this file is o
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
 
+### Additional note (how to generate subsamples of a given expression dataset)
+In the manuscript, we applied scMTNI on multiple subsamples of a given gene expression dataset.
+It was done to improve the stability or robustness of the results.
+To generate subsamples of a given dataset, please use the following script.
+
+```
+# Input:
+# --indir [the location of the filelist file; please see Step 2.3]
+# --filelist [the name of the filelist file]
+# --nseed [number of desired subsamples]
+# --fraction (optional) [fraction of cells each subsample should have compared to the number of cells in the original dataset; default = 0.5]
+
+## Generate 100 subsamples of a given dataset.
+## Each subsample should have half the number of cells in the original dataset (by default).
+## For each subsample, the cells will be selected without replacement.
+python Scripts/Datasubsample_sc_merged.py --filelist $filelist --indir $indir --nseed 100
+
+```
+
+
 
 ## Step 4. Evaluation
+### 4.0 Generate consensus network for subsample results
+
+```
+# Input:
+# 1 [number of subsamples]
+# 2 [number of regulators]
+# 3 [cell file order file path]
+# 4 [scMTNI results directory path]
+# 5 [number of ogids]
+
+nseed=10
+maxReg=50
+cellfile=ExampleData/celltype_order.txt
+indir=Results_subsample/
+nogid=50
+
+bash Scripts/Postprocessing/Makeconsensusnetwork.sh $nseed $maxReg $cellfile $indir $nogid 
+
+```
+
+Apply 80% edge confidence limit to consensus edges
+```
+bash Scripts/Postprocessing/genConsensus_cf0.8.sh
+```
+
 ### 4.1 Compute AUPR:
 ```
 bash Scripts/Evaluation/aupr_wrapper_list_intersection.sh
@@ -155,21 +200,75 @@ python Scripts/Evaluation/fscore_filterPred.py  --inferred $predicted_net --gold
 
 ## Step 5. Network dynamics analysis
 ### 5.1 edge-based k-means clustering analysis:
-Apply k-means clustering on edge*cell confidence matrix to find subnetworks with different patterns of conservation.
+Apply k-means clustering on edge\*cell confidence matrix to find subnetworks with different patterns of conservation.
 
 ```
 cd Scripts/Network_Analysis/
 matlab -nodisplay -nosplash -nodesktop -r "StablityKmeansClustering; quit()"
 ```
 
+Apply k-means for k=1-30 to the subsample results with a 0.8 confidence limit:
+```
+matlab -nodisplay -nosplash -nodesktop -r "addpath('Scripts/Network_Analysis'); StablityKmeansClustering_cf08; quit()"
+```
+Output directory:
+Results_subsample/analysis/kmeansclustering_cf0.8
+
+
+Generate a bubbleplot and kmeans heatmap per cluster
+```
+# Command line arguments
+# 1 [start of kmeans range i.e. 15]
+# 2 [end of kmeans range i.e. 30]
+# 3 [path to cluster dir]
+# 4 [path to output dir]
+# 5 [edge threshold i.e. cf0.8]
+# 6 [prefix i.e. testdata]
+
+bash Scripts/Network_Analysis/kmeans_bubbleplot_wrapper.sh 15 30 Results_subsample/analysis/kmeansclustering_cf0.8/ Results_subsample/analysis/kmeansclustering_cf0.8/ cf0.8 testdata
+```
+Output directory:
+Results_subsample/analysis/kmeansclustering_cf0.8/kmeans_k\*
+
+
+
 ### 5.2 topic model-based dynamic network analysis:
 Apply LDA topic models to examine subnetwork level rewiring 
 
+Prepare input matrix for subsample results
 ```
-cd Scripts/Network_Analysis/
-matlab -nodisplay -nosplash -nodesktop -r "LDA_analysis; quit()"
+# Input:
+# 1 [cell file order file path]
+# 2 [scMTNI results directory path]
+# 3 [edge filter threshold; i.e. 'full', '\_cf0.8'] 
+Rscript Scripts/Network_Analysis/prepareNetmatrix.R ExampleData/celltype_order.txt Results_subsample/analysis/cluster1 \_cf0.8
 ```
 
+Apply LDA to subsample results
+```
+matlab -nodisplay -nosplash -nodesktop -r "addpath('Scripts/Network_Analysis'); LDA_analysis('Results_subsample/analysis/lda_TFcellbygene/','ExampleData/celltype_order.txt',10,'_filteredlowexpression','_cf0.8','testdata',0); quit()"
+```
 
+Obtain giant component of inferred networks
+```
+Rscript --vanilla Scripts/Network_Analysis/plotNetworks_LDA_cf0.8.R 10
+
+bash Scripts/Network_Analysis/getGiantComponents.sh
+```
+
+Obtain top regulators per component
+```
+bash Scripts/Network_Analysis/getTopRegPerComponent.sh
+```
+
+Make network figures per topic: 
+```
+Rscript Scripts/Network_Analysis/makeAllGraphs.R
+```
+
+Make regulators bubble plot per topic:
+```
+Rscript Scripts/Network_Analysis/makeTopicRegBubble_ggplot.R
+```
 
 
