@@ -123,11 +123,12 @@ Framework::init(int argc, char** argv)
                 break;
             }
             //curently only one fold:
-            /*case 'v':
+            case 'v':
             {
                 cvCnt=atoi(my_optarg);
+                cvCnt=1;
                 break;
-            }*/
+            }
             case 'l':
             {
                 metaLearner.setRestrictedList(my_optarg);
