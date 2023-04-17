@@ -46,7 +46,9 @@ using namespace std;
 Framework::Framework()
 {
     epsThreshold=-1;
+    cvCnt=1;
 }
+
 
 Framework::~Framework()
 {
@@ -120,11 +122,12 @@ Framework::init(int argc, char** argv)
                 metaLearner.setConvergenceThreshold(convThreshold);
                 break;
             }
-            case 'v':
+            //curently only one fold:
+            /*case 'v':
             {
                 cvCnt=atoi(my_optarg);
                 break;
-            }
+            }*/
             case 'l':
             {
                 metaLearner.setRestrictedList(my_optarg);
@@ -226,6 +229,7 @@ Framework::init(int argc, char** argv)
     mor.readSpeciesMapping(speciesOrder); //speciesIDNameMap
     mor.readFile(orthoMapFName);  //generateGeneOrthoMap();
     metaLearner.setOrthogroupReader(&mor);
+    //curently only one fold:
     if(cvCnt==1){
         metaLearner.init_onefold();
     }else{

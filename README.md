@@ -93,7 +93,7 @@ The output network for each cell type is Results/cluster*/fold0/var_mb_pw_k50.tx
 
 ### Example uasge of scMTNI with prior network
 ```
-Code/scMTNI -f ExampleData/testdata_config.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
+Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 ```
 The above example will run scMTNI using all regulators and targets. 
 
@@ -101,7 +101,7 @@ The above example will run scMTNI using all regulators and targets.
 Since scMTNI learns regulators on a per-target basis, the algorithm can easily be parallelized by running the algorithm for each target gene (or sets of genes) separately. For example, to run scMTNI using 10 genes, we can replace the -n parameter with a file that contains only 10 genes as in ExampleData/AllGenes0.txt:
 
 ```
-Code/scMTNI -f ExampleData/testdata_config.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
+Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 ```
 
 ### Example uasge of scMTNI without prior network
@@ -119,8 +119,6 @@ f : config file with six columns, rows for each cell. Each cell's row should hav
 - 6. List of motifs to be used. This file should have three tab-separated columns, listing the regulator, target, and motif score
 
 x : Maximum # of regulators to be used for a given target.
-
-v : Used for cross-validation. Can be left at 1.
 
 p : default 0.5. The probability that an edge is present in the root cell.
 

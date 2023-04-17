@@ -623,7 +623,7 @@ int MetaLearner::start(int f)
         cout << "precomputeEmptyGraphPrior" << endl;
         initPrior = precomputeEmptyGraphPrior();
         initCondsetMap_Tree(speciesData->getRoot());
-        cout << "condsetMap_Tree" << endl;
+        /*cout << "condsetMap_Tree" << endl;
         for (int setIter = 0; setIter < condsetMap_Tree.size(); setIter++)
         {
             // INTINTMAP* cset=setIter->second;
@@ -634,7 +634,7 @@ int MetaLearner::start(int f)
                 cout << " " << speciesIDNameMap[cIter] << "=" << cset[cIter];
             }
             cout << endl;
-        }
+        }*/
     }
     // precomputePerSpeciesPrior();
     // initEdgeSet();
@@ -687,7 +687,7 @@ int MetaLearner::start(int f)
             currGlobalScore = newScore;
             double vm, rss;
             process_mem_usage(vm, rss);
-            cout << "ITERATION " << iter << " newScore=" << newScore << " diffscore=" << diff << " priorChange=" << priorChange << " successMove=" << successMove << " VM: " << vm << " MB; RSS: " << rss << endl;
+            cout << "ITERATION " << iter << " newScore=" << newScore << " diffscore=" << diff << " priorChange=" << priorChange << " successMove=" << successMove << endl; //" VM: " << vm << " MB; RSS: " << rss << endl;
             iter++;
         }
         // currK++;
@@ -847,7 +847,7 @@ int MetaLearner::initEdgeSet_onefold()
     cout << "initEdgeSet_onefold" << endl;
     initCondsetMap_Nopool();
     initCondsetMap_Tree(speciesData->getRoot());
-    cout << "condsetMap_Tree" << endl;
+    /*cout << "condsetMap_Tree" << endl;
     for (int setIter = 0; setIter < condsetMap_Tree.size(); setIter++)
     {
         // INTINTMAP* cset=setIter->second;
@@ -858,7 +858,7 @@ int MetaLearner::initEdgeSet_onefold()
             cout << " " << cIter << "=" << cset[cIter];
         }
         cout << endl;
-    }
+    }*/
     // for(map<string,SpeciesDataManager*>::iterator eIter=speciesDataSet.begin();eIter!=speciesDataSet.end();eIter++)
     for (int i = 0; i < speciesDataSet.size(); i++)
     {

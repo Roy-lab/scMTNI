@@ -28,7 +28,6 @@ CD34_cluster7
 PPP2R5A_cluster7
 HIST3H2A_cluster7
 TARBP1_cluster7
-RP11-443B7.1_cluster7
 COX20_cluster7
 PTRHD1_cluster7
 RAB10_cluster7
@@ -72,7 +71,6 @@ SKIL_cluster7
 FXR1_cluster7
 YEATS2_cluster7
 MAP3K13_cluster7
-HES1_cluster7
 ZNF595_cluster7
 ZNF141_cluster7
 RP11-539L10.3_cluster7
@@ -117,7 +115,6 @@ GTF2I_cluster7
 ADAM22_cluster7
 TRRAP_cluster7
 ZNF394_cluster7
-EPHB4_cluster7
 C7orf73_cluster7
 CDK5_cluster7
 TBL1X_cluster7
@@ -215,7 +212,6 @@ NEK3_cluster7
 DIS3_cluster7
 RAB20_cluster7
 TFDP1_cluster7
-CEBPE_cluster7
 NOVA1_cluster7
 TRIM9_cluster7
 ACTR10_cluster7
@@ -268,7 +264,6 @@ KHSRP_cluster7
 ZNF121_cluster7
 P2RY11_cluster7
 DNMT1_cluster7
-ICAM1_cluster7
 ECSIT_cluster7
 ZNF44_cluster7
 NFIX_cluster7
@@ -277,7 +272,6 @@ ZNF91_cluster7
 RPSAP58_cluster7
 CEBPG_cluster7
 AD000090.2_cluster7
-DPF1_cluster7
 PAK4_cluster7
 CIC_cluster7
 ZNF285_cluster7

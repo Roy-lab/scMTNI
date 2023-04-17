@@ -1,6 +1,5 @@
 ICAM1_cluster6
 GTF2I_cluster6
-PPAPDC3_cluster6
 BAZ1B_cluster6
 NR4A1_cluster6
 PAPOLG_cluster6
@@ -25,11 +24,9 @@ SUPT3H_cluster6
 MTMR14_cluster6
 DOT1L_cluster6
 TBCK_cluster6
-ZFPM1_cluster6
 POLR2F_cluster6
 HES1_cluster6
 PAK4_cluster6
-ZNF285_cluster6
 KDM2B_cluster6
 ZNF429_cluster6
 SKI_cluster6
@@ -89,12 +86,10 @@ FYN_cluster6
 HIVEP3_cluster6
 SMG7_cluster6
 ZFP36L2_cluster6
-ENPP5_cluster6
 KAT6A_cluster6
 NAB2_cluster6
 ZFP28_cluster6
 MAFG_cluster6
 PDE4D_cluster6
 CHP1_cluster6
-AR_cluster6
 STK38_cluster6

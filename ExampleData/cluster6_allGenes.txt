@@ -6,8 +6,6 @@ NBPF1_cluster6
 MECR_cluster6
 SFPQ_cluster6
 INPP5B_cluster6
-KIAA0754_cluster6
-ZFP69_cluster6
 HIVEP3_cluster6
 ERMAP_cluster6
 EBNA1BP2_cluster6
@@ -43,7 +41,6 @@ UNC50_cluster6
 EIF5B_cluster6
 RP11-332H14.2_cluster6
 MERTK_cluster6
-AC093818.1_cluster6
 FKBP7_cluster6
 ITGAV_cluster6
 INPP1_cluster6
@@ -66,8 +63,6 @@ ARL13B_cluster6
 MTRNR2L12_cluster6
 RP11-475N22.4_cluster6
 CEP63_cluster6
-MBNL1-AS1_cluster6
-RP11-38P22.2_cluster6
 SKIL_cluster6
 FXR1_cluster6
 YEATS2_cluster6
@@ -81,12 +76,10 @@ TBCK_cluster6
 PAPSS1_cluster6
 MAD2L1_cluster6
 PLRG1_cluster6
-CDH9_cluster6
 SKP2_cluster6
 PELO_cluster6
 PDE4D_cluster6
 GFM2_cluster6
-GIN1_cluster6
 FNIP1_cluster6
 PAIP2_cluster6
 CNOT6_cluster6
@@ -100,7 +93,6 @@ LTB_cluster6
 SYNGAP1_cluster6
 STK38_cluster6
 SUPT3H_cluster6
-ENPP5_cluster6
 FYN_cluster6
 L3MBTL3_cluster6
 TBPL1_cluster6
@@ -114,7 +106,6 @@ BBS9_cluster6
 EPDR1_cluster6
 BAZ1B_cluster6
 GTF2I_cluster6
-ADAM22_cluster6
 TRRAP_cluster6
 ZNF394_cluster6
 EPHB4_cluster6
@@ -122,8 +113,6 @@ C7orf73_cluster6
 CDK5_cluster6
 TBL1X_cluster6
 PQBP1_cluster6
-SYP_cluster6
-AR_cluster6
 OGT_cluster6
 AGPAT5_cluster6
 CNOT7_cluster6
@@ -143,14 +132,12 @@ SNAPC3_cluster6
 B4GALT1_cluster6
 C9orf41_cluster6
 SYK_cluster6
-ROR2_cluster6
 TMEM38B_cluster6
 FKBP15_cluster6
 HDHD3_cluster6
 PBX3_cluster6
 ST6GALNAC6_cluster6
 GLE1_cluster6
-PPAPDC3_cluster6
 RXRA_cluster6
 SDCCAG3_cluster6
 C9orf142_cluster6
@@ -166,7 +153,6 @@ RP11-77P6.2_cluster6
 PDLIM1_cluster6
 DHX32_cluster6
 POLR2L_cluster6
-CDKN1C_cluster6
 SWAP70_cluster6
 HTATIP2_cluster6
 KIF18A_cluster6
@@ -241,7 +227,6 @@ CKLF_cluster6
 ZFP1_cluster6
 C16orf46_cluster6
 KLHDC4_cluster6
-ZFPM1_cluster6
 RAP1GAP2_cluster6
 ARRB2_cluster6
 TRIM16_cluster6
@@ -280,7 +265,6 @@ AD000090.2_cluster6
 DPF1_cluster6
 PAK4_cluster6
 CIC_cluster6
-ZNF285_cluster6
 ERCC2_cluster6
 CCDC8_cluster6
 CLEC11A_cluster6

@@ -1,4 +1,3 @@
-ICAM1_cluster7
 GTF2I_cluster7
 PPAPDC3_cluster7
 BAZ1B_cluster7
@@ -7,14 +6,12 @@ PAPOLG_cluster7
 TRRAP_cluster7
 MAD2L1_cluster7
 POLR2L_cluster7
-DPF1_cluster7
 RAD51_cluster7
 ZNF121_cluster7
 HINFP_cluster7
 MEF2D_cluster7
 TARBP1_cluster7
 SCP2_cluster7
-EPHB4_cluster7
 KNTC1_cluster7
 L3MBTL3_cluster7
 SKIL_cluster7
@@ -27,7 +24,6 @@ DOT1L_cluster7
 TBCK_cluster7
 ZFPM1_cluster7
 POLR2F_cluster7
-HES1_cluster7
 PAK4_cluster7
 ZNF285_cluster7
 KDM2B_cluster7

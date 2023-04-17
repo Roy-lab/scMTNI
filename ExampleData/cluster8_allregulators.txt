@@ -1,6 +1,4 @@
-ICAM1_cluster8
 GTF2I_cluster8
-PPAPDC3_cluster8
 BAZ1B_cluster8
 NR4A1_cluster8
 PAPOLG_cluster8
@@ -14,7 +12,6 @@ HINFP_cluster8
 MEF2D_cluster8
 TARBP1_cluster8
 SCP2_cluster8
-EPHB4_cluster8
 KNTC1_cluster8
 L3MBTL3_cluster8
 SKIL_cluster8
@@ -25,11 +22,9 @@ SUPT3H_cluster8
 MTMR14_cluster8
 DOT1L_cluster8
 TBCK_cluster8
-ZFPM1_cluster8
 POLR2F_cluster8
 HES1_cluster8
 PAK4_cluster8
-ZNF285_cluster8
 KDM2B_cluster8
 ZNF429_cluster8
 SKI_cluster8
@@ -51,7 +46,6 @@ HOXA7_cluster8
 INPP1_cluster8
 EIF5B_cluster8
 FOSL2_cluster8
-HDAC11_cluster8
 PPP1R9B_cluster8
 GLI4_cluster8
 CIC_cluster8
@@ -77,7 +71,6 @@ PSTPIP1_cluster8
 ULK4_cluster8
 SYNJ2_cluster8
 TRIM16_cluster8
-CCDC8_cluster8
 ZNF580_cluster8
 ZNF595_cluster8
 ZNF141_cluster8

@@ -123,7 +123,7 @@ MappedOrthogroupReader::readSpeciesMapping(const char* aFName)
         }
         string speciesName(buffer);
         speciesIDNameMap[lineCnt]=speciesName;
-        cout << "speciesIDNameMap["<<lineCnt << "]=" << speciesName << endl;
+        //cout << "speciesIDNameMap["<<lineCnt << "]=" << speciesName << endl;
         lineCnt++;
     }
     inFile.close();
