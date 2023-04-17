@@ -1,8 +1,0 @@
-cluster8	cluster8	Results/cluster8	cluster8_allregulators.txt	cluster8_allGenes.txt	cluster8_network.txt
-cluster3	cluster3	Results/cluster3	cluster3_allregulators.txt	cluster3_allGenes.txt	cluster3_network.txt
-cluster2	cluster2	Results/cluster2	cluster2_allregulators.txt	cluster2_allGenes.txt	cluster2_network.txt
-cluster1	cluster1	Results/cluster1	cluster1_allregulators.txt	cluster1_allGenes.txt	cluster1_network.txt
-cluster6	cluster6	Results/cluster6	cluster6_allregulators.txt	cluster6_allGenes.txt	cluster6_network.txt
-cluster9	cluster9	Results/cluster9	cluster9_allregulators.txt	cluster9_allGenes.txt	cluster9_network.txt
-cluster10	cluster10	Results/cluster10	cluster10_allregulators.txt	cluster10_allGenes.txt	cluster10_network.txt
-cluster7	cluster7	Results/cluster7	cluster7_allregulators.txt	cluster7_allGenes.txt	cluster7_network.txt
