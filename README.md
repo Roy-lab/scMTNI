@@ -10,6 +10,8 @@ The scMTNI model has the following benefits:
 
 Preprint: https://biorxiv.org/cgi/content/short/2022.07.25.501350v1
 
+[![DOI](https://zenodo.org/badge/441968928.svg)](https://zenodo.org/badge/latestdoi/441968928)
+
 ![alt text](figures_doc/scMTNI_v2.png)
 
 ## Step 1. Install
