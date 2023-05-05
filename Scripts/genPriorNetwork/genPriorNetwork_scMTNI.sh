@@ -1,11 +1,6 @@
 ########################################################################################################################################
 ## Step 1: extract bam files
 ########################################################################################################################################
-prefix=liger_sqrt_ncell50_k8_filterhumanbc_FBS;dataset=FBS
-#clusterfile=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/networkinference/liger/sqrt_atacsum100_rnacell50/k10/ligerclusters.txt
-#datadir=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/networkinference/data/$prefix/
-#indir=/mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/data/scATACseq/${dataset}/bams_bycluster/
-#cellfile=${datadir}/celltype_order.txt
 datadir=../../ExampleData/
 cellfile=../../ExampleData/celltype_order.txt
 clusterfile=../../ExampleData/LIGER/ligerclusters.txt
@@ -19,7 +14,6 @@ done
 
 ########################################################################################################################################
 ## Step 2: MACS2 peaks calling
-## /mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/scripts/macs2Callpeaks.sh
 ########################################################################################################################################
 outdir=${datadir}/macs2_peaks/
 mkdir -p $outdir
@@ -31,7 +25,6 @@ done
 
 ########################################################################################################################################
 ## Step 3: Map peaks to genes 
-## Script: /mnt/dv/wid/projects5/Roy-singlecell/shilu_work/integrate_scrna_scatac/scripts/mapPeaksTogenes.sh
 ########################################################################################################################################
 motifs=${datadir}/motifs/all_motifs_sorted_clean.txt
 outdir2=${datadir}/mapPeaksTogenes/
@@ -46,7 +39,6 @@ done
 
 ########################################################################################################################################
 #  Step 4: connect TF motfis to genes
-# /mnt/dv/wid/projects5/Roy-singlecell/sridharanlab/scATACseq/from_Stefan/filtered_fragments/ESC_8/others/mapMot2Gene.py
 ########################################################################################################################################
 outdir3=${datadir}/macs2_networks/
 mkdir -p $outdir3
