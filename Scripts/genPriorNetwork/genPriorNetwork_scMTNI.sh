@@ -36,8 +36,8 @@ done
 motifs=${datadir}/motifs/all_motifs_sorted_clean.txt
 outdir2=${datadir}/mapPeaksTogenes/
 mkdir -p $outdir2
-bedtools=/mnt/dv/wid/projects2/Roy-common/programs/thirdparty/bedtools2/bin/bedtools 
-promoterfile=${datadir}/Mus_musculus.GRCm38.74.TSS.5000.bed
+bedtools=./bedtools 
+promoterfile=${datadir}/motifs/Mus_musculus.GRCm38.74.TSS.5000.bed
 for cluster in `cat $cellfile`
 do 
     $bedtools intersect -a ${outdir}/${cluster}_peak_peaks.narrowPeak -b $motifs -wb -sorted > ${outdir2}/motifs_in_${cluster} 
