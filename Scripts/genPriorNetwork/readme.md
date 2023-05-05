@@ -8,7 +8,7 @@ clusterfile=../../ExampleData/LIGER/ligerclusters.txt
 indir=../../ExampleData/bams_bycluster/
 for cellcluster in `cat $cellfile`
 do
-    python PrepareBamForLigerclusters_A2S.py $cellcluster $clusterfile $indir
+    python PrepareBamForLigerclusters.py $cellcluster $clusterfile $indir
 done
 ```
 
