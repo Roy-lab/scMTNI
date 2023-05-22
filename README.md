@@ -124,9 +124,11 @@ x : Maximum # of regulators to be used for a given target.
 
 p : default 0.5. The probability that an edge is present in the root cell.
 
-l : List of the orthogroups (id #s) to be considered as regulators. Note: a regulator must also be present in the species-specific list of regulators given in the species-specific config file (parameter f)
+l : List of the orthogroups (id #s) to be considered as regulators. Note: a regulator must also be present in the species-specific list of regulators given in the species-specific config file (parameter f).
+The list should only have the orthogroup IDs, not the names of the genes belonging to the orthogroup. The gene names are specified through parameter `m` which maps the orthogroup IDs to the gene names. 
 
-n : List of the orthogroups (id #s) to be considered as targets. Note: a target must also be present in the species-specific list of targets given in the species-specific config file (parameter f)
+n : List of the orthogroups (id #s) to be considered as targets. Note: a target must also be present in the species-specific list of targets given in the species-specific config file (parameter f).
+The list should only have the orthogroup IDs, not the names of the genes belonging to the orthogroup. The gene names are specified through parameter `m` which maps the orthogroup IDs to the gene names.
 
 d : The cell lineage tree to be used. This file should have 5 columns describing the tree:
 - 1. Child cell
@@ -134,7 +136,7 @@ d : The cell lineage tree to be used. This file should have 5 columns describing
 - 3. Branch-specific gain rate (The probability that an edge is gained in a child given that the edge is absent in the predecessor cell)
 - 4. Branch-specific loss rate (The probability that an edge is lost in a child given that the edge is present in the predecessor cell)
 
-m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1.
+m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1. If we are working with only a single species, then the gene names in a orthogroup are the same gene name followed by the cell cluster ID, e.g., {GeneX_cluster1, GeneX_cluster2, GeneX_cluster3}. Since scMTNI allows different gene sets in different cell clusters, we can set that gene to "None" for the cell clusters where it is absent. For example, if `GeneX` is absent in cluster 2, the aforementioned orthogroup will contain {GeneX_cluster1, None, GeneX_cluster3}. 
 
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
