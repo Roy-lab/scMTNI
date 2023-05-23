@@ -42,7 +42,7 @@ def readPeak2Gene(inname):
 		#16	Gm1992
 		parts = l.strip().split('\t')
 		peak = parts[3]
-		gene = parts[16]
+		gene = parts[-1]
 		genes = peak2gene.get(peak,set([]))
 		genes.add(gene)
 		peak2gene[peak] = genes

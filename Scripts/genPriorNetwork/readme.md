@@ -41,6 +41,12 @@ done
 
 ####################################################################################
 ##  Step 4: connect TF motfis to genes
+## Note: mapMot2Gene.py only works with narrowPeak format
+## See example peak file format: /mnt/dv/wid/projects5/Roy-singlecell/shilu_work/scMTNI/code/scMTNI/ExampleData/macs2_peaks/cluster8_peak_peaks.narrowPeak
+```
+chr1	3425131	3425514	cluster8_peak_peak_1	110	.	8.01443	13.75227	11.07777	184
+chr1	3444972	3445147	cluster8_peak_peak_2	45	.	5.08926	6.88859	4.58632	93
+```
 
 ```outdir3=${datadir}/macs2_networks/
 mkdir -p $outdir3
