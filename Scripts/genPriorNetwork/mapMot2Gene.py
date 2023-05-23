@@ -72,8 +72,8 @@ def readMot2Peak(inname):
 		#15	+
 		parts = l.strip().split('\t')
 		peak = parts[3]
-		mot  = parts[13]
-		val  = float(parts[14])
+		mot  = parts[-3] #parts[13]
+		val  = float(parts[-2])  # parts[14]
 		mot2peak.append((mot,peak,val))
 	f.close()
 	return mot2peak

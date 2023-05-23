@@ -31,7 +31,11 @@ done
 outdir2=${datadir}/mapPeaksTogenes/
 mkdir -p $outdir2
 bedtools=./bedtools
+### promoter file for mouse:
 promoterfile=${datadir}/motifs/Mus_musculus.GRCm38.74.TSS.5000.bed
+### promoter file for human:
+promoterfile=${datadir}/motifs/Homo_sapiens.GRCh37.74.TSS.5000.bed
+
 for cluster in `cat $cellfile`
 do 
     $bedtools intersect -a ${outdir}/${cluster}_peak_peaks.narrowPeak -b $motifs -wb -sorted > ${outdir2}/motifs_in_${cluster} 
@@ -39,14 +43,34 @@ do
 done
 ```
 
+#### See example peak file format: /mnt/dv/wid/projects5/Roy-singlecell/shilu_work/scMTNI/code/scMTNI/ExampleData/macs2_peaks/cluster8_peak_peaks.narrowPeak
+```
+chr1    3425131 3425514 cluster8_peak_peak_1    110     .       8.01443 13.75227        11.07777        184
+chr1    3444972 3445147 cluster8_peak_peak_2    45      .       5.08926 6.88859 4.58632 93
+```
+
+#### Example file of ${outdir2}/motifs_in_${cluster}
+#### See ExampleData/mapPeaksTogenes/motifs_in_cluster8
+```
+chr1	10008	10009	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	9993	10009	M5970_1.02	5.638908	-
+chr1	10008	10009	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	10001	10009	M1358_1.02	10.033302	+
+chr1	10008	10015	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	10007	10015	M1358_1.02	10.033302	+
+```
+
+#### Example file of ${outdir2}/TSS_in_${cluster}
+#### See ExampleData/mapPeaksTogenes/TSS_in_cluster8
+```
+chr1	10008	10162	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	6868	16868	TSS_ENST00000456328_DDX11L1	-1	+	DDX11L1
+chr1	10008	10162	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	6871	16871	TSS_ENST00000515242_DDX11L1	-1	+	DDX11L1
+chr1	10008	10162	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	6873	16873	TSS_ENST00000518655_DDX11L1	-1	+	DDX11L1
+```
+
 ####################################################################################
 ##  Step 4: connect TF motfis to genes
-## Note: mapMot2Gene.py only works with narrowPeak format
-## See example peak file format: /mnt/dv/wid/projects5/Roy-singlecell/shilu_work/scMTNI/code/scMTNI/ExampleData/macs2_peaks/cluster8_peak_peaks.narrowPeak
-```
-chr1	3425131	3425514	cluster8_peak_peak_1	110	.	8.01443	13.75227	11.07777	184
-chr1	3444972	3445147	cluster8_peak_peak_2	45	.	5.08926	6.88859	4.58632	93
-```
+#### Note: mapMot2Gene.py currently only works with narrowPeak format, column4 is the peak unique identifier, and the peak file contains 10 columns. It also requires the last column of the promoterfile to be gene name. It requires the second last column of the motifs file to be motif score, and the third last column of the motifs file to be motif name. 
+#### See example peak file format: ExampleData/macs2_peaks/cluster8_peak_peaks.narrowPeak
+#### See promoterfile example: ExampleData/motifs/Homo_sapiens.GRCh37.74.TSS.5000.bed
+#### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt
 
 ```outdir3=${datadir}/macs2_networks/
 mkdir -p $outdir3
