@@ -141,7 +141,7 @@ m : A file describing the gene relationships. The first column of this file is o
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
 
-### Additional note (how to generate subsamples of a given expression dataset)
+### Additional note 1 (how to generate subsamples of a given expression dataset)
 In the manuscript, we applied scMTNI on multiple subsamples of a given gene expression dataset.
 It was done to improve the stability or robustness of the results.
 To generate subsamples of a given dataset, please use the following script.
@@ -160,6 +160,31 @@ python Scripts/Datasubsample_sc_merged.py --filelist $filelist --indir $indir --
 
 ```
 
+### Additional note 2 (how to create the orthogroup related input files for scMTNI)
+`Scripts/PreparescMTNIinputfiles.py` is the script to generate `testdata_ogids.txt` and `TFs_OGs.txt`.
+OGIDs needs to have the `OG[serial_number]_1` format.
+If you prepare the `filelist.txt` and `regulators.txt` as shown below, you can directly use the script `Scripts/PreparescMTNIinputfiles.py`.
+
+First prepare `filelist.txt`.  
+The first column is the cell name, the second column is the file path to the expression data for each cell type. 
+The example file `ExampleData/filelist.txt`:
+```
+cluster3   ExampleData/cluster3.table
+cluster2   ExampleData/cluster2.table
+cluster1   ExampleData/cluster1.table
+cluster6   ExampleData/cluster6.table
+cluster9   ExampleData/cluster9.table
+cluster10   ExampleData/cluster10.table
+cluster7   ExampleData/cluster7.table
+```
+Then prepare all the other input files based on `ExampleData/filelist.txt` and regulators list `ExampleData/regulators.txt`.
+Finally, run the script `Scripts/PreparescMTNIinputfiles.py` as follows to generate the orthogroup related files:
+```
+indir=ExampleData/
+filelist=${indir}/filelist.txt
+regfile=${indir}/regulators.txt
+python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50 --motifs 1
+```
 
 
 ## Step 4. Evaluation
