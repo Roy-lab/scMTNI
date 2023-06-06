@@ -185,7 +185,7 @@ filelist=${indir}/filelist.txt
 regfile=${indir}/regulators.txt
 python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfile --indir $indir --outdir Results --splitgene 50 --motifs 1
 ```
-A detailed description of how to create the other input files is provided in Section [2.3](https://github.com/Roy-lab/scMTNI#23-prepare-all-input-files-and-config-file-for-scmtni).
+A detailed description of how to create the other input files is provided in Step [2.3](https://github.com/Roy-lab/scMTNI#23-prepare-all-input-files-and-config-file-for-scmtni).
 
 
 ## Step 4. Evaluation
