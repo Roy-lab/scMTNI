@@ -2,7 +2,8 @@
 
 ####################################################################################
 ## Step 1: extract bam files
-```datadir=../../ExampleData/
+```
+datadir=../../ExampleData/
 cellfile=../../ExampleData/celltype_order.txt
 clusterfile=../../ExampleData/LIGER/ligerclusters.txt
 indir=../../ExampleData/bams_bycluster/
@@ -15,7 +16,8 @@ done
 ####################################################################################
 ## Step 2: MACS2 peaks calling
 
-```outdir=${datadir}/macs2_peaks/
+```
+outdir=${datadir}/macs2_peaks/
 mkdir -p $outdir
 cd $indir
 for cluster in `cat $cellfile`
@@ -27,7 +29,11 @@ done
 ####################################################################################
 ## Step 3: Map peaks to genes 
 
-```motifs=${datadir}/motifs/all_motifs_sorted_clean.txt
+#### See promoterfile example: ExampleData/motifs/Homo_sapiens.GRCh37.74.TSS.5000.bed
+#### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt
+
+```
+motifs=${datadir}/motifs/all_motifs_sorted_clean.txt
 outdir2=${datadir}/mapPeaksTogenes/
 mkdir -p $outdir2
 bedtools=./bedtools
@@ -72,7 +78,8 @@ chr1	10008	10162	cluster8_peak_peak_1	59	.	6.11179	8.98592	5.99756	74	chr1	6873	
 #### See promoterfile example: ExampleData/motifs/Homo_sapiens.GRCh37.74.TSS.5000.bed
 #### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt
 
-```outdir3=${datadir}/macs2_networks/
+```
+outdir3=${datadir}/macs2_networks/
 mkdir -p $outdir3
 motif2tf=${datadir}/motifs/cisbp_motif2tf.txt
 for cluster in `cat $cellfile`
@@ -84,7 +91,8 @@ done
 ####################################################################################
 ## Step 5: filter regulators and genes in prior network:
 
-```outdir4=${datadir}/macs2_motifs/
+```
+outdir4=${datadir}/macs2_motifs/
 mkdir -p $outdir4
 for sample in `cat $cellfile`
 do
@@ -107,7 +115,8 @@ Rscript --vanilla filtertop20Pedges.R $datadir $outdir4
 
 ####################################################################################
 ## Step 7: perform percentile ranking
-```outdir4=${datadir}/macs2_motifs_top0.2/
+```
+outdir4=${datadir}/macs2_motifs_top0.2/
 outdir5=${datadir}/macs2_prior_percentile/
 mkdir -p $outdir5
 ## "incr" implies that the higher the score the better. "decr" implies that the lower the score the better.
