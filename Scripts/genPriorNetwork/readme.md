@@ -30,7 +30,7 @@ done
 ## Step 3: Map peaks to genes 
 
 #### See promoterfile example: ExampleData/motifs/Homo_sapiens.GRCh37.74.TSS.5000.bed
-#### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt
+#### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt (This file is a subsample of the full file, as a demo for the file format. The raw motif file for mouse or human is too large for uploading. Please contact the Roy Lab for raw motif file if needed.) 
 
 ```
 motifs=${datadir}/motifs/all_motifs_sorted_clean.txt
