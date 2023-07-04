@@ -1,5 +1,7 @@
 # generate prior network using scATAC-seq data
 
+### Note: All the files in ExampleData/ are subsamples of the original files, as a demo for the file format. The raw data is too large to upload. Please contact the Roy Lab for raw data if needed.
+
 ####################################################################################
 ## Step 1: extract bam files
 ```
