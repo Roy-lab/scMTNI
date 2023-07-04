@@ -26,6 +26,8 @@ It requires GCC version of gcc-6.3.1 and GNU extension with std=gnu++14 setting.
 
 ## Step 2. Prepare input files
 The data for demo is in ExampleData/. The demo data contains 100 regulators and 300 genes.
+All the files in ExampleData/ are subsamples of the original files, as a demo for the file format. The raw data is too large to upload.
+The source data is available at https://zenodo.org/record/7879228. Please contact the Roy Lab for raw data if needed. 
 
 ## 2.1 integrating scRNA-seq and scATAC-seq using LIGER
 Apply LIGER to integrate the scRNA-seq and scATAC-seq datasets, check LIGER (https://github.com/welch-lab/liger) for details. 
