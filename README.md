@@ -113,6 +113,20 @@ Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -
 Code/scMTNI -f ExampleData/testdata_config_noprior.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 0
 ```
 
+### Example uasge of INDEP with prior network
+Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
+
+```
+Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -m ExampleData/testdata_ogids.txt -s ExampleData/cluster1_order.txt -p 0.2 -i yes -c yes -b -0.9 -q 2 
+```
+
+### Example uasge of INDEP without prior network
+Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
+
+```
+Code/scMTNI -f ExampleData/cluster1_config_noprior.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt  -m ExampleData/testdata_ogids.txt -s ExampleData/cluster1_order.txt -p 0.2 -i yes -c yes -b -0.9 -q 0
+```
+
 ### Parameter Explanations
 f : config file with six columns, rows for each cell. Each cell's row should have the following species-specific entries:
 - 1. Cell Name
@@ -141,6 +155,8 @@ d : The cell lineage tree to be used. This file should have 5 columns describing
 m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1. If we are working with only a single species, then the gene names in a orthogroup are the same gene name followed by the cell cluster ID, e.g., {GeneX_cluster1, GeneX_cluster2, GeneX_cluster3}. Since scMTNI allows different gene sets in different cell clusters, we can set that gene to "None" for the cell clusters where it is absent. For example, if `GeneX` is absent in cluster 2, the aforementioned orthogroup will contain {GeneX_cluster1, None, GeneX_cluster3}. 
 
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
+
+i: yes -> run INDEP, no -> run scMTNI. By default, it will set i to no and run scMTNI.
 
 
 ### Additional note 1 (how to generate subsamples of a given expression dataset)
