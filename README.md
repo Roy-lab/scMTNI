@@ -95,7 +95,7 @@ cluster7	cluster10	0.2	0.2
 The input data for demo is in ExampleData/. The expected output is in Results/. The estimuated run time for the demo is around 7 minute.
 The output network for each cell type is Results/cluster*/fold0/var_mb_pw_k50.txt
 
-### Example uasge of scMTNI with prior network
+### Example usage of scMTNI with prior network
 ```
 Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 ```
@@ -108,23 +108,23 @@ Since scMTNI learns regulators on a per-target basis, the algorithm can easily b
 Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
 ```
 
-### Example uasge of scMTNI without prior network
+### Example usage of scMTNI without prior network
 ```
 Code/scMTNI -f ExampleData/testdata_config_noprior.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 0
 ```
 
-### Example uasge of INDEP with prior network
+### Example usage of INDEP with prior network (INDEP: single cell cluster version of scMTNI)
 Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
 
 ```
-Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -m ExampleData/testdata_ogids.txt -s ExampleData/cluster1_order.txt -p 0.2 -i yes -c yes -b -0.9 -q 2 
+Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/cluster1_TFs_OGs.txt -n ExampleData/cluster1_AllGenes.txt -m ExampleData/cluster1_ogids.txt -s ExampleData/cluster1.txt  -i yes -c yes -b -0.9 -q 0
 ```
 
-### Example uasge of INDEP without prior network
+### Example usage of INDEP without prior network (INDEP: single cell cluster version of scMTNI)
 Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
 
 ```
-Code/scMTNI -f ExampleData/cluster1_config_noprior.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt  -m ExampleData/testdata_ogids.txt -s ExampleData/cluster1_order.txt -p 0.2 -i yes -c yes -b -0.9 -q 0
+Code/scMTNI -f ExampleData/cluster1_config_noprior.txt -x50 -l ExampleData/cluster1_TFs_OGs.txt -n ExampleData/cluster1_AllGenes.txt -m ExampleData/cluster1_ogids.txt -s ExampleData/cluster1.txt  -i yes -c yes -b -0.9 -q 0
 ```
 
 ### Parameter Explanations
