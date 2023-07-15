@@ -1,0 +1,1 @@
+cluster1	ExampleData//cluster1.table	Results/cluster1	ExampleData//cluster1_allregulators.txt	ExampleData//cluster1_allGenes.txt	ExampleData//motif_empty.txt
