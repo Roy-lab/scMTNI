@@ -117,7 +117,7 @@ Code/scMTNI -f ExampleData/testdata_config_noprior.txt -x50 -v1 -l ExampleData/T
 Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
 
 ```
-Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/cluster1_TFs_OGs.txt -n ExampleData/cluster1_AllGenes.txt -m ExampleData/cluster1_ogids.txt -s ExampleData/cluster1.txt  -i yes -c yes -b -0.9 -q 0
+Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/cluster1_TFs_OGs.txt -n ExampleData/cluster1_AllGenes.txt -m ExampleData/cluster1_ogids.txt -s ExampleData/cluster1.txt  -i yes -c yes -b -0.9 -q 2
 ```
 
 ### Example usage of INDEP without prior network (INDEP: single cell cluster version of scMTNI)
