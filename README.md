@@ -8,7 +8,7 @@ The scMTNI model has the following benefits:
 - 2 incorporates the lineage structure to influence the extent of sharing between the learned networks, 
 - 3 incorporates prior information, such as motif-based prior network derived from scATAC-seq data, thereby integrating scRNA-seq and scATAC-seq data to infer gene regulatory network dynamics across cell lineages.
 
-Preprint: https://biorxiv.org/cgi/content/short/2022.07.25.501350v1
+Zhang, S., Pyne, S., Pietrzak, S. et al. Inference of cell type-specific gene regulatory networks on cell lineages from single cell omic datasets. Nat Commun 14, 3064 (2023). https://doi.org/10.1038/s41467-023-38637-9
 
 [![DOI](https://zenodo.org/badge/441968928.svg)](https://zenodo.org/badge/latestdoi/441968928)
 
@@ -155,6 +155,10 @@ d : The cell lineage tree to be used. This file should have 5 columns describing
 m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1. If we are working with only a single species, then the gene names in a orthogroup are the same gene name followed by the cell cluster ID, e.g., {GeneX_cluster1, GeneX_cluster2, GeneX_cluster3}. Since scMTNI allows different gene sets in different cell clusters, we can set that gene to "None" for the cell clusters where it is absent. For example, if `GeneX` is absent in cluster 2, the aforementioned orthogroup will contain {GeneX_cluster1, None, GeneX_cluster3}. 
 
 s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
+
+b : specifies the β0 parameter which controls the sparsity of the network, a penalty for adding new edges. The β0 parameter is a sparsity prior that controls the penalty of adding of a new edge to the network, which takes a negative value (β0 < 0). We suggest trying β0 for values between −5 and −0.1. A smaller (more negative) value will add a greater cost to edge addition and end up with a sparser network. 
+
+q : specifies the β1 parameter which controls how strongly motif instances are incorporated as prior (β1 ≥ 0). We suggest setting β1 to a value between 0 and 5.  A higher value will result in motif prior network being valued more strongly.  β1 is set to 0 when there is no cell type-specific motif information available.
 
 i: yes -> run INDEP, no -> run scMTNI. By default, it will set i to no and run scMTNI.
 
