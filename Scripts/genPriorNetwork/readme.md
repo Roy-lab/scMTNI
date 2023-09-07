@@ -32,7 +32,7 @@ done
 ## Step 3: Map peaks to genes 
 
 #### See promoterfile example: ExampleData/motifs/Homo_sapiens.GRCh37.74.TSS.5000.bed
-#### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt (This file is a subsample of the full file, as a demo for the file format. The raw motif file for mouse or human is too large to upload. The raw motif files are available to download at Zenodo. 
+#### See example motifs file: ExampleData/motifs/all_motifs_sorted_clean.txt (This file is a subsample of the full file, as a demo for the file format. The raw motif file for mouse or human is too large to upload. The original motif files are available to download at Zenodo https://zenodo.org/record/8323399#.ZPlrKuzMLOE.
 #### To generate the motif files, we obtained sequence-specific motifs from the Cis-BP database (http://cisbp.ccbr.utoronto.ca/) and used the script pwmmatch.exact.r available from the PIQ toolkit to identify significant motif instances genome-wide using the human genome assembly hg19 and mouse genome assembly mm10 respectively.
 
 
