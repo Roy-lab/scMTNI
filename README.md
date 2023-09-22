@@ -209,6 +209,30 @@ python Scripts/PreparescMTNIinputfiles.py --filelist $filelist --regfile $regfil
 ```
 A detailed description of how to create the other input files is provided in Step [2.3](https://github.com/Roy-lab/scMTNI#23-prepare-all-input-files-and-config-file-for-scmtni).
 
+### Additional note 3 (Interpretation of the output file of scMTNI)
+
+Example: Results/cluster1/fold0/var_mb_pw_k50.txt
+The first column is the regulator, and the second column is the target gene. The value on the 3rd column is the regression coefficient. The absolute value of the coefficient is the edge weight, larger value corresponds to a higher ranking of the edge.
+```
+CHP1_cluster1	MECR_cluster1	0.263274
+POLR2F_cluster1	SFPQ_cluster1	-0.228401
+POLR2L_cluster1	EBNA1BP2_cluster1	0.504227
+```
+
+However, we suggest running scMTNI using the stability selection framework:
+#1) generate 50 (or more) subsamples of the dataset (See https://github.com/Roy-lab/scMTNI#additional-note-1-how-to-generate-subsamples-of-a-given-expression-dataset)
+#2) run scMTNI on each of the subsamples
+#3) create a consensus network across the inferred networks of all subsamples (See https://github.com/Roy-lab/scMTNI#40-generate-consensus-network-for-subsample-results) 
+In the consensus network, you would have a confidence score from 0 to 1 for each inferred edge. Example: https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
+https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
+
+```
+AAK1	FAM49A	0.1
+AAK1	GLTPD1	0.1
+AAK1	GSTM1	0.2
+ARID3A	VAMP8	0.6
+ARNTL	ANAPC1	0.8
+```
 
 ## Step 4. Evaluation
 ### 4.0 Generate consensus network for subsample results
