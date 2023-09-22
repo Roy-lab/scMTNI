@@ -229,11 +229,10 @@ Var=SFPQ_cluster1	Wt=-1	CondVar=0.355977	CondBias=0.527808	CondWt=POLR2F_cluster
 ```
 
 However, we suggest running scMTNI using the stability selection framework:
-- 1 generate 50 (or more) subsamples of the dataset (See https://github.com/Roy-lab/scMTNI#additional-note-1-how-to-generate-subsamples-of-a-given-expression-dataset)
-- 2 run scMTNI on each of the subsamples
-- 3 create a consensus network across the inferred networks of all subsamples (See https://github.com/Roy-lab/scMTNI#40-generate-consensus-network-for-subsample-results) 
+- 1) generate 50 (or more) subsamples of the dataset (See https://github.com/Roy-lab/scMTNI#additional-note-1-how-to-generate-subsamples-of-a-given-expression-dataset)
+- 2) run scMTNI on each of the subsamples
+- 3) create a consensus network across the inferred networks of all subsamples (See https://github.com/Roy-lab/scMTNI#40-generate-consensus-network-for-subsample-results) 
 In the consensus network, the 3rd column is the confidence score ranging from 0 to 1 for each inferred edge. We suggest to keep edges with at least 80% confidence. Example: https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
-https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
 
 ```
 AAK1	FAM49A	0.1
