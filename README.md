@@ -211,19 +211,28 @@ A detailed description of how to create the other input files is provided in Ste
 
 ### Additional note 3 (Interpretation of the output file of scMTNI)
 
-Example: Results/cluster1/fold0/var_mb_pw_k50.txt
+Inferred network (Example: Results/cluster1/fold0/var_mb_pw_k50.txt)
 The first column is the regulator, and the second column is the target gene. The value on the 3rd column is the regression coefficient. The absolute value of the coefficient is the edge weight, larger value corresponds to a higher ranking of the edge.
 ```
+KHSRP_cluster1	MECR_cluster1	0.464787
+ILF2_cluster1	MECR_cluster1	-0.340458
 CHP1_cluster1	MECR_cluster1	0.263274
 POLR2F_cluster1	SFPQ_cluster1	-0.228401
 POLR2L_cluster1	EBNA1BP2_cluster1	0.504227
 ```
 
+Model parameters (Example: Results/cluster1/fold0/modelparams.txt)
+"Var=" is the target gene, "CondVar=" is the conditional variance of the target gene given regulators, "CondBias=" is the conditional bias, and "CondWt=" corresponds to the regression coefficient for each regulator.
+```
+Var=MECR_cluster1	Wt=-1	CondVar=0.266455	CondBias=0.217826	CondWt=KHSRP_cluster1=0.464787,ILF2_cluster1=-0.340458,ZNF580_cluster1=0.220504,CHP1_cluster1=0.263274,EIF5B_cluster1=-0.142582
+Var=SFPQ_cluster1	Wt=-1	CondVar=0.355977	CondBias=0.527808	CondWt=POLR2F_cluster1=-0.228401
+```
+
 However, we suggest running scMTNI using the stability selection framework:
-#1) generate 50 (or more) subsamples of the dataset (See https://github.com/Roy-lab/scMTNI#additional-note-1-how-to-generate-subsamples-of-a-given-expression-dataset)
-#2) run scMTNI on each of the subsamples
-#3) create a consensus network across the inferred networks of all subsamples (See https://github.com/Roy-lab/scMTNI#40-generate-consensus-network-for-subsample-results) 
-In the consensus network, you would have a confidence score from 0 to 1 for each inferred edge. Example: https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
+# 1) generate 50 (or more) subsamples of the dataset (See https://github.com/Roy-lab/scMTNI#additional-note-1-how-to-generate-subsamples-of-a-given-expression-dataset)
+# 2) run scMTNI on each of the subsamples
+# 3) create a consensus network across the inferred networks of all subsamples (See https://github.com/Roy-lab/scMTNI#40-generate-consensus-network-for-subsample-results) 
+In the consensus network, the 3rd column is the confidence score ranging from 0 to 1 for each inferred edge. We suggest to keep edges with at least 80% confidence. Example: https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
 https://github.com/Roy-lab/scMTNI/blob/master/Results_subsample/analysis/cluster1/consensus_edges.txt
 
 ```
