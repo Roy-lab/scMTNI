@@ -1,0 +1,3 @@
+hsc	hsc	Results/hsc	hsc_allregulators.txt	hsc_allGenes.txt	motif_empty.txt
+cmp	cmp	Results/cmp	cmp_allregulators.txt	cmp_allGenes.txt	motif_empty.txt
+gmp	gmp	Results/gmp	gmp_allregulators.txt	gmp_allGenes.txt	motif_empty.txt

@@ -1,0 +1,15 @@
+CREB1_gmp
+PXK_gmp
+ANKRD32_gmp
+HNRNPAB_gmp
+TLE4_gmp
+SMC2_gmp
+CAMK2G_gmp
+NDN_gmp
+NDNL2_gmp
+UBN1_gmp
+PHB_gmp
+TRPC4AP_gmp
+OAZ1_gmp
+ZNF226_gmp
+CHAF1B_gmp

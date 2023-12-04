@@ -1,0 +1,3 @@
+hsc	hsc.table
+cmp	cmp.table
+gmp	gmp.table

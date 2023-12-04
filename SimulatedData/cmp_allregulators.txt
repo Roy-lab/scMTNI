@@ -1,0 +1,15 @@
+CREB1_cmp
+PXK_cmp
+ANKRD32_cmp
+HNRNPAB_cmp
+TLE4_cmp
+SMC2_cmp
+CAMK2G_cmp
+NDN_cmp
+NDNL2_cmp
+UBN1_cmp
+PHB_cmp
+TRPC4AP_cmp
+OAZ1_cmp
+ZNF226_cmp
+CHAF1B_cmp

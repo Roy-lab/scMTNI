@@ -1,0 +1,15 @@
+CREB1_hsc
+PXK_hsc
+ANKRD32_hsc
+HNRNPAB_hsc
+TLE4_hsc
+SMC2_hsc
+CAMK2G_hsc
+NDN_hsc
+NDNL2_hsc
+UBN1_hsc
+PHB_hsc
+TRPC4AP_hsc
+OAZ1_hsc
+ZNF226_hsc
+CHAF1B_hsc
