@@ -242,6 +242,27 @@ ARID3A	VAMP8	0.6
 ARNTL	ANAPC1	0.8
 ```
 
+
+### Additional note 4 (Make cell lineage tree using expression-based MSTs)
+If the cell lineage tree is not known, one option is to infer a cell lineage tree from the cell clusters using a minimal spanning tree (MST) approach using the python package scipy.sparse.csgraph. Briefly, we used the mean expression profiles across samples of these cell clusters and computed the Euclidean distance between every pair of cell clusters. Then, we inferred the MST from the distance matrix using scipy.sparse.csgraph.
+```
+# Command line inputs:
+# 1 = cluster file input
+# 2 = sample prefix
+# 3 = number of clusters
+# 4 = output directory
+# 5 = original expression matrix, cells on rows, genes on columns
+
+make_MST_heatmaps=make_MST_tree.sh
+cluster_file=clusterfile.txt
+sample_prefix=liger_k10
+number_of_clusters=10
+out_dir=MSTtree/
+exp_file=expressionfile.txt
+bash $make_MST_heatmaps $cluster_file $sample_prefix $number_of_clusters $out_dir $exp_file 
+
+```
+
 ## Step 4. Evaluation
 ### 4.0 Generate consensus network for subsample results
 
