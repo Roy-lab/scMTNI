@@ -123,7 +123,9 @@ Rscript --vanilla filtertop20Pedges.R $datadir $outdir4
 outdir4=${datadir}/macs2_motifs_top0.2/
 outdir5=${datadir}/macs2_prior_percentile/
 mkdir -p $outdir5
-## "incr" implies that the higher the score the better. "decr" implies that the lower the score the better.
+## "incr" ranks in ascending order (edges with low scores, e.g. p-val based, will have higher overall ranking), 
+## "decr" ranks in descending order (edges with high score, e.g. -log10 p-val based, will have higher overall ranking)
+
 for sample in `cat $cellfile`
 do
     networkfile=${outdir4}/${sample}_network.txt
