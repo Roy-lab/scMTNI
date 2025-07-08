@@ -70,7 +70,7 @@ for(tp in 1:k){ #c(2,3,10)
   fwrite(dtopic1,file=paste0(outdir,"networks_lda_k",k,"_topic",tp,".txt"),quote=F,row.names=F,col.names=T,sep="\t")
   prefix=paste0("lda_topic",tp)
   outname=paste0(outdir,prefix,"_consensus_edges_k",k,"_network.png")
-  genNetall_multi(prefix,dtopic1,outname,w=5000,h=3000,nr=2,ntop=20)
+  genNetall_multi(prefix,dtopic1,outname,w=5000,h=3000,nr=2,ntop=20, cells)
 }
 
 

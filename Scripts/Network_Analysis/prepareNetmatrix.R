@@ -1,58 +1,136 @@
 #!/user/bin/env Rscript
+
+## Manage libraries -----
+library(data.table)
+library(Matrix)
+library(stringr)
+
+## Manage input args -----
 args=commandArgs(trailingOnly = T);
-if(length(args)==0)
+if(length(args)!= 5 && argslength(args) != 6)
 {
-  stop("At least one argument must be supplied(inputfile).n",call. = FALSE)
-}else if(length(args)>0)
+  stop("Exactly 5 or 6 arguments must be supplied (cf, n, cellfile, indir, outdir, [binary]).\n", call. = FALSE)
+}else
 {
   print("Start!")
 }
 
-cellfile=args[1]  ## celltype_order.txt
-indir=args[2]  ## Results_/subsample/analysis/
-filter=args[3] #"_full" or "_cf0.8"
-if(length(args)==3){
+#### OLD ARGUMENTS
+    #cellfile=args[1]  ## celltype_order.txt
+    #indir=args[2]  ## Results_/subsample/analysis/
+    #filter=args[3] #"_full" or "_cf0.8"
+####
+
+cf=args[1] #"top" or "cf"
+n=as.numeric(args[2]) # eg n=5000 for top edge of cf=0.8 for cf  
+cellfile=args[3] # celltype_order.txt
+indir=args[4] # input path
+outdir=args[5]  # output path 
+
+if(length(args)==5){
   binary=""
 }else{
-  binary=args[4]
+  binary=args[6]
 }
 
-print("Done reading in files")
 
-library(data.table)
-library(Matrix)
+### Error checking -----
+#### error checking arg1 -----
+if (cf != "top" && cf != "cf") {
+  stop("Invalid value for cf. Use 'top' or 'cf'.", call. = FALSE)
+}
+
+#### error checking arg2 -----
+if (cf == "top")
+{
+  if(n <= 0) {
+    stop("n must be a positive integer when cf is 'top'.", call. = FALSE)
+  }
+  print(paste("Extracting top", n, "edges for each cell type."))
+} else if (cf == "cf") {
+  if(n < 0 || n > 1) {
+    stop("n must be a number between 0 and 1 when cf is 'cf'.", call. = FALSE)
+  }
+  print(paste("Extracting edges with confidence threshold of", n, "for each cell type."))
+}
+
+
+#### error checking arg3 -----
+if (file.exists(cellfile) == FALSE) {
+  stop(paste("Cell file", cellfile, "does not exist."), call. = FALSE)
+}
+
+
+#### error checking arg4 -----
+if(dir.exists(indir) == FALSE) {
+  stop(paste("Input path", indir, "does not exist."), call. = FALSE)
+}
+
+#### error checking arg5 -----
+if(dir.exists(outdir) == FALSE) {
+  print(paste("Output path", outdir, "does not exist."))
+  dir.create(outdir, recursive = TRUE)
+  print(paste("Created output path:", outdir))
+}
+
+#### error checking arg6 -----
+if(binary == "")
+{
+  print("Binary option not provided. Defaulting to no binary conversion.")
+}
+
+### Read order file -----
 cells=read.table(cellfile,stringsAsFactors = F)
 cells=cells$V1
-#indir=" Results_subsample/analysis/"
-#filter="_full"
-#binary=""
-#filter="_cf0.8"
-#binary="_binary"
-outdir=paste0(indir,"lda_TFcellbygene/")
-dir.create(outdir,recursive = T)
-print(outdir)
+
 genes=NULL
 regulators=NULL
 for(cell in cells){
-  #d=fread(paste0(indir,cell,"/consensus_edges_filteredlowexpression.txt")) #consensus_edges.txt
-  d=fread(paste0(indir,cell,"/consensus_edges",filter,".txt"))	
-  if(filter=="_cf0.8"){
-    id=which(d$V3>=0.8)
-    d=d[id,]
-	}
-  if(filter=="_cf0.9"){
-	      id=which(d$V3>=0.9)
-      d=d[id,]
-	}
+  
+  ### Read cell data file -----
+  infile <- paste0(indir,'/', cell, "/consensus_edges_", cf, n, ".txt")
+  if(file.exists(infile) == FALSE) {
+    stop(paste("Input file for cell type", cell, "does not exist:", infile), call. = FALSE)
+  }
+  d=fread(infile)
+  
+  ### Apply filter ------
+  d=d[order(d$V3,decreasing = T),]
+  
+  #### Apply topk filter -----
+  if(cf=="top"){
+    #d1=d[1:n,] THIS IS PROBLEMATIC SINCE IT DOES NOT HANDLE TIES! SHS
+    
+    # Get the n-th largest value, or last value if n exceeds network size 
+    threshold <- sort(d$V3, decreasing = TRUE)[min(n, nrow(d))] 
+    
+    # apply top n_filter,
+    id <- which(d$V3 >= threshold)  # Select rows with value >= n-th largest
+    
+  #### Apply cf filter -----
+  }else if(cf=="cf"){
+    id <- which(d$V3>=n)
+  
+  }else{
+    stop("Invalid value for cf. Use 'top' or 'cf'.", call. = FALSE)
+  }
+  d = d[id, ]
+  
+  ### Identify unique regulators -----
   regulators=c(regulators,unique(d$V1))
   reg_count=length(regulators)
   print(paste0("The number of regulators for ",cell," are ",reg_count))
   genes=c(genes,unique(d$V2))
 }
+
+### Identify unique genes -----
 genes=unique(genes)
+
+### Generate genes and regulator data frames -----
 genes=data.frame(gene=genes,id=1:length(genes))
 genes$gene=as.character(genes$gene)
 write.table(genes,file=paste0(outdir,"genes_filteredlowexpression",filter,binary,".txt"),quote=F,row.names=F,col.names=F,sep="\t")
+
 
 regulators=unique(regulators)
 regulators=data.frame(gene=regulators)
@@ -62,20 +140,37 @@ regid=regulators$id
 write.table(regid,file=paste0(outdir,"TFtarget_regulator_id",filter,binary,".txt"),quote=F,row.names=F,col.names=F,sep="\n")
 regulators$id=1:nrow(regulators)
 regulators$gene=as.character(regulators$gene)
+
+
 for(cell in cells){
-  #d=fread(paste0(indir,cell,"/consensus_edges_filteredlowexpression.txt")) #consensus_edges.txt
-  d=fread(paste0(indir,cell,"/consensus_edges",filter,".txt"))
-  if(filter=="_cf0.8"){
-    id=which(d$V3>=0.8)
-    d=d[id,]
+  infile <- paste0(indir,'/', cell, "/consensus_edges_", cf, n, ".txt")
+  if(file.exists(infile) == FALSE) {
+    stop(paste("Input file for cell type", cell, "does not exist:", infile), call. = FALSE)
   }
-  if(filter=="_cf0.9"){
-    id=which(d$V3>=0.9)
-    d=d[id,]
+  d=fread(infile)
+  
+  ### Apply filter ------
+  d=d[order(d$V3,decreasing = T),]
+  
+  #### Apply topk filter -----
+  if(cf=="top"){
+    #d1=d[1:n,] THIS IS PROBLEMATIC SINCE IT DOES NOT HANDLE TIES! SHS
+    
+    # Get the n-th largest value, or last value if n exceeds network size 
+    threshold <- sort(d$V3, decreasing = TRUE)[min(n, nrow(d))] 
+    
+    # apply top n_filter,
+    id <- which(d$V3 >= threshold)  # Select rows with value >= n-th largest
+    
+    #### Apply cf filter -----
+  }else if(cf=="cf"){
+    id <- which(d$V3>=n)
+    
+  }else{
+    stop("Invalid value for cf. Use 'top' or 'cf'.", call. = FALSE)
   }
-  if(binary=="_binary"){
-    d$V3=1
-  }
+  d = d[id, ]
+  
   regs=data.frame(gene=unique(d$V1))
   regs=merge(regulators,regs,by="gene")
   regs=regs[order(regs$id),]

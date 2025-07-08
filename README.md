@@ -344,7 +344,7 @@ Prepare input matrix for subsample results
 # 1 [cell file order file path]
 # 2 [scMTNI results directory path]
 # 3 [edge filter threshold; i.e. 'full', '\_cf0.8'] 
-Rscript Scripts/Network_Analysis/prepareNetmatrix.R ExampleData/celltype_order.txt Results_subsample/analysis/cluster1 \_cf0.8
+Rscript Scripts/Network_Analysis/prepareNetmatrix.R cf 0.8 ExampleData/celltype_order.txt Results_subsample/analysis/ Results_subsample/analysis
 ```
 
 Apply LDA to subsample results
