@@ -101,7 +101,7 @@ for(cell in cells){
   ### Write cell-type specific consensus edges -----
   print(paste(cell,nrow(d1)))
   fwrite(d1,file=paste0(outpath,"/",cell,"/consensus_edges_",cf,n,".txt"),quote=F,sep="\t",row.names = F,col.names = F)
-  print(paste0(path,"/",cell,"/consensus_edges_",cf,n,".txt"))
+  print(paste0(outpath,"/",cell,"/consensus_edges_",cf,n,".txt"))
   names(d1)=c("regulator","target",cell)
   
   ### Add cell-type specific consensus edges to the consensus data frame -----
