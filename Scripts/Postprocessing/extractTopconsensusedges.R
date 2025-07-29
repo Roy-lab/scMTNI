@@ -74,7 +74,7 @@ for(cell in cells){
   if (!file.exists(infile)) {
     stop(paste("Input file for cell type", cell, "does not exist:", infile), call. = FALSE)
   }
-  d=fread(paste0(path,cell,"/consensus_edges.txt"))
+  d=fread(paste0(inpath,cell,"/consensus_edges.txt"))
   
   ### Apply filter ------
   d=d[order(d$V3,decreasing = T),]
