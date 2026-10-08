@@ -6,46 +6,26 @@
 #ifndef _MOVE_
 #define _MOVE_
 
-#include "CommonTypes.H"
-#include<unordered_map>
 class MetaMove
 {
 	public:
-	MetaMove();
-	~MetaMove();
-	int setScoreImprovement(double);
-	int setSrcMBScore(double);
-	int setTargetMBScore(double);
-	int setScore(double);
-	int setSrcVertex(int);
-	int setTargetVertex(int);
-	//int setConditionSet(INTINTMAP&);
-	int setConditionSetInd(int);
-	int setSrcWeight(unordered_map<int,double>&);
-    int setTFID(int);
-    int setTargetID(int);
-    int getTFID();
-    int getTargetID();
-	int getSrcVertex();
-	int getTargetVertex();
-	//INTINTMAP& getConditionSet();
-	int getConditionSetInd();
-	double getScore();
-	double getSrcMBScore();
-	double getTargetMBScore();
-	double getScoreImprovement();
-	unordered_map<int,double>& getSrcWeight();
+		void setScoreImprovement(double);
+		void setTargetMBScore(double);
+		void setConditionSetInd(int);
+		void setTFID(int);
+		void setTargetID(int);
+		int getTFID();
+		int getTargetID();
+		int getConditionSetInd();
+		double getTargetMBScore();
+		double getScoreImprovement();
+
 	private:
-	double scoreDelta;
-	double mbscore;
-	double targetMBScore;
-	int src;
-	int target;
-    int regi;
-    int targeti;
-	//INTINTMAP conditionSet;
-	int conditionSetInd;
-	unordered_map<int,double> srcWeight;
+		double scoreDelta;
+		double targetMBScore;
+		int regi;
+		int targeti;
+		int conditionSetInd;
 };
 
 #endif
