@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
@@ -18,5 +19,6 @@ class VariableManager
 
 	private:
 		vector<Variable*> variables;
+		unordered_map<int, Variable*> varMap;
 };
 #endif

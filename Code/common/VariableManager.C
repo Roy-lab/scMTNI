@@ -28,6 +28,7 @@ VariableManager::addVariable(string varName, int varID)
     var->setID(varID);
     var->setName(varName);
     variables.push_back(var);
+    varMap[varID] = var;
 }
 
 Variable*
@@ -45,13 +46,11 @@ VariableManager::getVariable(string varName)
 Variable*
 VariableManager::getVariable(int varID)
 {
-	for (int i = 0; i < variables.size(); i++) {
-		Variable* var = variables[i];
-		if (var->getID() == varID) {
-			return var;
-		}
-	}
-	return nullptr;
+    auto iter = varMap.find(varID);
+    if (iter != varMap.end()) {
+        return iter->second;
+    }
+    return nullptr;
 }
 
 vector<Variable*>&
