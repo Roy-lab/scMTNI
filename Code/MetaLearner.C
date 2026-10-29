@@ -75,7 +75,7 @@ int MetaLearner::setConvergenceThreshold(double aVal)
     return 0;
 }
 
-int MetaLearner::setRegulatorList(const char *aFName)
+void MetaLearner::setRegulatorList(const char *aFName)
 {
     ifstream inFile(aFName);
     string buffer;
@@ -88,10 +88,9 @@ int MetaLearner::setRegulatorList(const char *aFName)
         regulatorList.push_back(varIndex);
     }
     inFile.close();
-    return 0;
 }
 
-int MetaLearner::setTargetList(const char *aFName)
+void MetaLearner::setTargetList(const char *aFName)
 {
     ifstream inFile(aFName);
     string buffer;
@@ -104,7 +103,6 @@ int MetaLearner::setTargetList(const char *aFName)
         targetList.push_back(varIndex);
     }
     inFile.close();
-    return 0;
 }
 
 int MetaLearner::addVariable(string varName)

@@ -28,10 +28,10 @@ class MetaLearner
 		int setConvergenceThreshold(double);
 
 		// This list limits the regulators that will be considered for all species.
-		int setRegulatorList(const char*);
+		void setRegulatorList(const char*);
 
 		// This list limits the targets that will be considered for all species.
-		int setTargetList(const char*);
+		void setTargetList(const char*);
 
 		int setSpeciesDistances(SpeciesDistance*);
 		int setBeta1(double);
