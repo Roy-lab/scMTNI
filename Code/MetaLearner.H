@@ -49,14 +49,12 @@ class MetaLearner
 
 		vector<MetaMove> collectMoves();
 		void collectMovesForTarget(int targetID, vector<MetaMove>& moveSet);
-		void scoreEdge(int regulatorID, int targetID, vector<double>& scores, vector<double>& scoreImprovements, bool& atleastOneImprovement);
 		void findBestConditionSet(double oldPrior, vector<double>& scoreImprovements, double& bestImprovement, int& conditionSetIndex);
 
 		vector<MetaMove> collectMoves_INDEP();
 		bool findBestIndependentMove(int speciesID, int targetID, MetaMove& outMove);
 
 		void makeMoves(vector<MetaMove>& moveSet, double& scoreChange, double& priorChange);
-		void getNewPLLScore(int speciesID, int regulatorID, SlimFactor *targetFactor, double& score, double& scoreImprovement);
 		double getEdgePrior(int tfID, int targetID, SpeciesDataManager*);
 		int dumpAllGraphs(int);
 

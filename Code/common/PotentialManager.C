@@ -142,66 +142,166 @@ PotentialManager::getVariableManager()
     return vMgr;
 }
 
-double
-PotentialManager::computeConditionalLL(SlimFactor* sFactor, int& status)
-{
-    int mbsize = sFactor->mergedMB.size();
-    if (mbsize == 0) {
-        return 0;
-    }
+void
+PotentialManager::computeLLs(int factorID, vector<int>& existingParents, vector<int>&candidateParents, unordered_map<int, double>&scores) {
 
-    vector<int> mbVars(sFactor->mergedMB.begin(), sFactor->mergedMB.end());
-    Matrix* covariance = createMBCovarianceMatrix(sFactor, mbVars);
+	if (existingParents.size() == 0) {
+		computeSingleParentLLs(factorID, sampleCount, candidateParents, scores);
+		return;
+	}
 
-    double determinant = covariance->detMatrix();
-    if (determinant <= 0) {
-        status = -1;
-        return 0;
-    }
+	// In order to compute likelihood, we need the variance of the factor conditioned upon existing parents and the candidate parent.
+	// We use the following framing
+	// A : Factor
+	// B : existing parents
+	// C : candidate parent
+	// Var(A | B, C) = Var(A | B) - Cov(AC | B) * Var(C | B)^-1 * Cov(CA | B)
+	// Var (A | B) = Var(A) - Cov(AB) * Var(B)^-1 * Cov(BA)
+	// Var (C | B) = Var(C) - Cov(CB) * Var(B)^-1 * Cov(BC)
+	// Cov (AC | B) = Cov(AC) - Cov(AB) * Var(B)^-1 * Cov(BC)
 
-    int vId = sFactor->fId;
-    double mbcondVar = covMat->getValue(vId, vId);
-    
-    Matrix* mbcov = covariance->getSubMatrix(0, 0, mbsize, mbsize);
-    Matrix* mbmargvar = covariance->getSubMatrix(mbsize, 0, 1, mbsize);
+	// This allows us to precompute Var(A | B), Var(B)^-1, and Cov(AB) * Var(B)^-1, because they don't rely on C. Since we only add a single
+	// candidate parent at a time, the per candidate work doesn't require any matrix inverts, only scalar and vector multiplication.
 
-    double determinantP = mbcov->detMatrix();
-    if (determinantP <= 0) {
-        status = -1;
-        return 0;
-    }
+	int parentCount = existingParents.size();
 
-    Matrix* covInv = mbcov->invMatrix();
-    Matrix* prod1 = mbmargvar->multiplyMatrix(covInv);
+	// Var(A)
+	double factorVariance = covMat->getValue(factorID, factorID);
 
-    for (int i = 0; i < mbVars.size(); i++) {
-        int varID = mbVars[i];
-        double aVal = prod1->getValue(0, i);
-        double bVal = mbmargvar->getValue(0, i);
-        mbcondVar = mbcondVar - (aVal * bVal);
-    }
+	// Cov(AB)
+	gsl_vector* existingParentMarginalVariances = gsl_vector_alloc(parentCount);
 
-    if (mbcondVar < 0) {
-        status=-1;
-        return 0;
-    }
+	// Cov(BB)
+	gsl_matrix* existingParentCovariances = gsl_matrix_alloc(parentCount, parentCount);
 
-    double jointll1 = computeJointLL(mbsize + 1, determinant);
-    double jointll2 = computeJointLL(mbsize, determinantP);
-    double pll = jointll1 - jointll2;
+	for (int i = 0; i < parentCount; i++) {
+		int varAID = existingParents[i];
+		double marginalCovariance = covMat->getValue(factorID, varAID);
+		gsl_vector_set(existingParentMarginalVariances, i, marginalCovariance);
 
-    if (isinf(pll)) {
-        status=-1;
-        return 0;
-    }
+		for (int j = i; j < parentCount; j++) {
+			int varBID = existingParents[j];
+			double covariance = covMat->getValue(varAID, varBID);
+			gsl_matrix_set(existingParentCovariances, i, j, covariance);
+			gsl_matrix_set(existingParentCovariances, j, i, covariance);
+		}
+	}
 
-    delete covariance;
-    delete mbcov;
-    delete mbmargvar;
-    delete covInv;
-    delete prod1;
+	gsl_permutation* permutation = gsl_permutation_alloc(parentCount);
 
-    return pll;
+	int signum=0;
+	gsl_linalg_LU_decomp(existingParentCovariances, permutation, &signum);
+
+	// Var(B)^-1
+	gsl_matrix* parentCovInverse = gsl_matrix_alloc(parentCount, parentCount);
+	gsl_linalg_LU_invert(existingParentCovariances, permutation, parentCovInverse);
+
+	gsl_matrix_free(existingParentCovariances);
+	gsl_permutation_free(permutation);
+
+	// Cov(AB) * Var(B)^-1
+	gsl_vector* prod = gsl_vector_alloc(parentCount);
+	gsl_blas_dgemv(CblasTrans, 1, parentCovInverse, existingParentMarginalVariances, 0, prod);
+
+	// Cov(AB) * Var(B)^-1 * Cov(BA)
+	double dot = 0.0;
+	gsl_blas_ddot(prod, existingParentMarginalVariances, &dot);
+
+	// Var(A|B)
+	double existingConditionalVariance = factorVariance - dot;
+
+	gsl_vector_free(existingParentMarginalVariances);
+
+	for (int i = 0; i < candidateParents.size(); i++) {
+		int candidateID = candidateParents[i];
+
+		// Var(C)
+		double candidateVariance = covMat->getValue(candidateID, candidateID);
+
+		// Cov(BC)
+		gsl_vector* candidateMarginalVariances = gsl_vector_alloc(parentCount);
+
+		for (int i = 0; i < parentCount; i++) {
+			int varAID = existingParents[i];
+			double marginalCovariance = covMat->getValue(candidateID, varAID);
+			gsl_vector_set(candidateMarginalVariances, i, marginalCovariance);
+		}
+
+		// Cov(BC) * Var(B)^-1
+		gsl_vector* candidateProd = gsl_vector_alloc(parentCount);
+		gsl_blas_dgemv(CblasTrans, 1, parentCovInverse, candidateMarginalVariances, 0, candidateProd);
+
+		// Cov(BC) * Var(B)^-1 * Cov(CB)
+		double dot = 0.0;
+		gsl_blas_ddot(candidateProd, candidateMarginalVariances, &dot);
+
+		// Var(C|B)
+		double candidateConditionalVariance = candidateVariance - dot;
+
+		if (candidateConditionalVariance < 1e-10) {
+			continue;
+		}
+
+		// Cov(AC)
+		double candidateFactorCovariance = covMat->getValue(candidateID, factorID);
+
+		// Cov(AB) * Var(B)^-1 * Cov(BC)
+		dot = 0.0;
+		gsl_blas_ddot(prod, candidateMarginalVariances, &dot);
+
+		gsl_vector_free(candidateProd);
+		gsl_vector_free(candidateMarginalVariances);
+
+		// Cov(AC | B)
+		double factorAndCandidateConditionalCov = candidateFactorCovariance - dot;
+
+		// Var(A | B, C)
+		double finalVariance = existingConditionalVariance - factorAndCandidateConditionalCov * factorAndCandidateConditionalCov / candidateConditionalVariance;
+
+		if (finalVariance < 1e-5) {
+			finalVariance = 1e-5;
+		}
+
+		if(isnan(finalVariance) || isinf(finalVariance)) {
+			continue;
+		}
+
+		scores[candidateID] = -0.5 * ((sampleCount - 1) + sampleCount * log(2 * M_PI) + sampleCount * log(finalVariance));
+	}
+
+	gsl_matrix_free(parentCovInverse);
+	gsl_vector_free(prod);
+}
+
+// Computes a gaussian log likelihood of factor id conditioned upon a single parent, for each candidate parent.
+// The single parent case is broken out into a separate function because it can be done with fast scalar arithmetic.
+void
+PotentialManager::computeSingleParentLLs(int factorID, int sampleSize, vector<int>&candidateParents, unordered_map<int, double>&scores) {
+
+	double factorVariance = covMat->getValue(factorID, factorID);
+
+	for (int i = 0; i < candidateParents.size(); i++) {
+		int candidateID = candidateParents[i];
+
+		double candidateVariance = covMat->getValue(candidateID, candidateID);
+
+		if (candidateVariance < 1e-10) {
+			continue;
+		}
+
+		double factorCandidateCov = covMat->getValue(factorID, candidateID);
+		double finalVariance = factorVariance - factorCandidateCov * factorCandidateCov / candidateVariance;
+
+		if (finalVariance < 1e-5) {
+			finalVariance = 1e-5;
+		}
+
+		if(isnan(finalVariance) || isinf(finalVariance)) {
+			continue;
+		}
+
+		scores[candidateID] = -0.5 * ((sampleSize - 1) + sampleSize * log(2 * M_PI) + sampleSize * log(finalVariance));
+	}
 }
 
 void

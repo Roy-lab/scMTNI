@@ -23,12 +23,17 @@ class PotentialManager
 
         void loadEvidenceFromTable(string fileName, const vector<string>& variableList);
         VariableManager* getVariableManager();
+
         double computeUnivariateLL(int);
-        double computeConditionalLL(SlimFactor* sFactor, int&);
+
+        void computeLLs(int factorID, vector<int>& existingParents, vector<int>&candidateParents, unordered_map<int, double>&scores);
+
         void computePotentialMBCovMean(SlimFactor* sFactor, double& mbcondvar, double& mbbias, unordered_map<int,double>& mbcondMean_Vect);
+
         void dumpVarMB(SlimFactor* sFactor, ofstream& oFile);
 
     private:
+        void computeSingleParentLLs(int factorID, int sampleSize, vector<int>&candidateParents, unordered_map<int, double>&scores);
         double computeJointLL(int dim, double determinant);
         Matrix* createMBCovarianceMatrix(SlimFactor* factor, vector<int>& mbVars);
 
