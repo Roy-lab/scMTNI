@@ -1,10 +1,10 @@
 # single-cell Multi-Task learning Network Inference (scMTNI)
 
 
-We have developed single-cell Multi-Task learning Network Inference (scMTNI), a multi-task learning framework for joint inference of cell type-specific gene regulatory networks that leverages the cell lineage structure and scRNA-seq and scATAC-seq mea- surements to enable robust inference of cell type-specific gene regulatory networks. scMTNI takes as input a cell lineage tree, cell type-specific scRNA-seq data and optional cell type-specific prior networks that can be derived from bulk or single-cell ATAC-seq datasets. 
+We have developed single-cell Multi-Task learning Network Inference (scMTNI), a multi-task learning framework for joint inference of cell type-specific gene regulatory networks that leverages the cell lineage structure and scRNA-seq and scATAC-seq measurements to enable robust inference of cell type-specific gene regulatory networks. scMTNI takes as input a cell lineage tree, cell type-specific scRNA-seq data and optional cell type-specific prior networks that can be derived from bulk or single-cell ATAC-seq datasets.
 
 The scMTNI model has the following benefits: 
-- 1 uses multi-task learning allowing the learning procedure to be informed by the shared infor- mation across cell types, 
+- 1 uses multi-task learning allowing the learning procedure to be informed by the shared information across cell types,
 - 2 incorporates the lineage structure to influence the extent of sharing between the learned networks, 
 - 3 incorporates prior information, such as motif-based prior network derived from scATAC-seq data, thereby integrating scRNA-seq and scATAC-seq data to infer gene regulatory network dynamics across cell lineages.
 
@@ -40,7 +40,7 @@ The output files are in ExampleData/LIGER/. The liger cluster assginment is in E
 
 ## 2.2 generating the prior network using scATAC-seq data and motifs
 Check https://github.com/Roy-lab/scMTNI/blob/master/Scripts/genPriorNetwork/readme.md for details. 
-Due to limitation of file size in Github, bam files are currently not provided in ExampleData/. For demo, please directly use the output prior networks ExampleData/cluster*_network.txt 
+Due to limitation of file size in Github, bam files are currently not provided in ExampleData/. For demo, please directly use the output prior networks ExampleData/prior_networks/cluster*_network.txt
 ```
 bash Scripts/genPriorNetwork/genPriorNetwork_scMTNI.sh
 ```
@@ -49,14 +49,15 @@ The example output files are ExampleData/cluster*_network.txt
 ## 2.3 Prepare all input files and config file for scMTNI
 ### First prepare filelist.txt
 The first column is the cell name, the second column is the location and filename of the expression data for each cell type. The example file ExampleData/filelist.txt:
-```cluster8	ExampleData/cluster8.table
-cluster3	ExampleData/cluster3.table
-cluster2	ExampleData/cluster2.table
-cluster1	ExampleData/cluster1.table
-cluster6	ExampleData/cluster6.table
-cluster9	ExampleData/cluster9.table
-cluster10	ExampleData/cluster10.table
-cluster7	ExampleData/cluster7.table
+```
+cluster8	ExampleData/expression_data/cluster8.table
+cluster3	ExampleData/expression_data/cluster3.table
+cluster2	ExampleData/expression_data/cluster2.table
+cluster1	ExampleData/expression_data/cluster1.table
+cluster6	ExampleData/expression_data/cluster6.table
+cluster9	ExampleData/expression_data/cluster9.table
+cluster10	ExampleData/expression_data/cluster10.table
+cluster7	ExampleData/expression_data/cluster7.table
 ```
 
 ### Then prepare all the other input files based on ExampleData/filelist.txt and regulators list ExampleData/regulators.txt
@@ -82,7 +83,8 @@ The cell lineage tree file should have 5 columns describing the tree:
 
 The example file for cell lineage tree ExampleData/celltype_tree_ancestor.txt
 
-```cluster3	cluster8	0.2	0.2
+```
+cluster3	cluster8	0.2	0.2
 cluster2	cluster3	0.2	0.2
 cluster1	cluster2	0.2	0.2
 cluster6	cluster2	0.2	0.2
@@ -93,68 +95,60 @@ cluster7	cluster10	0.2	0.2
 
 ## Step 3. Run
 The input data for demo is in ExampleData/. The expected output is in Results/. The estimuated run time for the demo is around 7 minute.
-The output network for each cell type is Results/cluster*/fold0/var_mb_pw_k50.txt
+The output network for each cell type is Results/cluster*/var_mb_pw_k50.txt
 
 ### Example usage of scMTNI with prior network
 ```
-Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
+Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -p 0.2 -b -0.9 -q 2
 ```
 The above example will run scMTNI using all regulators and targets. 
 
 
-Since scMTNI learns regulators on a per-target basis, the algorithm can easily be parallelized by running the algorithm for each target gene (or sets of genes) separately. For example, to run scMTNI using 10 genes, we can replace the -n parameter with a file that contains only 10 genes as in ExampleData/AllGenes0.txt:
+Since scMTNI learns regulators on a per-target basis, the algorithm can easily be parallelized by running the algorithm for each target gene (or sets of genes) separately. For example, to run scMTNI using 10 genes, we can replace the -n parameter with a file that contains only 50 genes as in ExampleData/gene_splits/AllGenes0.txt:
 
 ```
-Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 2 
+Code/scMTNI -f ExampleData/testdata_config.txt -x50 -l ExampleData/TFs.txt -n ExampleData/gene_splits/AllGenes0.txt -d ExampleData/celltype_tree_ancestor.txt -p 0.2 -b -0.9 -q 2
 ```
 
 ### Example usage of scMTNI without prior network
 ```
-Code/scMTNI -f ExampleData/testdata_config_noprior.txt -x50 -v1 -l ExampleData/TFs_OGs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -m ExampleData/testdata_ogids.txt -s ExampleData/celltype_order.txt -p 0.2 -c yes -b -0.9 -q 0
+Code/scMTNI -f ExampleData/testdata_config_noprior.txt -x50 -l ExampleData/TFs.txt -n ExampleData/AllGenes.txt -d ExampleData/celltype_tree_ancestor.txt -p 0.2 -b -0.9 -q 0
 ```
 
 ### Example usage of INDEP with prior network (INDEP: single cell cluster version of scMTNI)
 Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
 
 ```
-Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/cluster1_TFs_OGs.txt -n ExampleData/cluster1_AllGenes.txt -m ExampleData/cluster1_ogids.txt -s ExampleData/cluster1.txt  -i yes -c yes -b -0.9 -q 2
+Code/scMTNI -f ExampleData/cluster1_config.txt -x50 -l ExampleData/TFs.txt -n ExampleData/AllGenes.txt -i yes -b -0.9 -q 2
 ```
 
 ### Example usage of INDEP without prior network (INDEP: single cell cluster version of scMTNI)
 Add parameter i and set it to yes for running INDEP. celltype_tree_ancestor.txt (parameter -d) file is not needed for INDEP
 
 ```
-Code/scMTNI -f ExampleData/cluster1_config_noprior.txt -x50 -l ExampleData/cluster1_TFs_OGs.txt -n ExampleData/cluster1_AllGenes.txt -m ExampleData/cluster1_ogids.txt -s ExampleData/cluster1.txt  -i yes -c yes -b -0.9 -q 0
+Code/scMTNI -f ExampleData/cluster1_config_noprior.txt -x50 -l ExampleData/TFs.txt -n ExampleData/AllGenes.txt -i yes -b -0.9 -q 0
 ```
 
 ### Parameter Explanations
-f : config file with six columns, rows for each cell. Each cell's row should have the following species-specific entries:
+f : config file with four columns, rows for each cell. Each cell's row should have the following species-specific entries:
 - 1. Cell Name
 - 2. Location of expression data with file name (cell.table)
 - 3. Location to place outputs
-- 4. List of regulators to be used
-- 5. List of target genes to be used
-- 6. List of motifs to be used. This file should have three tab-separated columns, listing the regulator, target, and motif score
+- 4. List of motifs to be used. This file should have three tab-separated columns, listing the regulator, target, and motif score
 
 x : Maximum # of regulators to be used for a given target.
 
 p : default 0.5. The probability that an edge is present in the root cell.
 
-l : List of the orthogroups (id #s) to be considered as regulators. Note: a regulator must also be present in the species-specific list of regulators given in the species-specific config file (parameter f).
-The list should only have the orthogroup IDs, not the names of the genes belonging to the orthogroup. The gene names are specified through parameter `m` which maps the orthogroup IDs to the gene names. 
+l : List of the genes to be considered as regulators.
 
-n : List of the orthogroups (id #s) to be considered as targets. Note: a target must also be present in the species-specific list of targets given in the species-specific config file (parameter f).
-The list should only have the orthogroup IDs, not the names of the genes belonging to the orthogroup. The gene names are specified through parameter `m` which maps the orthogroup IDs to the gene names.
+n : List of the genes to be considered as targets.
 
-d : The cell lineage tree to be used. This file should have 5 columns describing the tree:
+d : The cell lineage tree to be used. This file should have 4 columns describing the tree:
 - 1. Child cell
 - 2. Parent cell
 - 3. Branch-specific gain rate (The probability that an edge is gained in a child given that the edge is absent in the predecessor cell)
 - 4. Branch-specific loss rate (The probability that an edge is lost in a child given that the edge is present in the predecessor cell)
-
-m : A file describing the gene relationships. The first column of this file is of the format OGID{NUMBER}_{DUP}. Each NUMBER represents an orthogroup. For orthogroups with duplications, DUP is the duplication count/id. If there are no duplications in the dataset being used, DUP will always be 1. If we are working with only a single species, then the gene names in a orthogroup are the same gene name followed by the cell cluster ID, e.g., {GeneX_cluster1, GeneX_cluster2, GeneX_cluster3}. Since scMTNI allows different gene sets in different cell clusters, we can set that gene to "None" for the cell clusters where it is absent. For example, if `GeneX` is absent in cluster 2, the aforementioned orthogroup will contain {GeneX_cluster1, None, GeneX_cluster3}. 
-
-s : A list of the cells present in the gene file (parameter m), in the order they exist in the gene file
 
 b : specifies the β0 parameter which controls the sparsity of the network, a penalty for adding new edges. The β0 parameter is a sparsity prior that controls the penalty of adding of a new edge to the network, which takes a negative value (β0 < 0). We suggest trying β0 for values between −5 and −0.1. A smaller (more negative) value will add a greater cost to edge addition and end up with a sparser network. 
 
@@ -182,22 +176,21 @@ python Scripts/Datasubsample_sc_merged.py --filelist $filelist --indir $indir --
 
 ```
 
-### Additional note 2 (how to create the orthogroup related input files for scMTNI)
-`Scripts/PreparescMTNIinputfiles.py` is the script to generate `testdata_ogids.txt` and `TFs_OGs.txt`.
-OGIDs needs to have the `OG[serial_number]_1` format.
+### Additional note 2 (how to create the input files for scMTNI)
+`Scripts/PreparescMTNIinputfiles.py` is the script to generate `AllGenes.txt`, `TFs.txt`, and `testdata_config.txt`.
 If you prepare the `filelist.txt` and `regulators.txt` as shown below, you can directly use the script `Scripts/PreparescMTNIinputfiles.py`.
 
-First prepare `filelist.txt`.  
-The first column is the cell name, the second column is the file path to the expression data for each cell type. 
+First prepare `filelist.txt`.
+The first column is the cell name, the second column is the file path to the expression data for each cell type.
 The example file `ExampleData/filelist.txt`:
 ```
-cluster3   ExampleData/cluster3.table
-cluster2   ExampleData/cluster2.table
-cluster1   ExampleData/cluster1.table
-cluster6   ExampleData/cluster6.table
-cluster9   ExampleData/cluster9.table
-cluster10   ExampleData/cluster10.table
-cluster7   ExampleData/cluster7.table
+cluster3   ExampleData/expression_data/cluster3.table
+cluster2   ExampleData/expression_data/cluster2.table
+cluster1   ExampleData/expression_data/cluster1.table
+cluster6   ExampleData/expression_data/cluster6.table
+cluster9   ExampleData/expression_data/cluster9.table
+cluster10   ExampleData/expression_data/cluster10.table
+cluster7   ExampleData/expression_data/cluster7.table
 ```
 Then prepare all the other input files based on `ExampleData/filelist.txt` and regulators list `ExampleData/regulators.txt`.
 Finally, run the script `Scripts/PreparescMTNIinputfiles.py` as follows to generate the orthogroup related files:
@@ -211,21 +204,21 @@ A detailed description of how to create the other input files is provided in Ste
 
 ### Additional note 3 (Interpretation of the output file of scMTNI)
 
-#### Inferred network (Example: Results/cluster1/fold0/var_mb_pw_k50.txt)
+#### Inferred network (Example: Results/cluster1/var_mb_pw_k50.txt)
 The first column is the regulator, and the second column is the target gene. The value on the 3rd column is the regression coefficient. The absolute value of the coefficient is the edge weight, larger value corresponds to a higher ranking of the edge.
 ```
-KHSRP_cluster1	MECR_cluster1	0.464787
-ILF2_cluster1	MECR_cluster1	-0.340458
-CHP1_cluster1	MECR_cluster1	0.263274
-POLR2F_cluster1	SFPQ_cluster1	-0.228401
-POLR2L_cluster1	EBNA1BP2_cluster1	0.504227
+KHSRP	MECR	0.464787
+ILF2	MECR	-0.340458
+CHP1	MECR	0.263274
+POLR2F	SFPQ	-0.228401
+POLR2L	EBNA1BP2	0.504227
 ```
 
-#### Model parameters (Example: Results/cluster1/fold0/modelparams.txt)
+#### Model parameters (Example: Results/cluster1/modelparams.txt)
 "Var=" is the target gene, "CondVar=" is the conditional variance of the target gene given regulators, "CondBias=" is the conditional bias, and "CondWt=" corresponds to the regression coefficient for each regulator.
 ```
-Var=MECR_cluster1	Wt=-1	CondVar=0.266455	CondBias=0.217826	CondWt=KHSRP_cluster1=0.464787,ILF2_cluster1=-0.340458,ZNF580_cluster1=0.220504,CHP1_cluster1=0.263274,EIF5B_cluster1=-0.142582
-Var=SFPQ_cluster1	Wt=-1	CondVar=0.355977	CondBias=0.527808	CondWt=POLR2F_cluster1=-0.228401
+Var=MECR	Wt=-1	CondVar=0.266455	CondBias=0.217826	CondWt=KHSRP=0.464787,ILF2=-0.340458,ZNF580=0.220504,CHP1=0.263274,EIF5B=-0.142582
+Var=SFPQ	Wt=-1	CondVar=0.355977	CondBias=0.527808	CondWt=POLR2F=-0.228401
 ```
 
 However, we suggest running scMTNI using the stability selection framework:
@@ -373,5 +366,3 @@ Make regulators bubble plot per topic:
 ```
 Rscript Scripts/Network_Analysis/makeTopicRegBubble_ggplot.R
 ```
-
-

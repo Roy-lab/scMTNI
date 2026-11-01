@@ -31,16 +31,5 @@ Simulated_GRNs/
 - gmp_network.tsv  
 
 # Input files for scMTNI:
-## Genes for each cell type:
-- cmp_allGenes.txt  
-- gmp_allGenes.txt  
-- hsc_allGenes.txt
-## Regulators for each cell type
-- cmp_allregulators.txt  
-- gmp_allregulators.txt  
-- hsc_allregulators.txt
-## The orthogroup related input files
-- testdata_ogids.txt
 ## Config file:
 - config_condor.txt
-
