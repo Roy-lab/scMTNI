@@ -1,0 +1,2 @@
+hsc	cmp	0.2	0.2
+cmp	gmp	0.2	0.2

@@ -12,78 +12,54 @@
  *   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *   */
 #include <string.h>
+#include <fstream>
 #include "Variable.H"
-#include "Evidence.H"
 #include "Error.H"
 #include "VariableManager.H"
-#include "Potential.H"
 #include "PotentialManager.H"
 #include "SlimFactor.H"
-#include "FactorGraph.H"
-#include "EvidenceManager.H"
 #include "SpeciesDataManager.H"
-
-
-SpeciesDataManager::SpeciesDataManager()
-{
-}
 
 SpeciesDataManager::~SpeciesDataManager()
 {
-}
-
-int
-SpeciesDataManager::setVariableManager(VariableManager* aPtr)
-{
-	varMgr=aPtr;
-	return 0;
-}
-
-int
-SpeciesDataManager::createFactorGraph()
-{
-	vector<Variable*>& variableSet=varMgr->getVariableSet();
-	
-	fgraph=new FactorGraph;
-	//Create the factors and the Markov blanket variables using the neighbours of each variable
-    for(int globalFactorID=0;globalFactorID<variableSet.size();globalFactorID++)
-	{
-		SlimFactor* sFactor=new SlimFactor;
-		//sFactor->vIds=new int[1];
-		//sFactor->vIds[0]=globalFactorID;
-		//sFactor->vCnt=1;
-		sFactor->fId=globalFactorID;  //same as vIds
-		//globalFactorID++;
-		fgraph->setFactor(sFactor);
+	for(auto fIter = factors.begin(); fIter != factors.end(); fIter++) {
+		delete fIter->second;
 	}
-	return 0;
 }
 
-int
-SpeciesDataManager::setEvidenceManager(EvidenceManager* aPtr)
+SlimFactor*
+SpeciesDataManager::getFactor(int varID)
 {
-	evMgr=aPtr;
-	return 0;
+	return factors[varID];
 }
 
-
-int 
+void
 SpeciesDataManager::setPotentialManager(PotentialManager* aPtr)
 {
-	potMgr=aPtr;
-	return 0;
+	potMgr = aPtr;
+
+	VariableManager *varManager = aPtr->getVariableManager();
+	vector<Variable*>& variableSet = varManager->getVariableSet();
+
+    for(int i = 0; i < variableSet.size(); i++) {
+		Variable *var = variableSet[i];
+		SlimFactor* sFactor = new SlimFactor;
+		sFactor->fId = var->getID();
+		factors[sFactor->fId] = sFactor;
+	}
 }
 
-int
+void
 SpeciesDataManager::setOutputLoc(const char* aPtr)
 {
-	strcpy(outputLoc,aPtr);
-	return 0;
+	strcpy(outputLoc, aPtr);
 }
 
-int
+void
 SpeciesDataManager::setMotifNetwork(const char* aPtr)
 {
+	VariableManager* varMgr = potMgr->getVariableManager();
+
 	ifstream inFile(aPtr);
 	char buffer[1024];
 	while(inFile.good())
@@ -93,11 +69,6 @@ SpeciesDataManager::setMotifNetwork(const char* aPtr)
 		{
 			continue;
 		}
-
-		// strip trailing whitespace from line
-		//string buffstring = buffer;
-		//buffstring.erase(buffstring.find_last_not_of(" \n\r\t") + 1);
-		//char* tok=strtok(buffstring.c_str(), "\t");
 
 		char* tok=strtok(buffer,"\t");
 		int tokCnt=0;
@@ -123,11 +94,15 @@ SpeciesDataManager::setMotifNetwork(const char* aPtr)
 			tokCnt++;
 		}
 
-		int tfID=varMgr->getVarID(tfName.c_str());
-		int tgtID=varMgr->getVarID(tgtName.c_str());
-		if(tfID==-1 || tgtID==-1){
+		Variable* regulator = varMgr->getVariable(tfName);
+		Variable* target = varMgr->getVariable(tgtName);
+		if(regulator == nullptr || target == nullptr) {
 			continue;
 		}
+
+		int tfID = regulator->getID();
+		int tgtID = target->getID();
+
         unordered_map<int,double>* tgtSet=NULL;
 		if(motifNetwork.find(tfID)==motifNetwork.end())
 		{
@@ -139,68 +114,15 @@ SpeciesDataManager::setMotifNetwork(const char* aPtr)
 			tgtSet=motifNetwork[tfID];
 		}
 		(*tgtSet)[tgtID]=score;
-		//cout << "TFvarID=" << tfID << " targetvarID=" << tgtID << " " << tfName << "->" << tgtName<<  "="<< score<<endl; 
 	}
 	cout << "motifNetwork.size() = " << motifNetwork.size() << endl;
 	inFile.close();
-	return 0;
 }
-
-/*
-int 
-SpeciesDataManager::readRegulators(const char* aFName)
-{
-	ifstream inFile(aFName);
-	char buffer[1024];
-	while(inFile.good())
-	{
-		inFile.getline(buffer,1023);
-		if(strlen(buffer)<=0)
-		{
-			continue;
-		}
-		string regulator(buffer);
-		regulatorSet[regulator]=0;
-	}
-	inFile.close();
-	return 0;
-}
-
-int 
-SpeciesDataManager::readTargets(const char* aFName)
-{
-	ifstream inFile(aFName);
-	char buffer[1024];
-	while(inFile.good())
-	{
-		inFile.getline(buffer,1023);
-		if(strlen(buffer)<=0)
-		{
-			continue;
-		}
-		string target(buffer);
-		targetSet[target]=0;
-	}
-	inFile.close();
-	return 0;
-}*/
 	
 VariableManager*
 SpeciesDataManager::getVariableManager()
 {
-	return varMgr;
-}
-
-FactorGraph*
-SpeciesDataManager::getFactorGraph()
-{
-	return fgraph;
-}
-
-EvidenceManager*
-SpeciesDataManager::getEvidenceManager()
-{
-	return evMgr;
+	return potMgr->getVariableManager();
 }
 
 PotentialManager*
@@ -214,19 +136,7 @@ SpeciesDataManager::getOutputLoc()
 {
 	return outputLoc;
 }
-/*
-map<string,int>& 
-SpeciesDataManager::getRegulators()
-{
-	return regulatorSet;
-}
 
-map<string,int>&
-SpeciesDataManager::getTargets()
-{
-	return targetSet;
-}
- */
 unordered_map<int,unordered_map<int,double>*>&
 SpeciesDataManager::getMotifNetwork()
 {
